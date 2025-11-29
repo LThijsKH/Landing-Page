@@ -7,11 +7,11 @@ app = Flask(__name__)
 def landing():
     return render_template("index.html")
 
-@app.route("/photography")
+@app.route("/photography/")
 def photography():
     return render_template("photography.html")
 
-@app.route('/projects')
+@app.route('/projects/')
 def projects():
     return render_template('projects.html')
 
