@@ -6,6 +6,7 @@
     <meta lang="en">
     <title>{% block title %}Leo T. K-H{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    {% block extra_head %}{% endblock %}
 </head>
 <body>
     <div class="nav">
