@@ -5,7 +5,7 @@
 {% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery.css') }}">{% endblock %}
 
 {% block content %}
-    {% block heading %}Photography{% endblock %}
+    {% block header %}Photography{% endblock %}
     <div class="row">
         <div class="column">
             <img src="{{ url_for('static', filename='img/photos/bark.jpeg') }}" alt="bark" loading="lazy" class="photo">
@@ -20,6 +20,9 @@
             <img src="{{ url_for('static', filename='img/photos/lighthouse.jpeg') }}" alt="lighthouse" loading="lazy" class="photo">
             <img src="{{ url_for('static', filename='img/photos/nyc.jpeg') }}" alt="nyc" loading="lazy" class="photo">
             <img src="{{ url_for('static', filename='img/photos/path.jpeg') }}" alt="path" loading="lazy" class="photo">
+        </div>
+        <div class="column">
+            
         </div>
     </div>
 {% endblock %}

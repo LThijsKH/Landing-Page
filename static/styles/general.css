@@ -1,3 +1,112 @@
-* {
-    background-color: red;
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #111216;
+    padding: auto;
+}
+
+.content {
+    padding-left: 50px;
+}
+
+.nav{ 
+    border-bottom: 1px solid rgba(0,0,0,0.06); 
+    background: #fff; 
+}
+.nav .container { 
+    display:flex; gap: 20px; align-items:center; 
+    justify-content:space-between; 
+    padding: 18px 20px; 
+}
+
+div.homepage { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+div.homepage-link{ 
+    color: inherit; 
+    text-decoration: none; 
+    font-weight:700; 
+}
+
+a.homepage:hover{ 
+    text-decoration: underline; 
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.nav ul{ 
+    display:flex; 
+    gap: 18px; 
+    list-style:none; 
+    margin:0; padding:0; 
+    align-items:center; 
+}
+
+.nav a{ 
+    text-decoration:none; 
+    color: #111; 
+    font-weight:600; 
+    opacity: .9; 
+}
+
+.nav a:hover{ 
+    opacity:1; 
+}
+
+h1.header {
+    margin: 0 0 8px 0; 
+    font-size: clamp(28px, 6vw, 56px); 
+    line-height: 1.03;
+}
+
+.nav a {
+    color: inherit;
+}
+
+footer{ 
+    padding: 48px 0; 
+    border-top:1px solid rgba(0,0,0,0.04); 
+    border-bottom:1px solid rgba(0,0,0,0.04); 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap: 18px; 
+}
+
+footer .left{ 
+    display:flex; 
+    flex-direction:column; 
+    gap: 6px; 
+}
+
+footer .homepage{ 
+    font-size: clamp(24px, 5vw, 42px); 
+    font-weight:900; 
+    letter-spacing: -0.025em; 
+    color:#111; 
+    text-decoration:none; 
+}
+
+footer .homepage:hover{ 
+    text-decoration:underline; 
+}
+
+footer .muted{ 
+    color:#667; 
+    margin:0; 
+}
+
+footer .right{ 
+    display:flex; 
+    align-items:center; 
+    gap:14px; 
+}
+
+footer .right a{ 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+    padding: 6px; 
+    border-radius:6px; 
+}
+
+footer .right a:hover{ 
+    background: rgba(17,17,17,0.04); 
 }
