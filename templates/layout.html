@@ -7,20 +7,20 @@
     <title>{% block title %}Leo K-H{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}?v=1.1">
     {% block extra_head %}{% endblock %}
+    <meta name="theme-color" content="#0f1724">
+    <meta name="msapplication-navbutton-color" content="#0f1724">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0f1724">
 </head>
 <body>
-    <header class="nav">
-        <div class="container">
-            <div class="homepage"><a class="homepage" href="{{ url_for('landing') }}">Leo T. K-H</a></div>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('photography') }}">Photography</a></li>
-                    <li><a href="{{ url_for('projects') }}">Projects</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <div class="homepage"><a class="homepage" href="{{ url_for('landing') }}">Leo T. K-H</a></div>
+        <ul>
+            <li><a href="{{ url_for('photography') }}">Photography</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
     <div class="content">
         <h1 class="header">{% block header %}{% endblock %}</h1>
         {% block content %}{% endblock %}
