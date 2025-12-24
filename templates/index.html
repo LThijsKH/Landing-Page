@@ -1,8 +1,33 @@
 {% extends "layout.html" %}
+
 {% block title %}{{ super() }}{% endblock %}
+
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/landing.css') }}?v=1.1">{% endblock %}
+
 {% block header %}Leo Thijs Keeren-Hall{% endblock %}
+
 {% block content %}
-    <p> - Engineer - </p>
+    <p> - Student - </p>
     <h2>About me</h2>
-    <p>I am still working on the website</p>
+    Hello
+    <h2>Experience</h2>
+    Schooling:
+    <ul class="experience">
+        <li>
+            <h3>Villa Maria High School<span class="date">(2019-2024)</span></h3>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Dawson College<span class="date">(2024-2026)</span></h3>
+            <ul>
+                <li>Honours Role Every Semester</li>
+                <li></li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Placeholder</h2>
+    I am still working on the website
 {% endblock %}

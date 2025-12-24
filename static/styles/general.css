@@ -83,16 +83,18 @@ footer{
 
 footer .left{ 
     align-items: start;
-    display:flex; 
-    flex-direction:column; 
+    display: flex; 
+    flex-direction: column; 
     gap: 6px; 
+    padding-left: 50px;
 }
 
 footer .homepage{ 
-    font-size: clamp(24px, 5vw, 42px); 
-    font-weight:900; 
+    font-size: 32px; 
+    font-weight: 900; 
     letter-spacing: -0.025em; 
-    text-decoration:none; 
+    text-decoration: none; 
+    margin-bottom: 0;
 }
 
 footer .muted{ 
@@ -102,18 +104,34 @@ footer .muted{
 
 footer .right{ 
     display:flex; 
-    align-items:center; 
-    gap:14px; 
+    gap: 14px; 
+    flex-direction: column;
+    min-width: 40%;
+}
+
+footer .right #Contact {
+    margin-bottom: 0;
 }
 
 footer .right a{ 
-    display:inline-flex; 
-    align-items:center; 
-    justify-content:center; 
     padding: 6px; 
     border-radius:6px; 
+    min-width: 100px;
+    height: 50px;
 }
 
-footer .right a:hover{ 
+footer .right #links {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items:center; 
+    justify-content: space-around; 
+}
+
+footer .right a:hover { 
     background-color: var(--accent-border); 
+}
+
+footer .right a img {
+    min-width: 100%;
 }
