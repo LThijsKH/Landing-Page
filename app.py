@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_frozen import Freezer
+import json
 
 app = Flask(__name__)
 
@@ -13,7 +14,9 @@ def photography():
 
 @app.route('/projects/')
 def projects():
-    return render_template('projects.html')
+    with open("static/data/projects.json") as f:
+        projects = json.load(f)
+    return render_template('projects.html', projects=projects)
 
 # Setup that uses frozen flask to generate static pages in /build for cloudflare pages
 freezer = Freezer(app)

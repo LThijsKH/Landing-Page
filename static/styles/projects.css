@@ -1,0 +1,48 @@
+ul.projects {
+    list-style: none;
+}
+
+li.project-card {
+    background-color: var(--border);
+    padding: 0 20px 20px 20px;
+    border: 5px solid var(--accent-border);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.project-card h2.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card .date {
+    font-size: small;
+    font-weight: lighter;
+}
+
+.project-card img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-card .project-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.project-card .project-links * {
+    color: var(--accent-text);
+    background-color: var(--accent-bg);
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-text);
+    text-decoration: none;
+}
+
+.project-card .project-links *:hover {
+    background-color: black;
+}

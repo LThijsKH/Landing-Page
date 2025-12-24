@@ -1,6 +1,33 @@
 {% extends "layout.html" %}
-{% block title %}Projects | {{ super() }}{% endblock %}
-{% block content %}
-    {% block header %}Projects{% endblock %}
 
+{% block title %}Projects | {{ super() }}{% endblock %}
+
+{% block header %}Projects{% endblock %}
+
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/projects.css') }}">{% endblock %}
+
+{% block content %}
+    <ul class="projects">
+        {% for project in projects %}
+            <li class="project-card">
+                <h2 class="title">{{ project.title }}<span class="date">{{ project.date }}</span></h2>
+                {% if project.image %}
+                    {% if "http" in project.image %}
+                        <img alt="{{ project.alt }}" src="{{ project.image }}">
+                    {% else %}
+                        <img alt="{{ project.alt }}" src="{{url_for('static', filename=project.image)}}">
+                    {% endif %}
+                {% endif %}
+                <p class="desc">{{ project.description }}</p>
+                <div class="project-links">
+                    {% if project.link %}
+                        <a href="{{ project.link }}" target="_blank" rel="noopener">View</a>
+                    {% endif %}
+                    {% if project.repository %}
+                        <a href="{{ project.repository }}" target="_blank" rel="noopener">Repo</a>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
