@@ -19,10 +19,10 @@ def landing():
 def photography():
     with open("static/data/photos.json") as f:
         images_list = json.load(f)
-    images = split_list(images_list)
-    print(images)
-    return render_template("photography.html", col1=images[0], col2=images[2], col3=images[1], images=images_list, total=len(images_list)) # col2 last of lists which is the longest
-
+    columns = split_list(images_list)
+    columns = [columns[0], columns[2], columns[1]] # col2 last of lists which is the longest
+    images = columns[0] + columns[1] + columns[2]
+    return render_template("photography.html", col1=columns[0], col2=columns[1], col3=columns[2], images=images, total_i=len(images))
 @app.route('/projects/')
 def projects():
     with open("static/data/projects.json") as f:

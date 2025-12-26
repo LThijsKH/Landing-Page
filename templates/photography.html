@@ -12,19 +12,40 @@
 {% block content %}
     <div class="row">
         <div class="column">
-        {% for image in col1 %}    
-            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% for i in range(col1|length) %}
+            <img src="{{ url_for('static', filename=col1[i].path) }}" alt="{{ col1[i].description }}" onclick="openModal();currentSlide(1 + {{ i }})" loading="auto" class="photo">
         {% endfor %}
         </div>
         <div class="column">
-        {% for image in col2 %}    
-            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% for i in range(col2|length) %}
+            <img src="{{ url_for('static', filename=col2[i].path) }}" alt="{{ col2[i].description }}" onclick="openModal();currentSlide(1 + {{ col1|length }} + {{ i }} )" loading="auto" class="photo">
         {% endfor %}
         </div>
         <div class="column">
-        {% for image in col3 %}    
-            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% for i in range(col3|length) %}
+            <img src="{{ url_for('static', filename=col3[i].path) }}" alt="{{ col3[i].description }}" onclick="openModal();currentSlide(1 + {{ col1|length }} + {{ col2|length }} + {{ i }})" loading="auto" class="photo">
         {% endfor %}
+        </div>
+    </div>
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lighthouse">
+        <span id="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <!-- Image Slides -->
+            {% for i in range(total_i) %}
+            <div class="slide">
+                <img src="{{ url_for('static', filename=images[i].path) }}" alt="{{ images[i].description }}" loading="auto" class="photo">
+                <div class="slide-index"> {{ i+1 }} / {{ total_i }}</div>
+            </div>
+            {% endfor %}
+
+            <!-- Nav controls -->
+            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
         </div>
     </div>
 {% endblock %}

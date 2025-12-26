@@ -1,0 +1,42 @@
+[
+  {
+    "path": "img/photos/bark.jpeg",
+    "description": "Close up image of bark"
+  },
+  {
+    "path": "img/photos/beach.jpeg",
+    "description": "Landscape of a beach"
+  },
+  {
+    "path": "img/photos/canoe.jpeg",
+    "description": "Image from the perspective of inside a canoe of a sunset"
+  },
+  {
+    "path": "img/photos/darkleaf.jpeg",
+    "description": "A singlular small leaf with many bare branches in the background"
+  },
+  {
+    "path": "img/photos/flower.jpeg",
+    "description": "Beatles inside of a white flower"
+  },
+  {
+    "path": "img/photos/greenleaf.jpeg",
+    "description": "A singlular small green leaf with many bare branches in the background"
+  },
+  {
+    "path": "img/photos/lighthouse.jpeg",
+    "description": "A lighthouse on a peer in the distance during the sunset"
+  },
+  {
+    "path": "img/photos/nyc.jpeg",
+    "description": "Upwards image of tall buildings in New York City"
+  },
+  {
+    "path": "img/photos/park.jpeg",
+    "description": "The sunset over a long dirt road in a national park"
+  },
+  {
+    "path": "img/photos/path.jpeg",
+    "description": "A park with a path surrounded by drooping trees"
+  }
+]
