@@ -54,3 +54,13 @@ function handleKeyPress(event) {
 };
 
 // TODO: add event listener to background of modal to close if clicked
+Array.from(slides).forEach(slide => {
+	slide.addEventListener("click", handleClick);
+});
+
+function handleClick(event) {
+	console.log(event, event.target, event.currentTarget);
+	if (event.target === event.currentTarget) {
+		closeModal()
+	};
+};
