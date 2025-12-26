@@ -4,13 +4,24 @@ import json
 
 app = Flask(__name__)
 
+def split_list(l):
+    total_len = len(l)
+    i = total_len // 3
+    ans = [l[:i], l[i:2*i], l[2*i:]]
+    print(ans)
+    return ans
+
 @app.route("/")
 def landing():
     return render_template("index.html")
 
 @app.route("/photography/")
 def photography():
-    return render_template("photography.html")
+    with open("static/data/photos.json") as f:
+        images_list = json.load(f)
+    images = split_list(images_list)
+    print(images)
+    return render_template("photography.html", col1=images[0], col2=images[2], col3=images[1], images=images_list, total=len(images_list)) # col2 last of lists which is the longest
 
 @app.route('/projects/')
 def projects():

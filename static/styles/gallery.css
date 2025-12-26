@@ -14,11 +14,19 @@
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  filter: grayscale(100%);
+  position: relative;
+}
+
+.column img:hover {
+  filter: grayscale(0);
+  transform: scale(1.02);
+  z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
+    flex: 50%; 
     max-width: 50%;
   }
 }

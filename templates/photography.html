@@ -2,28 +2,29 @@
 
 {% block title %}Photos | {{ super() }}{% endblock %}
 
-{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery.css') }}">{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery.css') }}">
+    <script defer src="{{ url_for('static', filename='scripts/lightbox.js') }}"></script>
+{% endblock %}
 
 {% block header %}Photography{% endblock %}
 
 {% block content %}
     <div class="row">
         <div class="column">
-            <img src="{{ url_for('static', filename='img/photos/bark.jpeg') }}" alt="bark" loading="auto" class="photo">
-            <img src="{{ url_for('static', filename='img/photos/beach.jpeg') }}" alt="beach" loading="auto" class="photo">
-            <img src="{{ url_for('static', filename='img/photos/park.jpeg') }}" alt="park" loading="auto" class="photo">
+        {% for image in col1 %}    
+            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% endfor %}
         </div>
         <div class="column">
-            <img src="{{ url_for('static', filename='img/photos/canoe.jpeg') }}" alt="canoe" loading="auto" class="photo">
-            <img src="{{ url_for('static', filename='img/photos/flower.jpeg') }}" alt="flower" loading="auto" class="photo">
+        {% for image in col2 %}    
+            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% endfor %}
         </div>
         <div class="column">
-            <img src="{{ url_for('static', filename='img/photos/lighthouse.jpeg') }}" alt="lighthouse" loading="auto" class="photo">
-            <img src="{{ url_for('static', filename='img/photos/nyc.jpeg') }}" alt="nyc" loading="auto" class="photo">
-            <img src="{{ url_for('static', filename='img/photos/path.jpeg') }}" alt="path" loading="auto" class="photo">
-        </div>
-        <div class="column">
-            
+        {% for image in col3 %}    
+            <img src="{{ url_for('static', filename=image.path) }}" alt="{{ image.description }}" loading="auto" class="photo">
+        {% endfor %}
         </div>
     </div>
 {% endblock %}
