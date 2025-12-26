@@ -14,7 +14,10 @@ function closeModal() {
 };
 
 function changeSlides(i_change) {
-	i = ((i-1+i_change)%totalI)+1 // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
+	console.log("i: " + i)
+	console.log("i_change: " + i_change)
+	i = (((i-1+i_change+10)%totalI)+1) // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
+	console.log("i_f: " + i)
 	showSlides(i);
 };
 
@@ -27,10 +30,11 @@ function showSlides(i) {
 	let n = 0
 	for (n = 0; n < slides.length; n++) {
     slides[n].style.display = "none";
-	};
+};
 
 	// Show requested image
-	slides[i-1].style.display = "block";
+	slides[i-1].style.display = "flex";
+	caption.innerText = document.querySelectorAll(".modal .slide img.photo")[i-1].getAttribute("alt");
 };
 
 document.addEventListener('keydown', handleKeyPress);
