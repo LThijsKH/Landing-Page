@@ -1,16 +1,19 @@
 "use strict"
-
+const body = document.querySelector("body");
+const modal = document.getElementById("lighthouse")
 const slides = document.getElementsByClassName("slide");
 const caption = document.getElementById("caption")
 const totalI = slides.length
 let i = 1;
 
 function openModal() {
-	document.getElementById("lighthouse").style.display = "block";
+	modal.style.display = "block";
+	body.style.overflow = "hidden";
 };
 
 function closeModal() {
-	document.getElementById("lighthouse").style.display = "none";
+	modal.style.display = "none";
+	body.style.overflow = "auto";
 };
 
 function changeSlides(i_change) {
