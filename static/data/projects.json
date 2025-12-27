@@ -1,8 +1,8 @@
 [
   {
     "title": "Example",
-    "date": "18-06-2012",
-    "image": "https://picsum.photos/id/237/200/300",
+    "date": "8-06-2012",
+    "image": "https://picsum.photos/1080/400",
     "alt": "Example external pic placeholder",
     "description": "Placeholder project describing what kind of work will go here.",
     "repository": "github.com",
@@ -10,13 +10,13 @@
   },
   {
     "title": "Example 2",
-    "date": "18-06-2012",
+    "date": "18-06-1997",
     "description": "Project without a example link and only a repositorty.",
     "repository": "github.com"
   },
   {
     "title": "Example",
-    "date": "18-06-2012",
+    "date": "12-12-2012",
     "image": "img/photos/nyc.jpeg",
     "alt": "Example local pic placeholder",
     "description": "Placeholder project without a repo and only a link",
