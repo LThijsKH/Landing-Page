@@ -4,9 +4,8 @@
     --accent-bg: #0f1724;
     --accent-text: white;
     --accent-border: rgba(255,255,255,0.08);
-    --muted: rgba(255,255,255,0.9);
-    --border: rgba(0,0,0,0.06);
-    
+    --muted: #94a3b8;
+    --border: rgba(0,0,0,0.06);   
 }
 
 body {
@@ -26,6 +25,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
     background-color: var(--accent-bg); 
     color: var(--accent-text);
     display: flex; 
@@ -34,7 +34,7 @@ nav{
     justify-content: space-between; 
     padding: 18px 20px 18px 20px; 
     width: calc(100vw - 40px);
-}
+} 
 
 div.homepage {
     font-weight: 700; 
@@ -43,10 +43,19 @@ div.homepage {
     margin-right: auto;
 }
 
-nav a:hover{ 
-    font-family: Bentham, Georgia, serif;
-    width: 100px ;
-    font-size: 1rem;
+nav a span.decor{
+    color: var(--accent-bg);
+    transition: color 0.2s ease;
+
+}
+
+nav a:hover span.decor{ 
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+nav a#active span.decor{ 
+    color: inherit;
 }
 
 nav ul{ 
@@ -67,7 +76,7 @@ nav a{
 
 h1.header {
     margin: 0 0 8px 0; 
-    font-size: clamp(28px, 6vw, 56px); 
+    font-size: 4.5vw; 
     line-height: 1.03;
 }
 
@@ -83,16 +92,18 @@ footer{
 
 footer .left{ 
     align-items: start;
-    display:flex; 
-    flex-direction:column; 
+    display: flex; 
+    flex-direction: column; 
     gap: 6px; 
+    padding-left: 50px;
 }
 
 footer .homepage{ 
-    font-size: clamp(24px, 5vw, 42px); 
-    font-weight:900; 
+    font-size: 32px; 
+    font-weight: 900; 
     letter-spacing: -0.025em; 
-    text-decoration:none; 
+    text-decoration: none; 
+    margin-bottom: 0;
 }
 
 footer .muted{ 
@@ -102,18 +113,34 @@ footer .muted{
 
 footer .right{ 
     display:flex; 
-    align-items:center; 
-    gap:14px; 
+    gap: 14px; 
+    flex-direction: column;
+    min-width: 40%;
+}
+
+footer .right #Contact {
+    margin-bottom: 0;
 }
 
 footer .right a{ 
-    display:inline-flex; 
-    align-items:center; 
-    justify-content:center; 
     padding: 6px; 
     border-radius:6px; 
+    min-width: 100px;
+    height: 50px;
 }
 
-footer .right a:hover{ 
+footer .right #links {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items:center; 
+    justify-content: space-around; 
+}
+
+footer .right a:hover { 
     background-color: var(--accent-border); 
+}
+
+footer .right a img {
+    min-width: 100%;
 }

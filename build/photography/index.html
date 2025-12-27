@@ -6,7 +6,10 @@
     <meta lang="en">
     <title>Photos | Leo K-H</title>
     <link rel="stylesheet" href="/static/styles/general.css?v=1.1">
+    
     <link rel="stylesheet" href="/static/styles/gallery.css">
+    <script defer src="/static/scripts/lightbox.js"></script>
+
     <meta name="theme-color" content="#0f1724">
     <meta name="msapplication-navbutton-color" content="#0f1724">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -14,11 +17,11 @@
 </head>
 <body>
     <nav>
-        <div class="homepage"><a class="homepage" href="/">Leo T. K-H</a></div>
+        <div class="homepage"><a class="homepage" href="/" id=""><span class="decor">[</span><span>LeoTKH</span>.com<span class="decor">]</span></a></div>
         <ul>
-            <li><a href="/photography/">Photography</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="/photography/" id="active"><span class="decor">[</span>Photography<span class="decor">]</span></a></li>
+            <li><a href="/projects/" id=""><span class="decor">[</span>Projects<span class="decor">]</span></a></li>
+            <li><a href="#Contact"><span class="decor">[</span>Contact<span class="decor">]</span></a></li>
         </ul>
     </nav>
     <div class="content">
@@ -26,21 +29,99 @@
         
     <div class="row">
         <div class="column">
-            <img src="/static/img/photos/bark.jpeg" alt="bark" loading="auto" class="photo">
-            <img src="/static/img/photos/beach.jpeg" alt="beach" loading="auto" class="photo">
-            <img src="/static/img/photos/park.jpeg" alt="park" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/bark.jpeg" alt="Close up image of bark" onclick="openModal();currentSlide(1 + 0)" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" onclick="openModal();currentSlide(1 + 1)" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" onclick="openModal();currentSlide(1 + 2)" loading="auto" class="photo">
+        
         </div>
         <div class="column">
-            <img src="/static/img/photos/canoe.jpeg" alt="canoe" loading="auto" class="photo">
-            <img src="/static/img/photos/flower.jpeg" alt="flower" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" onclick="openModal();currentSlide(1 + 3 + 0 )" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" onclick="openModal();currentSlide(1 + 3 + 1 )" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" onclick="openModal();currentSlide(1 + 3 + 2 )" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" onclick="openModal();currentSlide(1 + 3 + 3 )" loading="auto" class="photo">
+        
         </div>
         <div class="column">
-            <img src="/static/img/photos/lighthouse.jpeg" alt="lighthouse" loading="auto" class="photo">
-            <img src="/static/img/photos/nyc.jpeg" alt="nyc" loading="auto" class="photo">
-            <img src="/static/img/photos/path.jpeg" alt="path" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 4 + 0)" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" onclick="openModal();currentSlide(1 + 3 + 4 + 1)" loading="auto" class="photo">
+        
+            <img src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 4 + 2)" loading="auto" class="photo">
+        
         </div>
-        <div class="column">
+    </div>
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lighthouse">
+        <span id="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <!-- Image Slides -->
             
+            <div class="slide">
+                <img src="/static/img/photos/bark.jpeg" alt="Close up image of bark" loading="auto" class="photo">
+                <div class="slide-index"> 1 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" loading="auto" class="photo">
+                <div class="slide-index"> 2 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" loading="auto" class="photo">
+                <div class="slide-index"> 3 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" loading="auto" class="photo">
+                <div class="slide-index"> 4 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" loading="auto" class="photo">
+                <div class="slide-index"> 5 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" loading="auto" class="photo">
+                <div class="slide-index"> 6 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" loading="auto" class="photo">
+                <div class="slide-index"> 7 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" loading="auto" class="photo">
+                <div class="slide-index"> 8 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" loading="auto" class="photo">
+                <div class="slide-index"> 9 / 10</div>
+            </div>
+            
+            <div class="slide">
+                <img src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" loading="auto" class="photo">
+                <div class="slide-index"> 10 / 10</div>
+            </div>
+            
+
+            <!-- Nav controls -->
+            <a id="prev" onclick="changeSlides(-1)">&#10094;</a>
+            <a id="next" onclick="changeSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
         </div>
     </div>
 
@@ -52,15 +133,17 @@
         </div>
         <div class="right">
             <h3 id="Contact">My Accounts</h3>
-            <a href="https://gitlab.com/leotkh" title="GitLab" target="_blank" rel="noopener">
-                <img src="/static/img/gitlab-logo.svg" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
-            </a>
-            <a href="https://github.com/lthijskh" title="GitHub" target="_blank" rel="noopener">
-                <img src="/static/img/github-mark.svg" alt="GitHub" width="24" height="24" />
-            </a>
-            <a href="mailto:lkeerenhall@gmail.com" title="Email">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25zm-1.5 0-7.5 6-7.5-6" stroke="#EA4335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <div id="links">
+                <a href="https://gitlab.com/leotkh" title="GitLab" target="_blank" rel="noopener">
+                    <img src="/static/img/gitlab-logo.svg" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
+                </a>
+                <a href="https://github.com/lthijskh" title="GitHub" target="_blank" rel="noopener">
+                    <img src="/static/img/github-mark.svg" alt="GitHub" width="24" height="24" />
+                </a>
+                <a href="mailto:lkeerenhall@gmail.com" title="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25zm-1.5 0-7.5 6-7.5-6" stroke="#EA4335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
         </div>
     </footer>
 </body>

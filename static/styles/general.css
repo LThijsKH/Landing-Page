@@ -4,9 +4,8 @@
     --accent-bg: #0f1724;
     --accent-text: white;
     --accent-border: rgba(255,255,255,0.08);
-    --muted: rgba(255,255,255,0.9);
-    --border: rgba(0,0,0,0.06);
-    
+    --muted: #94a3b8;
+    --border: rgba(0,0,0,0.06);   
 }
 
 body {
@@ -26,6 +25,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
     background-color: var(--accent-bg); 
     color: var(--accent-text);
     display: flex; 
@@ -34,7 +34,7 @@ nav{
     justify-content: space-between; 
     padding: 18px 20px 18px 20px; 
     width: calc(100vw - 40px);
-}
+} 
 
 div.homepage {
     font-weight: 700; 
@@ -43,10 +43,19 @@ div.homepage {
     margin-right: auto;
 }
 
-nav a:hover{ 
-    font-family: Bentham, Georgia, serif;
-    width: 100px ;
-    font-size: 1rem;
+nav a span.decor{
+    color: var(--accent-bg);
+    transition: color 0.2s ease;
+
+}
+
+nav a:hover span.decor{ 
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+nav a#active span.decor{ 
+    color: inherit;
 }
 
 nav ul{ 
@@ -67,7 +76,7 @@ nav a{
 
 h1.header {
     margin: 0 0 8px 0; 
-    font-size: clamp(28px, 6vw, 56px); 
+    font-size: 4.5vw; 
     line-height: 1.03;
 }
 

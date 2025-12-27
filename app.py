@@ -8,7 +8,6 @@ def split_list(l):
     total_len = len(l)
     i = total_len // 3
     ans = [l[:i], l[i:2*i], l[2*i:]]
-    print(ans)
     return ans
 
 @app.route("/")

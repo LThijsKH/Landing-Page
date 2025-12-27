@@ -6,6 +6,8 @@
 
 {% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/projects.css') }}">{% endblock %}
 
+{% set active_page = 'projects' %}
+
 {% block content %}
     <ul class="projects">
         {% for project in projects %}

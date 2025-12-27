@@ -14,11 +14,11 @@
 </head>
 <body>
     <nav>
-        <div class="homepage"><a class="homepage" href="{{ url_for('landing') }}">Leo T. K-H</a></div>
+        <div class="homepage"><a class="homepage" href="{{ url_for('landing') }}" id="{{ 'active' if active_page == 'home' }}"><span class="decor">[</span><span>LeoTKH</span>.com<span class="decor">]</span></a></div>
         <ul>
-            <li><a href="{{ url_for('photography') }}">Photography</a></li>
-            <li><a href="{{ url_for('projects') }}">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="{{ url_for('photography') }}" id="{{ 'active' if active_page == 'photography' }}"><span class="decor">[</span>Photography<span class="decor">]</span></a></li>
+            <li><a href="{{ url_for('projects') }}" id="{{ 'active' if active_page == 'projects' }}"><span class="decor">[</span>Projects<span class="decor">]</span></a></li>
+            <li><a href="#Contact"><span class="decor">[</span>Contact<span class="decor">]</span></a></li>
         </ul>
     </nav>
     <div class="content">
@@ -34,7 +34,7 @@
             <h3 id="Contact">My Accounts</h3>
             <div id="links">
                 <a href="https://gitlab.com/leotkh" title="GitLab" target="_blank" rel="noopener">
-                    <img src="{{ url_for('static', filename='img/dark.svg') }}" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
+                    <img src="{{ url_for('static', filename='img/gitlab-logo.svg') }}" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
                 </a>
                 <a href="https://github.com/lthijskh" title="GitHub" target="_blank" rel="noopener">
                     <img src="{{ url_for('static', filename='img/github-mark.svg') }}" alt="GitHub" width="24" height="24" />
