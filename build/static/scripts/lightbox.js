@@ -21,7 +21,8 @@ function changeSlides(i_change) {
 	showSlides(i);
 };
 
-function currentSlide(i) {
+function currentSlide(slidesIndex) {
+	i = slidesIndex
 	showSlides(i);
 };
 
