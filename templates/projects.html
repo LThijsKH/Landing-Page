@@ -9,10 +9,10 @@
 {% set active_page = 'projects' %}
 
 {% block content %}
-    <ul class="projects">
+    <ul>
         {% for project in projects %}
-            <li class="project-card">
-                <h2 class="title">{{ project.title }}<span class="date">{{ project.date }}</span></h2>
+            <li>
+                <h2>{{ project.title }}<span>{{ project.date }}</span></h2>
                 {% if project.image %}
                     {% if "http" in project.image %}
                         <img alt="{{ project.alt }}" src="{{ project.image }}">
@@ -20,8 +20,8 @@
                         <img alt="{{ project.alt }}" src="{{url_for('static', filename=project.image)}}">
                     {% endif %}
                 {% endif %}
-                <p class="desc">{{ project.description }}</p>
-                <div class="project-links">
+                <p>{{ project.description }}</p>
+                <div>
                     {% if project.link %}
                         <a href="{{ project.link }}" target="_blank" rel="noopener">Website</a>
                     {% endif %}

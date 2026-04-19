@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "tailwindcss -i ./static/styles/style.css -o ./static/css/output.css --watch",
-  "build": "tailwindcss -i ./static/styles/style.css -o ./static/css/output.css --minify"
+  "dev": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --watch",
+  "build": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --minify"
   },
   "repository": {
     "type": "git",

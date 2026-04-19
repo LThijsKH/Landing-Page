@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta lang="en">
     <title>{% block title %}Leo K-H{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/output.css') }}">
     {% block extra_head %}{% endblock %}
     <meta name="theme-color" content="#0f1724">
     <meta name="msapplication-navbutton-color" content="#0f1724">
@@ -14,27 +14,27 @@
 </head>
 <body>
     <nav>
-        <div class="homepage"><a class="homepage" href="{{ url_for('landing') }}" id="{{ 'active' if active_page == 'home' }}"><span class="decor">[</span><span>LeoTKH</span>.com<span class="decor">]</span></a></div>
+        <div><a href="{{ url_for('landing') }}" id="{{ 'active' if active_page == 'home' }}"><span>[</span><span>LeoTKH</span>.com<span>]</span></a></div>
         <ul>
-            <li><a href="{{ url_for('photography') }}" id="{{ 'active' if active_page == 'photography' }}"><span class="decor">[</span>Photography<span class="decor">]</span></a></li>
-            <li><a href="{{ url_for('projects') }}" id="{{ 'active' if active_page == 'projects' }}"><span class="decor">[</span>Projects<span class="decor">]</span></a></li>
-            <li><a href="#Contact"><span class="decor">[</span>Contact<span class="decor">]</span></a></li>
+            <li><a href="{{ url_for('photography') }}" id="{{ 'active' if active_page == 'photography' }}"><span>[</span>Photography<span>]</span></a></li>
+            <li><a href="{{ url_for('projects') }}" id="{{ 'active' if active_page == 'projects' }}"><span>[</span>Projects<span>]</span></a></li>
+            <li><a href="#Contact"><span>[</span>Contact<span>]</span></a></li>
         </ul>
     </nav>
-    <div class="content">
-        <h1 class="header">{% block header %}{% endblock %}</h1>
+    <div>
+        <h1>{% block header %}{% endblock %}</h1>
         {% block content %}{% endblock %}
     </div>
     <footer>
-        <div class="left">
-            <h2 class="homepage">Leo Thijs Keeren-Hall</h3>
-            <p class="muted">Student</p>
+        <div>
+            <h2>Leo Thijs Keeren-Hall</h3>
+            <p>Student</p>
         </div>
-        <div class="right">
+        <div>
             <h3 id="Contact">My Accounts</h3>
             <div id="links">
                 <a href="https://gitlab.com/leotkh" title="GitLab" target="_blank" rel="noopener">
-                    <img src="{{ url_for('static', filename='img/gitlab-logo.svg') }}" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
+                    <img src="{{ url_for('static', filename='img/gitlab-logo.svg') }}" alt="GitLab" width="24" height="24" />
                 </a>
                 <a href="https://github.com/lthijskh" title="GitHub" target="_blank" rel="noopener">
                     <img src="{{ url_for('static', filename='img/github-mark.svg') }}" alt="GitHub" width="24" height="24" />
