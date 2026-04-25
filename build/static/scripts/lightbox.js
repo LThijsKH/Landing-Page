@@ -3,16 +3,17 @@ const body = document.querySelector("body");
 const modal = document.getElementById("lighthouse")
 const slides = document.getElementsByClassName("slide");
 const caption = document.getElementById("caption")
+const slideCounter = document.getElementById("slide-counter");
 const totalI = slides.length
 let i = 1;
 
 function openModal() {
-	modal.style.display = "block";
+	modal.classList.remove("hidden");
 	body.style.overflow = "hidden";
 };
 
 function closeModal() {
-	modal.style.display = "none";
+	modal.classList.add("hidden");
 	body.style.overflow = "auto";
 };
 
@@ -30,12 +31,11 @@ function showSlides(i) {
 	// Hide unwanted images
 	let n = 0
 	for (n = 0; n < slides.length; n++) {
-    slides[n].style.display = "none";
+    slides[n].classList.add("hidden");
 };
 
 	// Show requested image
-	slides[i-1].style.display = "flex";
-	caption.innerText = document.querySelectorAll(".modal .slide img.photo")[i-1].getAttribute("alt");
+	slides[i-1].classList.remove("hidden");
 };
 
 document.addEventListener('keydown', handleKeyPress);
@@ -51,13 +51,27 @@ function handleKeyPress(event) {
 	};
 };
 
-// TODO: add event listener to background of modal to close if clicked
-Array.from(slides).forEach(slide => {
-	slide.addEventListener("click", handleClick);
+// Close modal when clicking on the overlay background
+modal.addEventListener("click", function(event) {
+	if (event.target === modal) {
+		closeModal();
+	}
 });
 
-function handleClick(event) {
-	if (event.target === event.currentTarget) {
-		closeModal()
-	};
-};
+// Show/hide controls based on mouse position
+const imageContainer = document.getElementById("image-container");
+const prevContainer = document.getElementById("prev-container");
+const nextContainer = document.getElementById("next-container");
+const closeBtn = document.getElementById("close-btn");
+
+if (imageContainer && prevContainer && nextContainer) {
+	imageContainer.addEventListener("mouseenter", function() {
+		prevContainer.classList.add("opacity-0");
+		nextContainer.classList.add("opacity-0");
+	});
+
+	imageContainer.addEventListener("mouseleave", function() {
+		prevContainer.classList.remove("opacity-0");
+		nextContainer.classList.remove("opacity-0");
+	});
+}

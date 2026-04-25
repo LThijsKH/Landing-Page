@@ -5,144 +5,454 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta lang="en">
     <title>Photos | Leo K-H</title>
-    <link rel="stylesheet" href="/static/css/output.css">
-    
+    <link rel="stylesheet" href="/static/styles/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">    
     <script defer src="/static/scripts/lightbox.js"></script>
 
-    <meta name="theme-color" content="#0f1724">
-    <meta name="msapplication-navbutton-color" content="#0f1724">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0f1724">
 </head>
-<body>
-    <nav>
-        <div class="homepage"><a class="homepage" href="/" id=""><span class="decor">[</span><span>LeoTKH</span>.com<span class="decor">]</span></a></div>
-        <ul>
-            <li><a href="/photography/" id="active"><span class="decor">[</span>Photography<span class="decor">]</span></a></li>
-            <li><a href="/projects/" id=""><span class="decor">[</span>Projects<span class="decor">]</span></a></li>
-            <li><a href="#Contact"><span class="decor">[</span>Contact<span class="decor">]</span></a></li>
-        </ul>
+<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text">
+    <nav class="min-w-full sticky top-0 flex justify-center md:justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
+        <div class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted -mb-px"><a href="/">LTKH</span></a></div>
+        <div class="h-full justify-center align-middle flex p-2 m-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="14" rx="2"></rect>
+                <circle cx="12" cy="13" r="3"></circle>
+                <path d="M8 6l1.5-2h5L16 6"></path>
+            </svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            </svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M4 9V4h5"></path>
+                <path d="M20 9V4h-5"></path>
+                <path d="M4 15v5h5"></path>
+                <path d="M20 15v5h-5"></path>
+            </svg>
+        </div>
+        <div class="hidden md:flex px-2">
+            <a class="mx-5 py-5 border-b-2 border-accent -mb-px" href="/photography/">Photography</a>
+            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted  -mb-px" href="/projects/">Projects</a>
+            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
+        </div>
     </nav>
-    <div class="content">
-        <h1 class="header">Photography</h1>
+    <div class="m-5 min-h-[calc(100vh-25rem)]">
+        <h1>Photography</h1>
         
-    <div class="row">
-        <div class="column">
+    <!-- Snapping Images -->
+     <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
+        <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
+
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 0
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            Close up image of bark
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/bark.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 1
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            Landscape of a beach
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/beach.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 2
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            Image from the perspective of inside a canoe of a sunset
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/canoe.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 3
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            A singlular small leaf with many bare branches in the background
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/darkleaf.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 4
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            Beatles inside of a white flower
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/flower.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 5
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            A singlular small green leaf with many bare branches in the background
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/greenleaf.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 6
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            A lighthouse on a peer in the distance during the sunset
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/lighthouse.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 7
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            Upwards image of tall buildings in New York City
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/nyc.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 8
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            The sunset over a long dirt road in a national park
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/park.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="snap-start h-screen flex">
+
+                <!-- TEXT -->
+                <div class="w-1/2 flex items-center justify-center p-12">
+                    <div>
+                        <h2 class="text-3xl font-medium">
+                            Photo 9
+                        </h2>
+                        <p class="mt-4 text-gray-500">
+                            A park with a path surrounded by drooping trees
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="w-1/2">
+                    <div class="sticky top-0 h-screen flex items-center justify-center">
+                        <img 
+                            src="/static/img/photos/path.jpeg"
+                            class="max-h-[80vh] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+     </div>
+
+    <!-- Library -->
+    <div class="flex p-1">
+        <div>
         
-            <img src="/static/img/photos/bark.jpeg" alt="Close up image of bark" onclick="openModal();currentSlide(1 + 0)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/bark.jpeg" alt="Close up image of bark" onclick="openModal();currentSlide(1 + 0)" loading="auto">
         
-            <img src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" onclick="openModal();currentSlide(1 + 1)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" onclick="openModal();currentSlide(1 + 1)" loading="auto">
         
-            <img src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" onclick="openModal();currentSlide(1 + 2)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" onclick="openModal();currentSlide(1 + 2)" loading="auto">
         
         </div>
-        <div class="column">
+        <div>
         
-            <img src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" onclick="openModal();currentSlide(1 + 3 + 0 )" loading="auto" class="photo">
+            <img class="p-1 hover:p-0 hover:pb-0.9" src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 0 )" loading="auto">
         
-            <img src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" onclick="openModal();currentSlide(1 + 3 + 1 )" loading="auto" class="photo">
+            <img class="p-1 hover:p-0 hover:pb-0.9" src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" onclick="openModal();currentSlide(1 + 3 + 1 )" loading="auto">
         
-            <img src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" onclick="openModal();currentSlide(1 + 3 + 2 )" loading="auto" class="photo">
-        
-            <img src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" onclick="openModal();currentSlide(1 + 3 + 3 )" loading="auto" class="photo">
+            <img class="p-1 hover:p-0 hover:pb-0.9" src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 2 )" loading="auto">
         
         </div>
-        <div class="column">
+        <div>
         
-            <img src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 4 + 0)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" onclick="openModal();currentSlide(1 + 3 + 3 + 0)" loading="auto">
         
-            <img src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" onclick="openModal();currentSlide(1 + 3 + 4 + 1)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" onclick="openModal();currentSlide(1 + 3 + 3 + 1)" loading="auto">
         
-            <img src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" onclick="openModal();currentSlide(1 + 3 + 4 + 2)" loading="auto" class="photo">
+            <img class="p-1 hover:p-0" src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" onclick="openModal();currentSlide(1 + 3 + 3 + 2)" loading="auto">
+        
+            <img class="p-1 hover:p-0" src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" onclick="openModal();currentSlide(1 + 3 + 3 + 3)" loading="auto">
         
         </div>
     </div>
+
     <!-- Lightbox Modal -->
-    <div class="modal" id="lighthouse">
-        <span id="close-modal" onclick="closeModal()">&times;</span>
-        <div id="modal-content">
-            <!-- Image Slides -->
-            
-            <div class="slide">
-                <img src="/static/img/photos/bark.jpeg" alt="Close up image of bark" loading="auto" class="photo">
-                <div class="slide-index"> 1 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" loading="auto" class="photo">
-                <div class="slide-index"> 2 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" loading="auto" class="photo">
-                <div class="slide-index"> 3 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" loading="auto" class="photo">
-                <div class="slide-index"> 4 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" loading="auto" class="photo">
-                <div class="slide-index"> 5 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" loading="auto" class="photo">
-                <div class="slide-index"> 6 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" loading="auto" class="photo">
-                <div class="slide-index"> 7 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" loading="auto" class="photo">
-                <div class="slide-index"> 8 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" loading="auto" class="photo">
-                <div class="slide-index"> 9 / 10</div>
-            </div>
-            
-            <div class="slide">
-                <img src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" loading="auto" class="photo">
-                <div class="slide-index"> 10 / 10</div>
-            </div>
-            
+    <div id="lighthouse" class="hidden fixed inset-0 z-50 bg-white flex flex-col items-center justify-center p-4">
+        <!-- Close Button -->
+        <button id="close-modal" onclick="closeModal()" class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl font-light transition z-10">
+            ×
+        </button>
 
-            <!-- Nav controls -->
-            <a id="prev" onclick="changeSlides(-1)">&#10094;</a>
-            <a id="next" onclick="changeSlides(1)">&#10095;</a>
-
-            <div class="caption-container">
-                <p id="caption"></p>
+        <!-- Image Container (Main Focus) -->
+        <div class="flex-1 flex items-center justify-center w-full max-w-5xl max-h-[90vh]" id="image-container">
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/bark.jpeg" alt="Close up image of bark" class="max-w-full max-h-full object-contain" loading="lazy">
             </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/beach.jpeg" alt="Landscape of a beach" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/canoe.jpeg" alt="Image from the perspective of inside a canoe of a sunset" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/darkleaf.jpeg" alt="A singlular small leaf with many bare branches in the background" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/flower.jpeg" alt="Beatles inside of a white flower" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/greenleaf.jpeg" alt="A singlular small green leaf with many bare branches in the background" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/lighthouse.jpeg" alt="A lighthouse on a peer in the distance during the sunset" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/nyc.jpeg" alt="Upwards image of tall buildings in New York City" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/park.jpeg" alt="The sunset over a long dirt road in a national park" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+            <div class="slide hidden w-full h-full flex items-center justify-center">
+                <img src="/static/img/photos/path.jpeg" alt="A park with a path surrounded by drooping trees" class="max-w-full max-h-full object-contain" loading="lazy">
+            </div>
+            
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="absolute bottom-4 left-4">
+            <button id="prev" onclick="changeSlides(-1)" class="text-gray-600 hover:text-black text-2xl font-light transition">
+                ←
+            </button>
+        </div>
+
+        <div class="absolute bottom-4 right-4">
+            <button id="next" onclick="changeSlides(1)" class="text-gray-600 hover:text-black text-2xl font-light transition">
+                →
+            </button>
         </div>
     </div>
 
     </div>
-    <footer>
-        <div class="left">
-            <h2 class="homepage">Leo Thijs Keeren-Hall</h3>
-            <p class="muted">Student</p>
-        </div>
-        <div class="right">
-            <h3 id="Contact">My Accounts</h3>
-            <div id="links">
-                <a href="https://gitlab.com/leotkh" title="GitLab" target="_blank" rel="noopener">
-                    <img src="/static/img/gitlab-logo.svg" alt="GitLab" width="24" height="24" style="vertical-align: middle;" />
-                </a>
-                <a href="https://github.com/lthijskh" title="GitHub" target="_blank" rel="noopener">
-                    <img src="/static/img/github-mark.svg" alt="GitHub" width="24" height="24" />
-                </a>
-                <a href="mailto:lkeerenhall@gmail.com" title="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25zm-1.5 0-7.5 6-7.5-6" stroke="#EA4335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+    <footer class="min-w-full items-center justify-center md:justify-between border-t dark:border-d-line border-line print:hidden p-4 flex bg-bg dark:bg-d-bg">
+        <div class="p-4 flex flex-col h- justify-between">
+            <div class="self-center">
+                <h3 id="Contact" class="font-bold">
+                    Contact
+                </h3>
+                <div id="links" class="flex flex-col gap-1">
+                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-muted" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-muted">
+                        Email
+                    </a>
+                    <a href="https://github.com/lthijskh" class="hover:text-muted" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <iframe id="printFrame" src="index.html" style="display:none;"></iframe>
+                    <a href="#" onclick="window.print()" class="hover:text-muted">
+                        Print my resume
+                    </a>
+                </div>
             </div>
+            <p class="text-muted font-extralight text-xs mt-auto">
+            © 2026 Leo T. K-H
+            </p>
+        </div>
+        <div class="p-4">
+            <h2 class="-m-7 text-right font-display font-extrabold text-9xl tracking-tighter">
+                Leo Thijs <br>
+                Keeren-Hall
+            </h2>
         </div>
     </footer>
 </body>

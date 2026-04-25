@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --watch",
-  "build": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --minify"
+    "dev": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --watch",
+    "build": "tailwindcss -i ./static/styles/style.css -o ./static/styles/output.css --minify"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LThijsKH/Landing-Page#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.2",
-    "tailwindcss": "^4.2.2"
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
   }
 }
