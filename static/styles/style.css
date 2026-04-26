@@ -17,5 +17,6 @@
     /* fonts */
     --font-sans: "Atkinson Hyperlegible", "Inter", system-ui, sans-serif;
     --font-serif: "Source Serif 4", "Literata", serif;
+    --font-accent: "Kapakana", serif;
     --font-display: "Anton", sans-serif;
 }

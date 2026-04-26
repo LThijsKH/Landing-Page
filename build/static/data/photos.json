@@ -1,42 +1,120 @@
 [
   {
     "path": "img/photos/bark.jpeg",
-    "description": "Close up image of bark"
+    "title": "Bark",
+    "camera": "NIKON D5300",
+    "lens": "AF-DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/beach.jpeg",
-    "description": "Landscape of a beach"
+    "title": "Landscape of a beach",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/canoe.jpeg",
-    "description": "Image from the perspective of inside a canoe of a sunset"
+    "title": "Image from the perspective of inside a canoe of a sunset",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/darkleaf.jpeg",
-    "description": "A singlular small leaf with many bare branches in the background"
+    "title": "A singlular small leaf with many bare branches in the background",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/flower.jpeg",
-    "description": "Beatles inside of a white flower"
+    "title": "Beatles inside of a white flower",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/greenleaf.jpeg",
-    "description": "A singlular small green leaf with many bare branches in the background"
+    "title": "A singlular small green leaf with many bare branches in the background",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/lighthouse.jpeg",
-    "description": "A lighthouse on a peer in the distance during the sunset"
+    "title": "A lighthouse on a peer in the distance during the sunset",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/nyc.jpeg",
-    "description": "Upwards image of tall buildings in New York City"
+    "title": "Upwards image of tall buildings in New York City",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/park.jpeg",
-    "description": "The sunset over a long dirt road in a national park"
+    "title": "The sunset over a long dirt road in a national park",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s",
+    "location": "Montreal,Quebec",
+    "coords": "45.5017,-73.5673"
   },
   {
     "path": "img/photos/path.jpeg",
-    "description": "A park with a path surrounded by drooping trees"
+    "title": "A park with a path surrounded by drooping trees",
+    "camera": "NIKON D5300",
+    "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
+    "iso": 1600,
+    "focal": "27mm",
+    "aperture": "f/3.5",
+    "shutter": "1/30s"
   }
 ]

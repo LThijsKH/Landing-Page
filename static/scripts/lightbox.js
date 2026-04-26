@@ -1,63 +1,94 @@
-"use strict"
+"use strict";
 const body = document.querySelector("body");
-const modal = document.getElementById("lighthouse")
+const modal = document.getElementById("lighthouse");
 const slides = document.getElementsByClassName("slide");
-const caption = document.getElementById("caption")
-const totalI = slides.length
+const caption = document.getElementById("caption");
+const slideCounter = document.getElementById("slide-counter");
+const totalI = slides.length;
+const single = document.getElementById('view-single');
+const grid = document.getElementById('view-grid');
+const views = [
+	single, grid, modal
+];
 let i = 1;
+showSlides(1);
+
+function showView(index) {
+
+  views.forEach((v) => {
+    v.classList.add("hidden");
+  });
+
+  views[index].classList.remove("hidden");
+}
 
 function openModal() {
-	modal.style.display = "block";
-	body.style.overflow = "hidden";
-};
+  modal.classList.remove("hidden");
+  body.style.overflow = "hidden";
+}
 
 function closeModal() {
-	modal.style.display = "none";
-	body.style.overflow = "auto";
-};
+  modal.classList.add("hidden");
+  body.style.overflow = "auto";
+}
 
 function changeSlides(i_change) {
-	i = (((i-1+i_change+10)%totalI)+1) // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
-	showSlides(i);
-};
+  i = ((i - 1 + i_change + 10) % totalI) + 1; // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
+  showSlides(i);
+}
 
 function currentSlide(slidesIndex) {
-	i = slidesIndex
-	showSlides(i);
-};
+  i = slidesIndex;
+  showSlides(i);
+}
 
 function showSlides(i) {
-	// Hide unwanted images
-	let n = 0
-	for (n = 0; n < slides.length; n++) {
-    slides[n].style.display = "none";
-};
+  // Hide unwanted images
+  let n = 0;
+  for (n = 0; n < slides.length; n++) {
+    slides[n].classList.add("hidden");
+  }
 
-	// Show requested image
-	slides[i-1].style.display = "flex";
-	caption.innerText = document.querySelectorAll(".modal .slide img.photo")[i-1].getAttribute("alt");
-};
+  // Show requested image
+  slides[i - 1].classList.remove("hidden");
+}
 
-document.addEventListener('keydown', handleKeyPress);
+document.addEventListener("keydown", handleKeyPress);
 
 function handleKeyPress(event) {
-	let key = event.key;
-	if (key === "ArrowLeft" || key === "a") {
-		changeSlides(-1)
-	}; if (key === "ArrowRight" || key === "d") {
-		changeSlides(1)
-	}; if (key === "Escape") {
-		closeModal()
-	};
-};
+  let key = event.key;
+  if (key === "ArrowLeft" || key === "a") {
+    changeSlides(-1);
+  }
+  if (key === "ArrowRight" || key === "d") {
+    changeSlides(1);
+  }
+  if (key === "Escape") {
+    closeModal();
+  }
+}
 
-// TODO: add event listener to background of modal to close if clicked
-Array.from(slides).forEach(slide => {
-	slide.addEventListener("click", handleClick);
+// Close modal when clicking on the overlay background
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
 });
 
-function handleClick(event) {
-	if (event.target === event.currentTarget) {
-		closeModal()
-	};
-};
+// Show/hide controls based on mouse position
+const imageContainer = document.getElementById("image-container");
+const prevContainer = document.getElementById("prev-container");
+const nextContainer = document.getElementById("next-container");
+const closeBtn = document.getElementById("close-btn");
+
+if (imageContainer && prevContainer && nextContainer) {
+  imageContainer.addEventListener("mouseenter", function () {
+    prevContainer.classList.add("opacity-0");
+    nextContainer.classList.add("opacity-0");
+  });
+
+  imageContainer.addEventListener("mouseleave", function () {
+    prevContainer.classList.remove("opacity-0");
+    nextContainer.classList.remove("opacity-0");
+  });
+}
