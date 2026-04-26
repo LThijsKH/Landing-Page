@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const panel = document.getElementById("sticky-panel");
   const sections = document.querySelectorAll("[data-index]");
+  const firstSection = sections[0];
+  const lastSection = sections[sections.length - 1];
   if (!panel || !sections.length) return;
 
   let currentIndex = -1;
@@ -14,12 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -------- BUILD PANEL -------- */
   panel.innerHTML = `
-    <div id="text-container" class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-6">
-      <h2 id="text-title" class="text-3xl font-medium leading-tight min-h-18"></h2>
-
-      <div id="meta-location-wrap" class="mt-4 text-sm text-muted space-y-1 min-h-14">
+    <div id="text-container" class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-3">
+      <h2 id="text-title" class="text-3xl font-medium leading-tight min-h-4"></h2>
+      <div id="meta-location-wrap" class="mt-1 text-sm text-muted space-y-1 min-h-14">
         <div id="meta-location" class="text-text dark:text-d-text font-medium h-5"></div>
-        <a id="meta-coords" class="text-xs opacity-70 underline h-4 block" target="_blank" rel="noopener"></a>
+        <a id="meta-coords" class="text-xs opacity-70 underline h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener"></a>
       </div>
 
       <div class="mt-6 text-sm text-muted space-y-2 min-h-20">
@@ -135,13 +136,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600); // longer → less aggressive snapping
   }
 
+  function isInGallery() {
+    const firstRect = firstSection.getBoundingClientRect();
+    const lastRect = lastSection.getBoundingClientRect();
+
+    const viewportMid = window.innerHeight / 2;
+
+    // must be well inside first section (not just touching it)
+    const enteredTop = firstRect.top <= 0;
+
+    // must not have passed last section
+    const beforeBottom = lastRect.bottom >= viewportMid;
+
+    return enteredTop && beforeBottom;
+  }
+
   window.addEventListener("scroll", () => {
     if (isSnapping) return;
 
     clearTimeout(scrollTimeout);
 
+
     // ✅ slower trigger → less “twitchy”
-    scrollTimeout = setTimeout(snapToClosest, 260);
+    scrollTimeout = setTimeout(() => {
+      if (!isInGallery()) return; // 🚫 DO NOT SNAP outside gallery
+      snapToClosest();
+    }, 120);
   });
 
   /* -------- INIT -------- */
