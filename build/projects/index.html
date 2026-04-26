@@ -4,92 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta lang="en">
-    <title>Projects | Leo K-H</title>
+    <title>Projects - Leo Keeren-Hall</title>
     <link rel="stylesheet" href="/static/styles/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kapakana:wght@300..400&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    
 </head>
-<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text">
-    <nav class="min-w-full sticky top-0 flex justify-center md:justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
-        <div class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted -mb-px"><a href="/">LTKH</span></a></div>
-        <div class="h-full justify-center align-middle hidden p-2 m-3">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="6" width="18" height="14" rx="2"></rect>
-                <circle cx="12" cy="13" r="3"></circle>
-                <path d="M8 6l1.5-2h5L16 6"></path>
-            </svg>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-            </svg>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M4 9V4h5"></path>
-                <path d="M20 9V4h-5"></path>
-                <path d="M4 15v5h5"></path>
-                <path d="M20 15v5h-5"></path>
-            </svg>
-        </div>
-        <div class="hidden md:flex px-2">
-            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted -mb-px" href="/photography/">Photography</a>
-            <a class="mx-5 py-5 border-b-2 border-accent  -mb-px" href="/projects/">Projects</a>
-            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
+<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text selection:bg-accent">
+    <nav class="min-w-full sticky top-0 z-50 border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
+        <div class="relative flex justify-center md:justify-between">
+            <div class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted -mb-px"><a href="/">LTKH</a></div>
+            <!-- TODO: setup switching views in phtoography template -->
+            <div class="absolute top-0 w-1/10 left-[45vw] h-full justify-center align-middle hidden">
+                <button onclick="showView(0)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <rect x="3" y="6" width="18" height="14" rx="2"></rect>
+                        <circle cx="12" cy="13" r="3"></circle>
+                        <path d="M8 6l1.5-2h5L16 6"></path>
+                    </svg>
+                </button>
+                <button onclick="showView(1)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                    </svg>
+                </button>
+                <button onclick="showView(2)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path d="M4 9V4h5"></path>
+                        <path d="M20 9V4h-5"></path>
+                        <path d="M4 15v5h5"></path>
+                        <path d="M20 15v5h-5"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex px-2">
+                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted -mb-px" href="/photography/">Photography</a>
+                <a class="mx-5 py-5 border-b-2 border-accent  -mb-px" href="/projects/">Projects</a>
+                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
+            </div>
         </div>
     </nav>
     <div class="m-5 min-h-[calc(100vh-25rem)]">
-        <h1>Projects</h1>
         
-    <ul>
-        
-            <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
-                <h2>Example<span>8-06-2012</span></h2>
-                
-                    
-                        <img class="max-h" alt="Example external pic placeholder" src="https://picsum.photos/1080/400">
-                    
-                
-                <p>Placeholder project describing what kind of work will go here.</p>
-                <div>
-                    
-                        <a href="https://example.com" target="_blank" rel="noopener">Website</a>
-                    
-                    
-                        <a href="github.com" target="_blank" rel="noopener">Repository</a>
-                    
-                </div>
-            </li>
-        
-            <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
-                <h2>Example 2<span>18-06-1997</span></h2>
-                
-                <p>Project without a example link and only a repositorty.</p>
-                <div>
-                    
-                    
-                        <a href="github.com" target="_blank" rel="noopener">Repository</a>
-                    
-                </div>
-            </li>
-        
-            <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
-                <h2>Example<span>12-12-2012</span></h2>
-                
-                    
-                        <img class="max-h-100" alt="Example local pic placeholder" src="/static/img/photos/nyc.jpeg">
-                    
-                
-                <p>Placeholder project without a repo and only a link</p>
-                <div>
-                    
-                        <a href="https://example.com" target="_blank" rel="noopener">Website</a>
-                    
-                    
-                </div>
-            </li>
-        
-    </ul>
+<h1 class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-1.5">
+  Projects
+</h1>
+<ul>
+  
+  <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
+    <h2>Example<span>8-06-2012</span></h2>
+     
+    <img class="max-h" alt="Example external pic placeholder" src="https://picsum.photos/1080/400" />
+     
+    <p>Placeholder project describing what kind of work will go here.</p>
+    <div>
+      
+      <a href="https://example.com" target="_blank" rel="noopener">Website</a>
+       
+      <a href="github.com" target="_blank" rel="noopener"
+        >Repository</a
+      >
+      
+    </div>
+  </li>
+  
+  <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
+    <h2>Example 2<span>18-06-1997</span></h2>
+    
+    <p>Project without a example link and only a repositorty.</p>
+    <div>
+       
+      <a href="github.com" target="_blank" rel="noopener"
+        >Repository</a
+      >
+      
+    </div>
+  </li>
+  
+  <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
+    <h2>Example<span>12-12-2012</span></h2>
+     
+    <img
+      class="max-h-100"
+      alt="Example local pic placeholder"
+      src="/static/img/photos/nyc.jpeg"
+    />
+     
+    <p>Placeholder project without a repo and only a link</p>
+    <div>
+      
+      <a href="https://example.com" target="_blank" rel="noopener">Website</a>
+       
+    </div>
+  </li>
+  
+</ul>
 
     </div>
     <footer class="min-w-full items-center justify-center md:justify-between border-t dark:border-d-line border-line print:hidden p-4 flex bg-bg dark:bg-d-bg">
@@ -98,18 +111,18 @@
                 <h3 id="Contact" class="font-bold">
                     Contact
                 </h3>
-                <div id="links" class="flex flex-col gap-1">
-                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-muted" target="_blank" rel="noopener">
+                <div id="links" class="flex flex-col gap-1 hover:text-muted">
+                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
                         LinkedIn
                     </a>
-                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-muted">
+                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-text dark:hover:text-d-text">
                         Email
                     </a>
-                    <a href="https://github.com/lthijskh" class="hover:text-muted" target="_blank" rel="noopener">
+                    <a href="https://github.com/lthijskh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
                         GitHub
                     </a>
                     <iframe id="printFrame" src="index.html" style="display:none;"></iframe>
-                    <a href="#" onclick="window.print()" class="hover:text-muted">
+                    <a href="#" onclick="window.print()" class="hover:text-text dark:hover:text-d-text">
                         Print my resume
                     </a>
                 </div>

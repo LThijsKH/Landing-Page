@@ -1,0 +1,38 @@
+{
+  "education": [
+    {
+      "title": "McGill University",
+      "subtitle": "Bachelor of Electrical Engineering",
+      "date": "Fall 2026",
+      "note": "(Registered)",
+      "details": []
+    },
+    {
+      "title": "Dawson College",
+      "subtitle": "DEC in Computer Science, Science & Math",
+      "date": "2024- 2026",
+      "note": "(Expected)",
+      "details": ["Honour Role (every semester)"]
+    },
+    {
+      "title": "Villa Maria",
+      "subtitle": "High School Diploma in Science (French Program)",
+      "date": "2019-2024",
+      "note": "(Registered)"
+    }
+  ],
+  "work": [
+    {
+      "title": "Clerk - Super C",
+      "subtitle": "Fruit & Vegetable Department",
+      "date": "July 2022 - May 2023",
+      "details": [
+        "Bilingual Customer Service (French and English)", 
+        "Independently managed my department during evening shifts", 
+        "Handled deliveries and organized stock from incoming pallets", 
+        "Closed the department at end of shift", 
+        "Restocked and maintained produce displays"
+      ]
+    }
+  ]
+}

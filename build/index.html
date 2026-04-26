@@ -4,66 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta lang="en">
-    <title>Leo K-H</title>
+    <title>Leo Keeren-Hall</title>
     <link rel="stylesheet" href="/static/styles/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kapakana:wght@300..400&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    
 </head>
-<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text">
-    <nav class="min-w-full sticky top-0 flex justify-center md:justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
-        <div class="mx-5 py-5 border-b-2 border-accent -mb-px"><a href="/">LTKH</span></a></div>
-        <div class="h-full justify-center align-middle hidden p-2 m-3">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="6" width="18" height="14" rx="2"></rect>
-                <circle cx="12" cy="13" r="3"></circle>
-                <path d="M8 6l1.5-2h5L16 6"></path>
-            </svg>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-            </svg>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor p-5" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M4 9V4h5"></path>
-                <path d="M20 9V4h-5"></path>
-                <path d="M4 15v5h5"></path>
-                <path d="M20 15v5h-5"></path>
-            </svg>
-        </div>
-        <div class="hidden md:flex px-2">
-            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted -mb-px" href="/photography/">Photography</a>
-            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted dark:hover:border-d-muted  -mb-px" href="/projects/">Projects</a>
-            <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
+<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text selection:bg-accent">
+    <nav class="min-w-full sticky top-0 z-50 border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
+        <div class="relative flex justify-center md:justify-between">
+            <div class="mx-5 py-5 border-b-2 border-accent -mb-px"><a href="/">LTKH</a></div>
+            <!-- TODO: setup switching views in phtoography template -->
+            <div class="absolute top-0 w-1/10 left-[45vw] h-full justify-center align-middle hidden">
+                <button onclick="showView(0)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <rect x="3" y="6" width="18" height="14" rx="2"></rect>
+                        <circle cx="12" cy="13" r="3"></circle>
+                        <path d="M8 6l1.5-2h5L16 6"></path>
+                    </svg>
+                </button>
+                <button onclick="showView(1)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                    </svg>
+                </button>
+                <button onclick="showView(2)" class="cursor-pointer">
+                    <svg class="w-6 h-6 m-auto text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path d="M4 9V4h5"></path>
+                        <path d="M20 9V4h-5"></path>
+                        <path d="M4 15v5h5"></path>
+                        <path d="M20 15v5h-5"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex px-2">
+                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted -mb-px" href="/photography/">Photography</a>
+                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted  -mb-px" href="/projects/">Projects</a>
+                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
+            </div>
         </div>
     </nav>
     <div class="m-5 min-h-[calc(100vh-25rem)]">
-        <h1>Leo Thijs Keeren-Hall</h1>
         
-    <p> - Student - </p>
+<div id="hero" class="flex-col p-32 mb-3 h-screen">
+  <div class="flex-col">
+    <h1
+      class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-3"
+    >
+      Leo Keeren-Hall
+    </h1>
+  </div>
+  <a href="/photography/"><img src="/static/img/photos/lighthouse.jpeg" class="print:hidden mt-auto w-full h-120 object-cover relative bottom-0 md:-mt-10"/></a>
+</div>
+<div class="p-3">
+  <div>
     <h2>About me</h2>
-    Hello
-    <h2>Experience</h2>
+    <p class="indent-2 max-w-2/3">I’m a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="/photography/">photography</a>, practical <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="/projects/"">projects</a>, biking, and I'm always looking to learn by doing.</p>
+  </div>
+  <div>
+    <h2 class="text-2xl">Experience</h2>
     Schooling:
     <ul>
-        <li>
-            <h3>Villa Maria High School<span>(2019-2024)</span></h3>
-            <ul>
-                <li></li>
-                <li></li>
+      <div class="mt-4">
+        
+        <div class="flex gap-x-4">
+          <div class="relative">
+            <div class="relative z-10 size-6 flex justify-center items-center">
+              <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+            </div>
+            
+            <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
+            
+          </div>
+          <div class="pb-8">
+            <p class="font-light">
+              Fall 2026
+              <span class="text-muted italic"> (Registered) </span>
+            </p>
+            <h3 class="font-serif font-bold text-xl">McGill University</h3>
+            <p class="italic">Bachelor of Electrical Engineering</p>
+            
+          </div>
+        </div>
+        
+        <div class="flex gap-x-4">
+          <div class="relative">
+            <div class="relative z-10 size-6 flex justify-center items-center">
+              <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+            </div>
+            
+            <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
+            
+          </div>
+          <div class="pb-8">
+            <p class="font-light">
+              2024- 2026
+              <span class="text-muted italic"> (Expected) </span>
+            </p>
+            <h3 class="font-serif font-bold text-xl">Dawson College</h3>
+            <p class="italic">DEC in Computer Science, Science &amp; Math</p>
+            
+            <ul class="list-disc ml-4">
+              
+              <li>Honour Role (every semester)</li>
+              
             </ul>
-        </li>
-        <li>
-            <h3>Dawson College<span>(2024-2026)</span></h3>
-            <ul>
-                <li>Honours Role Every Semester</li>
-                <li></li>
-            </ul>
-        </li>
+            
+          </div>
+        </div>
+        
+        <div class="flex gap-x-4">
+          <div class="relative">
+            <div class="relative z-10 size-6 flex justify-center items-center">
+              <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+            </div>
+            
+          </div>
+          <div class="pb-8">
+            <p class="font-light">
+              2019-2024
+              <span class="text-muted italic"> (Registered) </span>
+            </p>
+            <h3 class="font-serif font-bold text-xl">Villa Maria</h3>
+            <p class="italic">High School Diploma in Science (French Program)</p>
+            
+          </div>
+        </div>
+        
+      </div>
     </ul>
-    <h2>Placeholder</h2>
-    I am still working on the website
+    Work Experience
+    <div>
+      
+      <div class="flex gap-x-4">
+        <div class="relative">
+          <div class="relative z-10 size-6 flex justify-center items-center">
+            <div class="size-2 rounded-full bg-text"></div>
+          </div>
+          
+        </div>
+        <div class="pb-8">
+          <p class="font-light">
+            July 2022 - May 2023
+            <span class="text-muted italic">  </span>
+          </p>
+          <h3 class="font-serif font-bold text-xl">Clerk - Super C</h3>
+          <p class="italic">Fruit &amp; Vegetable Department</p>
+          
+          <ul class="list-disc ml-4">
+            
+            <li>Bilingual Customer Service (French and English)</li>
+            
+            <li>Independently managed my department during evening shifts</li>
+            
+            <li>Handled deliveries and organized stock from incoming pallets</li>
+            
+            <li>Closed the department at end of shift</li>
+            
+            <li>Restocked and maintained produce displays</li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
     </div>
     <footer class="min-w-full items-center justify-center md:justify-between border-t dark:border-d-line border-line print:hidden p-4 flex bg-bg dark:bg-d-bg">
@@ -72,18 +183,18 @@
                 <h3 id="Contact" class="font-bold">
                     Contact
                 </h3>
-                <div id="links" class="flex flex-col gap-1">
-                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-muted" target="_blank" rel="noopener">
+                <div id="links" class="flex flex-col gap-1 hover:text-muted">
+                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
                         LinkedIn
                     </a>
-                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-muted">
+                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-text dark:hover:text-d-text">
                         Email
                     </a>
-                    <a href="https://github.com/lthijskh" class="hover:text-muted" target="_blank" rel="noopener">
+                    <a href="https://github.com/lthijskh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
                         GitHub
                     </a>
                     <iframe id="printFrame" src="index.html" style="display:none;"></iframe>
-                    <a href="#" onclick="window.print()" class="hover:text-muted">
+                    <a href="#" onclick="window.print()" class="hover:text-text dark:hover:text-d-text">
                         Print my resume
                     </a>
                 </div>

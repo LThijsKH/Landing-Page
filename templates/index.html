@@ -1,35 +1,85 @@
-{% extends "layout.html" %}
-
-{% block title %}{{ super() }}{% endblock %}
-
-{% block extra_head %}{% endblock %}
-
-{% block header %}Leo Thijs Keeren-Hall{% endblock %}
-
-{% set active_page = 'home' %}
-
-{% block content %}
-    <p> - Student - </p>
+{% extends "layout.html" %} {% block title %}{{ super() }}{% endblock %} {%
+block extra_head %}{% endblock %} {% set active_page = 'home' %} {% block
+content %}
+<div id="hero" class="flex-col p-32 mb-3 h-screen">
+  <div class="flex-col">
+    <h1
+      class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-3"
+    >
+      Leo Keeren-Hall
+    </h1>
+  </div>
+  <a href="{{ url_for('photography') }}"><img src="/static/img/photos/lighthouse.jpeg" class="print:hidden mt-auto w-full h-120 object-cover relative bottom-0 md:-mt-10"/></a>
+</div>
+<div class="p-3">
+  <div>
     <h2>About me</h2>
-    Hello
-    <h2>Experience</h2>
+    <p class="indent-2 max-w-2/3">I’m a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('photography') }}">photography</a>, practical <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('projects') }}"">projects</a>, biking, and I'm always looking to learn by doing.</p>
+  </div>
+  <div>
+    <h2 class="text-2xl">Experience</h2>
     Schooling:
     <ul>
-        <li>
-            <h3>Villa Maria High School<span>(2019-2024)</span></h3>
-            <ul>
-                <li></li>
-                <li></li>
+      <div class="mt-4">
+        {% for item in cv.education %}
+        <div class="flex gap-x-4">
+          <div class="relative">
+            <div class="relative z-10 size-6 flex justify-center items-center">
+              <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+            </div>
+            {% if not loop.last %}
+            <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
+            {% endif %}
+          </div>
+          <div class="pb-8">
+            <p class="font-light">
+              {{ item.date }}
+              <span class="text-muted italic"> {{ item.note }} </span>
+            </p>
+            <h3 class="font-serif font-bold text-xl">{{ item.title }}</h3>
+            <p class="italic">{{ item.subtitle }}</p>
+            {% if item.details %}
+            <ul class="list-disc ml-4">
+              {% for d in item.details %}
+              <li>{{ d }}</li>
+              {% endfor %}
             </ul>
-        </li>
-        <li>
-            <h3>Dawson College<span>(2024-2026)</span></h3>
-            <ul>
-                <li>Honours Role Every Semester</li>
-                <li></li>
-            </ul>
-        </li>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </ul>
-    <h2>Placeholder</h2>
-    I am still working on the website
+    Work Experience
+    <div>
+      {% for job in cv.work %}
+      <div class="flex gap-x-4">
+        <div class="relative">
+          <div class="relative z-10 size-6 flex justify-center items-center">
+            <div class="size-2 rounded-full bg-text"></div>
+          </div>
+          {% if not loop.last %}
+          <div class="absolute top-6 bottom-0 left-3 w-px bg-line"></div>
+          {% endif %}
+        </div>
+        <div class="pb-8">
+          <p class="font-light">
+            {{ job.date }}
+            <span class="text-muted italic"> {{ job.note }} </span>
+          </p>
+          <h3 class="font-serif font-bold text-xl">{{ job.title }}</h3>
+          <p class="italic">{{ job.subtitle }}</p>
+          {% if job.details %}
+          <ul class="list-disc ml-4">
+            {% for d in job.details %}
+            <li>{{ d }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,35 +1,33 @@
-{% extends "layout.html" %}
-
-{% block title %}Projects | {{ super() }}{% endblock %}
-
-{% block header %}Projects{% endblock %}
-
-{% block extra_head %}{% endblock %}
-
-{% set active_page = 'projects' %}
-
-{% block content %}
-    <ul>
-        {% for project in projects %}
-            <li>
-                <h2>{{ project.title }}<span>{{ project.date }}</span></h2>
-                {% if project.image %}
-                    {% if "http" in project.image %}
-                        <img alt="{{ project.alt }}" src="{{ project.image }}">
-                    {% else %}
-                        <img alt="{{ project.alt }}" src="{{url_for('static', filename=project.image)}}">
-                    {% endif %}
-                {% endif %}
-                <p>{{ project.description }}</p>
-                <div>
-                    {% if project.link %}
-                        <a href="{{ project.link }}" target="_blank" rel="noopener">Website</a>
-                    {% endif %}
-                    {% if project.repository %}
-                        <a href="{{ project.repository }}" target="_blank" rel="noopener">Repository</a>
-                    {% endif %}
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+{% extends "layout.html" %} {% block title %}Projects - {{ super() }}{% endblock
+%} {% block extra_head %}{% endblock %} {% set active_page = 'projects' %} {%
+block content %}
+<h1 class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-1.5">
+  Projects
+</h1>
+<ul>
+  {% for project in projects %}
+  <li class="bg-gray-300 rounded-4xl m-8 p-3 align-middle">
+    <h2>{{ project.title }}<span>{{ project.date }}</span></h2>
+    {% if project.image %} {% if "http" in project.image %}
+    <img class="max-h" alt="{{ project.alt }}" src="{{ project.image }}" />
+    {% else %}
+    <img
+      class="max-h-100"
+      alt="{{ project.alt }}"
+      src="{{url_for('static', filename=project.image)}}"
+    />
+    {% endif %} {% endif %}
+    <p>{{ project.description }}</p>
+    <div>
+      {% if project.link %}
+      <a href="{{ project.link }}" target="_blank" rel="noopener">Website</a>
+      {% endif %} {% if project.repository %}
+      <a href="{{ project.repository }}" target="_blank" rel="noopener"
+        >Repository</a
+      >
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}
