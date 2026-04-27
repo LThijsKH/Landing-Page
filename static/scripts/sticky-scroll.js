@@ -17,21 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
   /* -------- BUILD PANEL -------- */
   panel.innerHTML = `
     <div id="text-container" class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-3">
-      <h2 id="text-title" class="text-3xl font-medium leading-tight min-h-4"></h2>
-      <div id="meta-location-wrap" class="mt-1 text-sm text-muted space-y-1 min-h-14">
+      <h2 id="text-title" class="text-3xl font-medium leading-tight min-h-[3.5rem]"></h2>
+
+      <div id="meta-location-wrap" class="mt-1 text-sm text-muted space-y-1 min-h-[3.5rem]">
         <div id="meta-location" class="text-text dark:text-d-text font-medium h-5"></div>
         <a id="meta-coords" class="text-xs opacity-70 underline h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener"></a>
       </div>
 
-      <div class="mt-6 text-sm text-muted space-y-2 min-h-20">
+      <div class="mt-6 text-sm text-muted space-y-2 min-h-[5rem]">
         <div id="meta-camera" class="font-medium text-text dark:text-d-text h-5"></div>
         <div id="meta-lens" class="text-xs h-4"></div>
 
-        <div class="flex gap-6 text-xs mt-2 min-h-5">
-          <span id="meta-iso" class="min-w-12"></span>
-          <span id="meta-focal" class="min-w-16"></span>
-          <span id="meta-aperture" class="min-w-16"></span>
-          <span id="meta-shutter" class="min-w-20"></span>
+        <div class="flex gap-6 text-xs mt-2 min-h-[1.25rem]">
+          <span id="meta-iso" class="min-w-[3rem]"></span>
+          <span id="meta-focal" class="min-w-[4rem]"></span>
+          <span id="meta-aperture" class="min-w-[4rem]"></span>
+          <span id="meta-shutter" class="min-w-[5rem]"></span>
         </div>
       </div>
     </div>
@@ -52,6 +53,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const apertureEl = document.getElementById("meta-aperture");
   const shutterEl = document.getElementById("meta-shutter");
 
+  /* -------- NUMBER SCRAMBLE -------- */
+  function scrambleNumber(el, finalText, duration = 400) {
+    if (!finalText) {
+      el.textContent = "";
+      return;
+    }
+
+    const chars = "0123456789";
+    const length = finalText.length;
+
+    let start = null;
+
+    function animate(timestamp) {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+
+      let output = "";
+
+      for (let i = 0; i < length; i++) {
+        if (progress > i / length) {
+          output += finalText[i];
+        } else {
+          output += chars[Math.floor(Math.random() * chars.length)];
+        }
+      }
+
+      el.textContent = output;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
   /* -------- UPDATE TEXT -------- */
   function updateText(index) {
     if (index === currentIndex) return;
@@ -65,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       titleEl.textContent = data.title || `Photo ${index}`;
 
-      // Use visibility instead of display → prevents layout shift
       if (data.location) {
         locationEl.textContent = data.location;
         locationEl.style.visibility = "visible";
@@ -75,7 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (data.coords) {
         const [lat, lng] = data.coords.split(",");
-        coordsEl.textContent = `${Number(lat).toFixed(4)}, ${Number(lng).toFixed(4)}`;
+        const formatted = `${Number(lat).toFixed(4)}, ${Number(lng).toFixed(4)}`;
+        scrambleNumber(coordsEl, formatted);
         coordsEl.href = `https://www.google.com/maps?q=${data.coords}`;
         coordsEl.style.visibility = "visible";
       } else {
@@ -91,13 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
       cameraEl.textContent = data.camera || "";
       lensEl.textContent = data.lens || "";
 
-      isoEl.textContent = data.iso ? `ISO ${data.iso}` : "";
-      focalEl.textContent = data.focal || "";
-      apertureEl.textContent = data.aperture || "";
-      shutterEl.textContent = data.shutter || "";
+      scrambleNumber(isoEl, data.iso ? `ISO ${data.iso}` : "");
+      scrambleNumber(focalEl, data.focal || "");
+      scrambleNumber(apertureEl, data.aperture || "");
+      scrambleNumber(shutterEl, data.shutter || "");
 
       container.style.opacity = 1;
-    }, 180); // slightly slower fade → smoother
+    }, 180);
   }
 
   /* -------- SNAP -------- */
@@ -116,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // ✅ IMPORTANT: don’t snap if already close (prevents jitter)
     if (minDist < 40) {
       updateText(closest);
       return;
@@ -126,42 +162,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections[closest].scrollIntoView({
       behavior: "smooth",
-      block: "center"
+      block: "center",
     });
 
     updateText(closest);
 
     setTimeout(() => {
       isSnapping = false;
-    }, 600); // longer → less aggressive snapping
+    }, 600);
   }
 
+  /* -------- MOBILE-SAFE GALLERY CHECK -------- */
   function isInGallery() {
     const firstRect = firstSection.getBoundingClientRect();
     const lastRect = lastSection.getBoundingClientRect();
 
-    const viewportMid = window.innerHeight / 2;
-
-    // must be well inside first section (not just touching it)
-    const enteredTop = firstRect.top <= 0;
-
-    // must not have passed last section
-    const beforeBottom = lastRect.bottom >= viewportMid;
-
-    return enteredTop && beforeBottom;
+    return (
+      firstRect.top < window.innerHeight * 0.5 &&
+      lastRect.bottom > window.innerHeight * 0.5
+    );
   }
 
+  /* -------- SCROLL -------- */
   window.addEventListener("scroll", () => {
     if (isSnapping) return;
 
     clearTimeout(scrollTimeout);
 
-
-    // ✅ slower trigger → less “twitchy”
     scrollTimeout = setTimeout(() => {
-      if (!isInGallery()) return; // 🚫 DO NOT SNAP outside gallery
+      if (!isInGallery()) return;
       snapToClosest();
-    }, 120);
+    }, 220); // slower for mobile
   });
 
   /* -------- INIT -------- */

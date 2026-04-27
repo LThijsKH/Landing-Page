@@ -1,24 +1,28 @@
 {% extends "layout.html" %} {% block title %}{{ super() }}{% endblock %} {%
 block extra_head %}{% endblock %} {% set active_page = 'home' %} {% block
 content %}
-<div id="hero" class="flex-col p-32 mb-3 h-screen">
+<div id="hero" class="flex-col p-8 md:p-32 mb-3">
   <div class="flex-col">
     <h1
-      class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-3"
+      class="font-serif text-5xl md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-7xl md:first-letter:-mr-3 first-letter:-mr-1.5"
     >
       Leo Keeren-Hall
     </h1>
   </div>
   <a href="{{ url_for('photography') }}"><img src="/static/img/photos/lighthouse.jpeg" class="print:hidden mt-auto w-full h-120 object-cover relative bottom-0 md:-mt-10"/></a>
 </div>
-<div class="p-3">
-  <div>
-    <h2>About me</h2>
-    <p class="indent-2 max-w-2/3">I’m a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('photography') }}">photography</a>, practical <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('projects') }}"">projects</a>, biking, and I'm always looking to learn by doing.</p>
+<div class="p-3 flex flex-col">
+  <div class="px-auto">
+    <h2 class="font-serif text-2xl">About me</h2>
+    <p class="indent-2 max-w-2/3">
+      I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about 
+      <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('photography') }}">photography</a>, practical 
+      <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('projects') }}"">projects</a>, biking, and I'm always looking to learn by doing.
+    </p>
   </div>
   <div>
-    <h2 class="text-2xl">Experience</h2>
-    Schooling:
+    <h2 class="font-serif text-2xl">Experience</h2>
+    <h3 class="font-bold text-lg">Schooling</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
@@ -50,16 +54,16 @@ content %}
         {% endfor %}
       </div>
     </ul>
-    Work Experience
+    <h3 class="font-bold text-lg">Work Experience</h3>
     <div>
       {% for job in cv.work %}
       <div class="flex gap-x-4">
         <div class="relative">
           <div class="relative z-10 size-6 flex justify-center items-center">
-            <div class="size-2 rounded-full bg-text"></div>
+            <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
           </div>
           {% if not loop.last %}
-          <div class="absolute top-6 bottom-0 left-3 w-px bg-line"></div>
+          <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
           {% endif %}
         </div>
         <div class="pb-8">

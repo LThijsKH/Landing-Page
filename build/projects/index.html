@@ -1,29 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta lang="en" />
     <title>Projects - Leo Keeren-Hall</title>
-    <link rel="stylesheet" href="/static/styles/output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kapakana:wght@300..400&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="/static/styles/output.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kapakana:wght@300..400&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
     
-</head>
-<body class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text selection:bg-accent">
-    <nav class="min-w-full sticky top-0 z-50 border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg">
-        <div class="relative flex justify-center md:justify-between">
-            <div class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted -mb-px"><a href="/">LTKH</a></div>
-            <div class="hidden md:flex px-2">
-                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted hover:darkborder-d-muted -mb-px" href="/photography/">Photography</a>
-                <a class="mx-5 py-5 border-b-2 border-accent  -mb-px" href="/projects/">Projects</a>
-                <a class="mx-5 py-5 border-b-2 border-transparent hover:border-muted -mb-px" href="#Contact">Contact</a>
-            </div>
-        </div>
+  </head>
+  <body
+    class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text selection:bg-accent"
+  >
+    <nav
+      class="min-w-full sticky top-0 z-50 flex md:flex-row flex-col justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg"
+    >
+      <div
+        class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted hover:darkborder-d-muted md:-mb-px"
+      >
+        <a href="/">LTKH</a>
+      </div>
+      <div
+        id="nav-buttons"
+        class="hidden flex flex-col md:flex md:flex-row px-2"
+      >
+        <a
+          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted hover:darkborder-d-muted md:-mb-px"
+          href="/photography/"
+          >Photography</a
+        >
+        <a
+          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 border-accent  md:-mb-px"
+          href="/projects/"
+          >Projects</a
+        >
+        <a
+          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted md:-mb-px"
+          href="#Contact"
+          >Contact</a
+        >
+      </div>
+      <div
+        class="absolute top-0 right-0 w-6 h-6 md:hidden mx-5 py-5 border-b-2 -mb-px border-transparent hover:border-muted hover:darkborder-d-muted"
+        onclick="
+          document.getElementById('nav-buttons').classList.toggle('hidden')
+        "
+      >
+        <svg
+          class="text-text dark:text-d-text"
+          stroke="currentColor"
+          stroke-width="0.75"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+              fill="currentColor"
+            ></path>
+          </g>
+        </svg>
+      </div>
     </nav>
     <div class="m-5 min-h-[calc(100vh-25rem)]">
-        
+      
 <h1 class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-1.5">
   Projects
 </h1>
@@ -79,38 +135,61 @@
 </ul>
 
     </div>
-    <footer class="min-w-full items-center justify-center md:justify-between border-t dark:border-d-line border-line print:hidden p-4 flex bg-bg dark:bg-d-bg">
-        <div class="p-4 flex flex-col h- justify-between">
-            <div class="self-center">
-                <h3 id="Contact" class="font-bold">
-                    Contact
-                </h3>
-                <div id="links" class="flex flex-col gap-1 hover:text-muted">
-                    <a href="https://www.linkedin.com/in/leotkh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
-                        LinkedIn
-                    </a>
-                    <a href="mailto:lkeerenhall@gmail.com" class="hover:text-text dark:hover:text-d-text">
-                        Email
-                    </a>
-                    <a href="https://github.com/lthijskh" class="hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">
-                        GitHub
-                    </a>
-                    <iframe id="printFrame" src="index.html" style="display:none;"></iframe>
-                    <a href="#" onclick="window.print()" class="hover:text-text dark:hover:text-d-text">
-                        Print my resume
-                    </a>
-                </div>
-            </div>
-            <p class="text-muted font-extralight text-xs mt-auto">
-            © 2026 Leo T. K-H
-            </p>
+    <footer
+      class="flex sm:flex-row flex-col min-w-full items-center justify-center sm:justify-between border-t dark:border-d-line border-line print:hidden p-4 bg-bg dark:bg-d-bg contain-content"
+    >
+      <div class="p-4 flex flex-col justify-between self-start">
+        <div class="min-w-full">
+          <h3 id="Contact" class="font-bold">Contact</h3>
+          <div id="links" class="flex flex-col gap-1  hover:text-muted min-w-full">
+            <a
+              href="https://www.linkedin.com/in/leotkh"
+              class="hover:text-text dark:hover:text-d-text"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:lkeerenhall@gmail.com"
+              class="hover:text-text dark:hover:text-d-text"
+            >
+              Email
+            </a>
+            <a
+              href="https://github.com/lthijskh"
+              class="hover:text-text dark:hover:text-d-text"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+            </a>
+            <iframe
+              id="printFrame"
+              src="index.html"
+              style="display: none"
+            ></iframe>
+            <a
+              href="#"
+              onclick="window.print()"
+              class="hover:text-text dark:hover:text-d-text"
+            >
+              Print my resume
+            </a>
+          </div>
         </div>
-        <div class="p-4">
-            <h2 class="-m-7 text-right font-display font-extrabold text-9xl tracking-tighter">
-                Leo Thijs <br>
-                Keeren-Hall
-            </h2>
-        </div>
+        <p class="text-muted font-extralight text-xs mt-auto">
+          © 2026 Leo T. K-H
+        </p>
+      </div>
+      <div class="pt-3">
+        <h2
+          class="-m-7 -mr-3 text-right font-display font-extrabold text-7xl md:text-9xl sm:text-8xl tracking-tighter"
+        >
+          Leo Thijs <br/>
+          Keeren-Hall
+        </h2>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

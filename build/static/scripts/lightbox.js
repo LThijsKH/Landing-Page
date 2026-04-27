@@ -5,21 +5,20 @@ const slides = document.getElementsByClassName("slide");
 const caption = document.getElementById("caption");
 const slideCounter = document.getElementById("slide-counter");
 const totalI = slides.length;
-const single = document.getElementById('view-single');
-const grid = document.getElementById('view-grid');
-const views = [
-	single, grid, modal
-];
+const single = document.getElementById("view-single");
+const grid = document.getElementById("view-grid");
+const views = [single, grid, modal];
 let i = 1;
 showSlides(1);
 
 function showView(index) {
-
   views.forEach((v) => {
     v.classList.add("hidden");
+    v.classList.add("md:hidden");
   });
 
   views[index].classList.remove("hidden");
+  views[index].classList.remove("md:hidden");
 }
 
 function openModal() {
@@ -30,6 +29,12 @@ function openModal() {
 function closeModal() {
   modal.classList.add("hidden");
   body.style.overflow = "auto";
+  if (
+    single.classList.contains("hidden") &&
+    grid.classList.contains("hidden")
+  ) {
+    grid.classList.remove("hidden");
+  }
 }
 
 function changeSlides(i_change) {
