@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTimeout = setTimeout(() => {
       if (!isInGallery()) return;
       snapToClosest();
-    }, 220); // slower for mobile
+    }, 20); // slower for mobile
   });
 
   /* -------- INIT -------- */

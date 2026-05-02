@@ -3,16 +3,16 @@
 @theme {
     /* colours */
     --color-bg: #ffffff;
-    --color-text: #111111;
-    --color-muted: #6b7280;
+    --color-text: #1a1a1a;
+    --color-muted: #737373;
     --color-line: #e5e5e5;
-    --color-accent: #2563eb;
 
     --color-d-bg: #0a0a0a;
     --color-d-text: #f5f5f5;
     --color-d-muted: #a3a3a3;
     --color-d-line: #262626;
 
+    --color-accent: #3A855D;
 
     /* fonts */
     --font-sans: "Atkinson Hyperlegible", "Inter", system-ui, sans-serif;
