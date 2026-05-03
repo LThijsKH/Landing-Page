@@ -69,10 +69,14 @@ function handleKeyPress(event) {
     changeSlides(1);
   }
   if (key === "Escape") {
-    if (currentView == 0) {
-      currentView = 1
+    if (!helpPopup.classList.contains("hidden")) {
+      closeHelp();
+    } else {
+      if (currentView == 0) {
+        currentView = 1
+      }
+      showView(currentView-1);
     }
-    showView(currentView-1);
   }
   if (key === "f") {
     if (currentView == 2) {
@@ -106,3 +110,25 @@ if (imageContainer && prevContainer && nextContainer) {
     nextContainer.classList.remove("opacity-0");
   });
 }
+
+// Help Pop Up
+const helpTrigger = document.getElementById("help-trigger");
+const helpPopup = document.getElementById("help-popup");
+
+function initHelp() {
+  if (!localStorage.getItem("seenHelp")) {
+    helpTrigger.classList.remove("hidden");
+  }
+}
+
+function openHelp() {
+  helpPopup.classList.remove("hidden");
+}
+
+function closeHelp() {
+  helpPopup.classList.add("hidden");
+  helpTrigger.classList.add("hidden");
+  localStorage.setItem("seenHelp", "true");
+}
+
+document.addEventListener("DOMContentLoaded", initHelp);

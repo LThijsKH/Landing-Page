@@ -755,6 +755,58 @@
     </button>
   </div>
 </div>
+<div id="help-trigger"
+     class="hidden fixed bottom-6 right-6 z-[100]">
+  <button
+    onclick="openHelp()"
+    class="px-3 py-2 text-xs rounded-full bg-bg dark:bg-d-bg border border-line dark:border-d-line shadow hover:opacity-80">
+    ?
+  </button>
+</div>
+<div id="help-popup" class="hidden fixed inset-0 z-[101] bg-black/50 backdrop-blur-sm flex items-center justify-center p-6">
+  <div class="bg-bg dark:bg-d-bg w-full max-w-md rounded-xl border border-line dark:border-d-line shadow-lg p-6">
+
+    <h3 class="text-lg font-medium mb-5">How to use</h3>
+
+    <ul class="space-y-4 text-sm text-muted">
+
+      <li>
+        Click a photo to see how it was taken
+      </li>
+
+      <li>
+        Click it again to view it without distractions
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        Navigate with
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">A</span>
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">D</span>
+        or
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">←</span>
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">→</span>
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        View more details:
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">F</span>
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        Go back:
+        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">Esc</span>
+      </li>
+
+    </ul>
+
+    <button
+      onclick="closeHelp()"
+      class="mt-6 text-sm underline opacity-70 hover:opacity-100">
+      Got it!
+    </button>
+
+  </div>
+</div>
 
     </div>
     <footer
@@ -764,6 +816,18 @@
         <div class="min-w-full">
           <h3 id="Contact" class="font-bold">Contact</h3>
           <div id="links" class="flex flex-col gap-1  hover:text-muted min-w-full">
+            <a
+              onclick="window.print()"
+              class="hover:text-text dark:hover:text-d-text hidden"
+            >
+              Print my resume
+            </a>
+            <a
+              onclick="openHelp()"
+              class="hover:text-text dark:hover:text-d-text block"
+            >
+              Help navigating this page
+            </a>
             <a
               href="https://www.linkedin.com/in/leotkh"
               class="hover:text-text dark:hover:text-d-text"
@@ -785,13 +849,6 @@
               rel="noopener"
             >
               GitHub
-            </a>
-            <a
-              href=""
-              onclick="window.print()"
-              class="hover:text-text dark:hover:text-d-text hidden"
-            >
-              Print my resume
             </a>
           </div>
         </div>
