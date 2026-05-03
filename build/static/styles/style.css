@@ -20,3 +20,15 @@
     --font-accent: "Kapakana", serif;
     --font-display: "Anton", sans-serif;
 }
+
+@layer components {
+    .text-heading {
+        @apply font-serif font-bold text-xl
+    };
+    .text-subheading {
+        @apply font-bold text-lg;
+    }
+    .kbd {
+        @apply px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none
+    }
+}

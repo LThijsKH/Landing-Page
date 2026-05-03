@@ -21,28 +21,27 @@ content %}
 <div class="p-3 flex flex-col xl:flex-row justify-around">
   <div class="px-auto">
     <p class="max-w-xl text-base leading-relaxed">
-      I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about 
+      I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects or technical problem solving. Outside of school, I am passionate about 
       <a class="underline decoration-muted dark:decoration-d-muted hover:decoration-text dark:hover:decoration-d-text" href="{{ url_for('photography') }}">photography</a>, biking, and I'm always looking to learn by doing.</p>
     <div class="mt-12">
-      <h3 class="font-bold text-lg">Projects</h3>
+      <h1 class="text-subheading">Projects</h3>
       <div class="mt-4 space-y-4 relative">
         {% for project in projects %}
-          <a class="group" href="{{ url_for('projects') }}#{{ project.title }}">
+          <a class="group" href="{{ url_for('projects') }}#{{ project.slug }}">
             <div>
-              <h4 class="font-serif font-bold text-xl">{{ project.title }}</h4>
+              <h2 class="text-subheading">{{ project.title }}</h4>
               <p class="text-sm dark:text-d-muted text-muted group-hover:text-text dark:group-hover:text-d-text">{{ project.description }}</p>
             </div>
           </a>
         {% endfor %}
       </div>
-
       <a href="{{ url_for('projects') }}" class="text-sm text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text print:hidden">
         View all projects →
       </a>
     </div>
   </div>
   <div>
-    <h3 class="font-bold text-lg">Education</h3>
+    <h1 class="text-heading">Education</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
@@ -60,7 +59,7 @@ content %}
               {{ item.date }}
               <span class="text-muted italic"> {{ item.note }} </span>
             </p>
-            <h3 class="font-serif font-bold text-xl">{{ item.title }}</h3>
+            <h2 class="text-subheading">{{ item.title }}</h3>
             <p class="italic">{{ item.subtitle }}</p>
             {% if item.details %}
             <ul class="list-disc ml-4">
@@ -74,7 +73,7 @@ content %}
         {% endfor %}
       </div>
     </ul>
-    <h3 class="font-bold text-lg mt-12">Work Experience</h3>
+    <h2 class="text-subheading mt-12">Work Experience</h3>
     <div>
       {% for job in cv.work %}
       <div class="flex gap-x-4">
@@ -91,7 +90,7 @@ content %}
             {{ job.date }}
             <span class="text-muted italic"> {{ job.note }} </span>
           </p>
-          <h3 class="font-serif font-bold text-xl">{{ job.title }}</h3>
+          <h2 class="text-subheading">{{ job.title }}</h1>
           <p class="italic">{{ job.subtitle }}</p>
           {% if job.details %}
           <ul class="list-disc ml-4">

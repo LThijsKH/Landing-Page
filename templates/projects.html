@@ -1,18 +1,17 @@
 {% extends "layout.html" %} {% block title %}Projects - {{ super() }}{% endblock
-%} {% block extra_head %}{% endblock %} {% set active_page = 'projects' %} {%
-block content %}
+%} {% block extra_head %}{% endblock %} {% set active_page = 'projects' %} {%block content %}
 <h1
-  class="font-serif text-7xl first-letter:font-accent first-letter:text-9xl first-letter:-mr-1.5"
+  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl md:first-letter:-mr-1.5 first-letter:-mr-0.5"
 >
   Projects
 </h1>
 <ul>
   {% for project in projects %}
   <li
-    id="{{ project.slug }}" class="bg-bg dark:bg-d-bg border border-line dark:border-d-line rounded-4xl m-8 p-6 align-middle"
+    id="{{ project.slug }}" class="py-10 border-b border-line dark:border-d-line"
   >
     <div class="w-full flex flex-row justify-between align-middle">
-      <h2 class="text-3xl font-bold">{{ project.title }}</h2>
+      <h1 class="text-heading">{{ project.title }}</h2>
       <span class="font-light">{{ project.date }}</span>
     </div>
     {% if project.image %} {% if "http" in project.image %}

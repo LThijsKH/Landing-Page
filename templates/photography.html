@@ -4,12 +4,9 @@
   defer
   src="{{ url_for('static', filename='scripts/lightbox.js') }}"
 ></script>
-<script>
-  window.imagesData = {{ images|tojson }};
-</script>
 {% endblock %} {% set active_page = 'photography' %} {% block content %}
 <h1
-  class="font-serif text-5xl sm:text-7xl first-letter:font-accent first-letter:text-7xl sm:first-letter:text-9xl first-letter:mr-1.5 sm:first-letter:mr-2.5"
+  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl first-letter:mr-1.5 md:first-letter:mr-2.5"
 >
   Photography
 </h1>
@@ -23,7 +20,7 @@
       src="{{ url_for('static', filename=col1[i].path) }}"
       alt="{{ col1[i].alt }}"
       onclick="showView(1);currentSlide(1 + {{ i }})"
-      loading="auto"
+      loading="eager"
     />
     {% endfor %}
   </div>
@@ -34,7 +31,7 @@
       src="{{ url_for('static', filename=col2[i].path) }}"
       alt="{{ col2[i].alt }}"
       onclick="showView(1);currentSlide(1 + {{ col1|length }} + {{ i }} )"
-      loading="auto"
+      loading="eager"
     />
     {% endfor %}
   </div>
@@ -45,7 +42,7 @@
       src="{{ url_for('static', filename=col3[i].path) }}"
       alt="{{ col3[i].alt }}"
       onclick="showView(1);currentSlide(1 + {{ col1|length }} + {{ col2|length }} + {{ i }})"
-      loading="auto"
+      loading="eager"
     />
     {% endfor %}
   </div>
@@ -65,12 +62,12 @@
         <div class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-3">
           <h2 class="text-3xl font-medium leading-tight min-h-14">{{ img.title }}</h2>
 
-          <div class="mt-1 text-sm text-muted space-y-1 min-h-14">
+          <div class="mt-1 text-sm text-muted dark:text-d-muted space-y-1 min-h-14">
             <div class="text-text dark:text-d-text font-medium h-5">{{ img.location }}</div>
-            <a href="https://www.google.com/maps?q={{ img.coords}}" class="max-w-fit text-xs opacity-70 underline h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">{{ img.coords }}</a>
+            <a href="https://www.google.com/maps?q={{ img.coords}}" class="text-muted dark:text-d-muted max-w-fit text-xs h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">{{ img.coords }}</a>
           </div>
 
-          <div class="mt-6 text-sm text-muted space-y-2 min-h-20">
+          <div class="mt-6 text-sm text-muted dark:text-d-muted space-y-2 min-h-20">
             <div class="font-medium text-text dark:text-d-text h-5">{{ img.camera }}</div>
             <div class="text-xs h-4">{{ img.lens }}</div>
 
@@ -92,6 +89,7 @@
             class="max-h-[60vh] md:max-h-[80vh] max-w-[80vw] md:max-w-[60vw] w-full object-contain max-md:mt-14"
             data-index="{{ loop.index0 }}"
             onclick="showView(2);currentSlide(1 + {{ loop.index0 }})"
+            loading="lazy"
           />
         </div>
       </div>
@@ -135,7 +133,7 @@
     <button
       id="prev"
       onclick="changeSlides(-1)"
-      class="text-mutede hover:text-text dark:hover:text-d-text text-2xl font-light transition"
+      class="text-muted hover:text-text dark:hover:text-d-text text-2xl font-light transition"
     >
       ←
     </button>
@@ -145,7 +143,7 @@
     <button
       id="next"
       onclick="changeSlides(1)"
-      class="text-mutede hover:text-text dark:hover:text-d-text text-2xl font-light transition"
+      class="text-muted hover:text-text dark:hover:text-d-text text-2xl font-light transition"
     >
       →
     </button>
@@ -176,21 +174,21 @@
 
       <li class="flex items-center gap-2 flex-wrap">
         Navigate with
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">A</span>
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">D</span>
+        <span class="kbd">A</span>
+        <span class="kbd">D</span>
         or
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">←</span>
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">→</span>
+        <span class="kbd">←</span>
+        <span class="kbd">→</span>
       </li>
 
       <li class="flex items-center gap-2 flex-wrap">
         View more details:
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">F</span>
+        <span class="kbd">F</span>
       </li>
 
       <li class="flex items-center gap-2 flex-wrap">
         Go back:
-        <span class="px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none">Esc</span>
+        <span class="kbd">Esc</span>
       </li>
 
     </ul>
