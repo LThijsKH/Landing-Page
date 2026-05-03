@@ -1,28 +1,48 @@
 {% extends "layout.html" %} {% block title %}{{ super() }}{% endblock %} {%
-block extra_head %}{% endblock %} {% set active_page = 'home' %} {% block
+block extra_head %}
+<style>
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+</style>
+{% endblock %} {% set active_page = 'home' %} {% block
 content %}
-<div id="hero" class="flex-col p-8 md:p-32 mb-3">
+<div id="hero" class="flex-col p-0 lg:p-32 lg:pb-0 lg:min-h-[calc(100vh-65px)]">
   <div class="flex-col">
     <h1
-      class="font-serif text-5xl md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-7xl md:first-letter:-mr-3 first-letter:-mr-1.5"
+      class="font-serif text-4xl max-lg:px-8 md:text-7xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-6xl not-print:md:first-letter:-mr-3 not-print:first-letter:-mr-1.5 "
     >
       Leo Keeren-Hall
     </h1>
   </div>
   <a href="{{ url_for('photography') }}"><img src="/static/img/photos/lighthouse.jpeg" class="print:hidden mt-auto w-full h-120 object-cover relative bottom-0 md:-mt-10"/></a>
 </div>
-<div class="p-3 flex flex-col">
+<div class="p-3 flex flex-col xl:flex-row justify-around">
   <div class="px-auto">
-    <h2 class="font-serif text-2xl">About me</h2>
-    <p class="indent-2 max-w-2/3">
+    <p class="max-w-xl text-base leading-relaxed">
       I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects, or technical problem solving. Outside of school, I am passionate about 
-      <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('photography') }}">photography</a>, practical 
-      <a class="text-muted hover:text-text dark:hover:text-d-text underline" href="{{ url_for('projects') }}"">projects</a>, biking, and I'm always looking to learn by doing.
-    </p>
+      <a class="underline decoration-muted dark:decoration-d-muted hover:decoration-text dark:hover:decoration-d-text" href="{{ url_for('photography') }}">photography</a>, biking, and I'm always looking to learn by doing.</p>
+    <div class="mt-12">
+      <h3 class="font-bold text-lg">Projects</h3>
+      <div class="mt-4 space-y-4 relative">
+        {% for project in projects %}
+          <a class="group" href="{{ url_for('projects') }}#{{ project.title }}">
+            <div>
+              <h4 class="font-serif font-bold text-xl">{{ project.title }}</h4>
+              <p class="text-sm dark:text-d-muted text-muted group-hover:text-text dark:group-hover:text-d-text">{{ project.description }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+
+      <a href="{{ url_for('projects') }}" class="text-sm text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text print:hidden">
+        View all projects →
+      </a>
+    </div>
   </div>
   <div>
-    <h2 class="font-serif text-2xl">Experience</h2>
-    <h3 class="font-bold text-lg">Schooling</h3>
+    <h3 class="font-bold text-lg">Education</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
@@ -54,7 +74,7 @@ content %}
         {% endfor %}
       </div>
     </ul>
-    <h3 class="font-bold text-lg">Work Experience</h3>
+    <h3 class="font-bold text-lg mt-12">Work Experience</h3>
     <div>
       {% for job in cv.work %}
       <div class="flex gap-x-4">

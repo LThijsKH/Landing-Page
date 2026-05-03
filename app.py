@@ -12,9 +12,13 @@ def split_list(l):
 
 @app.route("/")
 def landing():
+    with open("static/data/projects.json") as f:
+        featured_projects = [
+            p for p in json.load(f) if p.get("featured")
+        ]
     with open("static/data/cv.json") as f:
         cv = json.load(f)
-    return render_template("index.html", cv=cv)
+    return render_template("index.html", cv=cv, projects=featured_projects)
 
 @app.route("/photography/")
 def photography():

@@ -9,7 +9,7 @@ block content %}
 <ul>
   {% for project in projects %}
   <li
-    class="bg-bg dark:bg-d-bg border border-line dark:border-d-line rounded-4xl m-8 p-6 align-middle"
+    id="{{ project.slug }}" class="bg-bg dark:bg-d-bg border border-line dark:border-d-line rounded-4xl m-8 p-6 align-middle"
   >
     <div class="w-full flex flex-row justify-between align-middle">
       <h2 class="text-3xl font-bold">{{ project.title }}</h2>
