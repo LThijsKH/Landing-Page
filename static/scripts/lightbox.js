@@ -2,23 +2,25 @@
 const body = document.querySelector("body");
 const modal = document.getElementById("lighthouse");
 const slides = document.getElementsByClassName("slide");
+const infoSlides = document.getElementsByClassName("info-slide")
 const caption = document.getElementById("caption");
 const slideCounter = document.getElementById("slide-counter");
 const totalI = slides.length;
 const single = document.getElementById("view-single");
 const grid = document.getElementById("view-grid");
-const views = [single, grid, modal];
+const views = [grid, single, modal];
 let i = 1;
+let currentView = 0;
 showSlides(1);
 
 function showView(index) {
   views.forEach((v) => {
     v.classList.add("hidden");
-    v.classList.add("md:hidden");
   });
 
   views[index].classList.remove("hidden");
-  views[index].classList.remove("md:hidden");
+
+  currentView = index
 }
 
 function openModal() {
@@ -29,12 +31,8 @@ function openModal() {
 function closeModal() {
   modal.classList.add("hidden");
   body.style.overflow = "auto";
-  if (
-    single.classList.contains("hidden") &&
-    grid.classList.contains("hidden")
-  ) {
-    grid.classList.remove("hidden");
-  }
+  
+  showView(0);
 }
 
 function changeSlides(i_change) {
@@ -48,14 +46,16 @@ function currentSlide(slidesIndex) {
 }
 
 function showSlides(i) {
-  // Hide unwanted images
-  let n = 0;
-  for (n = 0; n < slides.length; n++) {
+  for (let n = 0; n < slides.length; n++) {
     slides[n].classList.add("hidden");
   }
 
-  // Show requested image
+  for (let n = 0; n < infoSlides.length; n++) {
+    infoSlides[n].classList.add("hidden");
+  }
+
   slides[i - 1].classList.remove("hidden");
+  infoSlides[i - 1].classList.remove("hidden");
 }
 
 document.addEventListener("keydown", handleKeyPress);
@@ -69,7 +69,16 @@ function handleKeyPress(event) {
     changeSlides(1);
   }
   if (key === "Escape") {
-    closeModal();
+    if (currentView == 0) {
+      currentView = 1
+    }
+    showView(currentView-1);
+  }
+  if (key === "f") {
+    if (currentView == 2) {
+      currentView = -1
+    }
+    showView(currentView+1);
   }
 }
 

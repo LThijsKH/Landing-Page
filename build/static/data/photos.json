@@ -1,7 +1,7 @@
 [
   {
     "path": "img/photos/bark.jpeg",
-    "title": "",
+    "title": "TEST",
     "alt": "Close up image of bark on a tree",
     "camera": "NIKON D5300",
     "lens": "AF-DX VR Nikkor 18-55mm f/3.5-5.6G II",
@@ -14,7 +14,7 @@
   },
   {
     "path": "img/photos/beach.jpeg",
-    "title": "",
+    "title": "HELLO",
     "alt": "Landscape of a beach",
     "camera": "NIKON D5300",
     "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
