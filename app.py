@@ -17,6 +17,7 @@ def landing():
         featured_projects = [
             p for p in json.load(f) if p.get("featured")
         ]
+    # TODO: Sort my date
     with open("static/data/cv.json") as f:
         cv = json.load(f)
     return render_template("index.html", cv=cv, projects=featured_projects)
@@ -41,10 +42,8 @@ def not_found(e):
 # Setup that uses frozen flask to generate static pages in /build for cloudflare pages
 freezer = Freezer(app)
 
-app.config['FREEZER_STATIC_IGNORE'] = [
-    'data/*', 
+app.config['FREEZER_STATIC_IGNORE'] = [ 
     'img/photos/Originals/*', 
-    'styles/style.css'
 ]
 
 app.config['FREEZER_REMOVE_EXTRA_FILES'] = ['True']

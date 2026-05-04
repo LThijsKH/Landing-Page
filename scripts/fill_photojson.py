@@ -13,6 +13,8 @@ MAX_SIZE = 25 * 1024 * 1024  # 25MB
 
 
 def optimize_images():
+    print("Optimizing images...")
+    print("--------------------")
 
     for file in os.listdir(ORIGINALS_FOLDER):
         if not file.lower().endswith((".jpg", ".jpeg", ".png")):
@@ -23,17 +25,13 @@ def optimize_images():
         output_file = name + ".jpg"
         output_path = os.path.join(IMAGE_FOLDER, output_file)
 
-        # Skip if already processed
-        if os.path.exists(output_path):
-            continue
-
         try:
             subprocess.run([
                 "magick",
                 input_path,
-                "-resize", "4000x4000>",
+                "-resize", "4500x4500>",
                 "-strip",
-                "-quality", "95",
+                "-quality", "92",
                 output_path
             ], check=True)
 
@@ -41,6 +39,8 @@ def optimize_images():
 
             if size > MAX_SIZE:
                 print(f"⚠ {output_file} → {size // (1024*1024)} MB (too large)")
+            else:
+                print(f"✓ {output_file} → {size // (1024*1024)} MB")
 
         except Exception as e:
             print(f"Error processing {file}: {e}")
@@ -49,7 +49,6 @@ def optimize_images():
 def format_shutter(val):
     try:
         val = float(val)
-
         if val >= 1:
             return f"{val:.1f}".rstrip("0").rstrip(".") + "s"
         else:
@@ -81,43 +80,32 @@ def get_exif_data(image_path):
         data = json.loads(result.stdout)[0]
         out = {}
 
-        # Camera
         out["camera"] = data.get("CameraModelName") or data.get("Model")
-
-        # Lens
         out["lens"] = data.get("Lens") or data.get("LensID")
 
-        # ISO
         if "ISO" in data:
             try:
                 out["iso"] = int(data["ISO"])
             except:
                 out["iso"] = data["ISO"]
 
-        # Focal
         if "FocalLengthIn35mmFormat" in data:
             out["focal"] = f"{data['FocalLengthIn35mmFormat']}mm"
         elif "FocalLength" in data:
             val = str(data["FocalLength"])
-            if "mm" in val:
-                out["focal"] = val.replace(" ", "")
-            else:
-                out["focal"] = f"{val}mm"
+            out["focal"] = val.replace(" ", "") if "mm" in val else f"{val}mm"
 
-        # Aperture
         if "FNumber" in data:
             try:
                 out["aperture"] = f"f{float(data['FNumber']):.1f}".rstrip("0").rstrip(".")
             except:
                 out["aperture"] = f"f{data['FNumber']}"
 
-        # Shutter
         if "ExposureTime" in data:
             formatted = format_shutter(data["ExposureTime"])
             if formatted:
                 out["shutter"] = formatted
 
-        # GPS
         if "GPSLatitude" in data and "GPSLongitude" in data:
             try:
                 lat = float(data["GPSLatitude"])
@@ -126,7 +114,6 @@ def get_exif_data(image_path):
             except:
                 pass
 
-        # Date
         out["date"] = data.get("DateTimeOriginal") or data.get("CreateDate")
         out["date_formatted"] = format_date(out["date"])
 
@@ -144,10 +131,8 @@ def load_existing():
     try:
         with open(JSON_FILE, "r") as f:
             content = f.read().strip()
-            if not content:
-                return []
-            return json.loads(content)
-    except json.JSONDecodeError:
+            return json.loads(content) if content else []
+    except:
         print("Warning: Invalid JSON. Resetting file.")
         return []
 
@@ -157,40 +142,45 @@ def save(data):
         json.dump(data, f, indent=2)
 
 
+def log_change(path, key, old, new):
+    print(f"UPDATE [{path}] {key}: '{old}' → '{new}'")
+
+
 def main():
-    # Step 1: Optimize images from Originals → main folder
     optimize_images()
 
-    # Step 2: Load existing JSON
     existing = load_existing()
     existing_map = {item["path"]: item for item in existing}
 
     results = []
 
-    for file in os.listdir(IMAGE_FOLDER):
+    for file in os.listdir(ORIGINALS_FOLDER):
         if not file.lower().endswith((".jpg", ".jpeg", ".png")):
             continue
 
-        full_path = os.path.join(IMAGE_FOLDER, file)
-        public_path = f"img/photos/{file}"
+        name, _ = os.path.splitext(file)
+        public_path = f"img/photos/{name}.jpg"
+        original_path = os.path.join(ORIGINALS_FOLDER, file)
 
-        exif_data = get_exif_data(full_path)
+        exif_data = get_exif_data(original_path)
 
         if public_path in existing_map:
             entry = existing_map[public_path]
-
-            AUTO_FIELDS = ["camera", "lens", "iso", "focal", "aperture", "shutter", "coords"]
 
             for key, value in exif_data.items():
                 if value is None:
                     continue
 
-                if key in AUTO_FIELDS:
-                    entry[key] = value
-                else:
-                    if key not in entry or entry[key] in [None, "", 0]:
+                if key in entry:
+                    if entry[key] != value:
+                        log_change(public_path, key, entry[key], value)
                         entry[key] = value
+                else:
+                    print(f"NEW FIELD [{public_path}] {key}: '{value}'")
+                    entry[key] = value
+
         else:
+            print(f"NEW IMAGE: {public_path}")
             entry = {
                 "path": public_path,
                 "alt": "",
@@ -199,6 +189,13 @@ def main():
             }
 
         results.append(entry)
+
+    # Preserve removed originals
+    existing_paths = {item["path"] for item in results}
+    for item in existing:
+        if item["path"] not in existing_paths:
+            print(f"PRESERVED (missing original): {item['path']}")
+            results.append(item)
 
     save(results)
 

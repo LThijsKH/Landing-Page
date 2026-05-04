@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Example",
+    "slug": "example",
+    "date": "8-06-2012",
+    "image": "https://picsum.photos/1080/400",
+    "alt": "Example external pic placeholder",
+    "tech": ["Python", "Flask", "HTML", "CSS", "Tailwind"],
+    "description": "Placeholder project describing what kind of work will go here.",
+    "repository": "github.com",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Example 2",
+    "slug": "example-2",
+    "featured": true,
+    "date": "18-06-1997",
+    "tech": ["Python"],
+    "description": "Project without a example link and only a repositorty.",
+    "repository": "github.com"
+  },
+  {
+    "title": "Example3",
+    "slug": "example-3",
+    "featured": true,
+    "date": "12-12-2012",
+    "alt": "Example local pic placeholder",
+    "description": "Placeholder project without a repo and only a link",
+    "link": "https://example.com"
+  }
+]

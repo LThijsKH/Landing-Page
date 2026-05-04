@@ -13,3 +13,5 @@ yarn-error.log*
 
 # Photography (reduce folder size since already in build/)
 static/img/photos/
+build/static/data/
+build/static/styles/style.css
