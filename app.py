@@ -41,5 +41,13 @@ def not_found(e):
 # Setup that uses frozen flask to generate static pages in /build for cloudflare pages
 freezer = Freezer(app)
 
+app.config['FREEZER_STATIC_IGNORE'] = [
+    'data/*', 
+    'img/photos/Originals/*', 
+    'styles/style.css'
+]
+
+app.config['FREEZER_REMOVE_EXTRA_FILES'] = ['True']
+
 if __name__ == '__main__':
     freezer.freeze()  # This will generate static files in a build/ directory
