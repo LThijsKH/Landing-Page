@@ -24,7 +24,6 @@
     "slug": "example-3",
     "featured": true,
     "date": "12-12-2012",
-    "image": "img/photos/nyc.jpeg",
     "alt": "Example local pic placeholder",
     "description": "Placeholder project without a repo and only a link",
     "link": "https://example.com"

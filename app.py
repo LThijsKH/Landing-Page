@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request
 from flask_frozen import Freezer
 import json
+from datetime import datetime
 
 app = Flask(__name__)
-
-def split_list(l):
-    total_len = len(l)
-    i = total_len // 3
-    ans = [l[:i], l[i:2*i], l[2*i:]]
-    return ans
+ 
+def split_list(l, n=3):
+    cols = [[] for _ in range(n)]
+    for i, item in enumerate(l):
+        cols[i % n].append(item)
+    return cols
 
 @app.route("/")
 def landing():

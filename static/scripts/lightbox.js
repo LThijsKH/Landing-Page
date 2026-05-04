@@ -36,7 +36,7 @@ function closeModal() {
 }
 
 function changeSlides(i_change) {
-  i = ((i - 1 + i_change + 10) % totalI) + 1; // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
+  i = ((i - 1 + i_change + totalI) % totalI) + 1; // Converting to index (starting from 0) to calculate new slide and then back to couting from 1
   showSlides(i);
 }
 

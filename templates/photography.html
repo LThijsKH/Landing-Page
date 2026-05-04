@@ -19,7 +19,7 @@
       class="p-1 hover:scale-102"
       src="{{ url_for('static', filename=col1[i].path) }}"
       alt="{{ col1[i].alt }}"
-      onclick="showView(1);currentSlide(1 + {{ i }})"
+      onclick="showView(1);currentSlide(1 + {{ i * 3 }})"
       loading="eager"
     />
     {% endfor %}
@@ -30,7 +30,7 @@
       class="p-1 hover:scale-102"
       src="{{ url_for('static', filename=col2[i].path) }}"
       alt="{{ col2[i].alt }}"
-      onclick="showView(1);currentSlide(1 + {{ col1|length }} + {{ i }} )"
+      onclick="showView(1);currentSlide(1 + {{ i * 3 + 1 }})"
       loading="eager"
     />
     {% endfor %}
@@ -41,7 +41,7 @@
       class="p-1 hover:scale-102"
       src="{{ url_for('static', filename=col3[i].path) }}"
       alt="{{ col3[i].alt }}"
-      onclick="showView(1);currentSlide(1 + {{ col1|length }} + {{ col2|length }} + {{ i }})"
+      onclick="showView(1);currentSlide(1 + {{ i * 3 + 2 }})"
       loading="eager"
     />
     {% endfor %}
@@ -60,11 +60,16 @@
           ←
         </button>
         <div class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-3">
-          <h2 class="text-3xl font-medium leading-tight min-h-14">{{ img.title }}</h2>
 
           <div class="mt-1 text-sm text-muted dark:text-d-muted space-y-1 min-h-14">
-            <div class="text-text dark:text-d-text font-medium h-5">{{ img.location }}</div>
+            <div class="text-text dark:text-d-text text-2xl font-medium leading-tight">
+              {{ img.location }}
+            </div>
             <a href="https://www.google.com/maps?q={{ img.coords}}" class="text-muted dark:text-d-muted max-w-fit text-xs h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">{{ img.coords }}</a>
+          </div>
+
+          <div class="text-sm text-muted dark:text-d-muted">
+            {{ img.date_formatted }}
           </div>
 
           <div class="mt-6 text-sm text-muted dark:text-d-muted space-y-2 min-h-20">
@@ -74,7 +79,7 @@
             <div class="flex gap-6 text-xs mt-2 min-h-5">
               <span>ISO {{ img.iso }}</span>
               <span>{{ img.focal }}</span>
-              <span>{{ img.aperature }}</span>
+              <span>{{ img.aperture }}</span>
               <span>{{ img.shutter }}</span>
             </div>
           </div>

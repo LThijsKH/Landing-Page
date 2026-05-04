@@ -23,6 +23,14 @@
       src="{{url_for('static', filename=project.image)}}"
     />
     {% endif %} {% endif %}
+    <div class="flex justify-around align-middle">
+      {% for item in project.tech %}
+        <a onclick="filterAdd({{ item }})" class="mx-14">{{ item }}</a>
+        {% if not loop.last %}
+        <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
     <p class="mt-3 max-w-prose">{{ project.description }}</p>
     <div class="mt-3 flex gap-4">
       {% if project.link %}
