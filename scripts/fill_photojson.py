@@ -6,27 +6,66 @@ from datetime import datetime
 
 
 IMAGE_FOLDER = "static/img/photos"
+ORIGINALS_FOLDER = "static/img/photos/Originals"
 JSON_FILE = "static/data/photos.json"
+
+MAX_SIZE = 25 * 1024 * 1024  # 25MB
+
+
+def optimize_images():
+
+    for file in os.listdir(ORIGINALS_FOLDER):
+        if not file.lower().endswith((".jpg", ".jpeg", ".png")):
+            continue
+
+        input_path = os.path.join(ORIGINALS_FOLDER, file)
+        name, _ = os.path.splitext(file)
+        output_file = name + ".jpg"
+        output_path = os.path.join(IMAGE_FOLDER, output_file)
+
+        # Skip if already processed
+        if os.path.exists(output_path):
+            continue
+
+        try:
+            subprocess.run([
+                "magick",
+                input_path,
+                "-resize", "4000x4000>",
+                "-strip",
+                "-quality", "95",
+                output_path
+            ], check=True)
+
+            size = os.path.getsize(output_path)
+
+            if size > MAX_SIZE:
+                print(f"⚠ {output_file} → {size // (1024*1024)} MB (too large)")
+
+        except Exception as e:
+            print(f"Error processing {file}: {e}")
+
 
 def format_shutter(val):
     try:
         val = float(val)
 
         if val >= 1:
-            # e.g. 1.3s
-            return f"{val:.1f}s".rstrip("0").rstrip(".") + "s"
+            return f"{val:.1f}".rstrip("0").rstrip(".") + "s"
         else:
             frac = Fraction(val).limit_denominator(8000)
             return f"{frac.numerator}/{frac.denominator}s"
     except:
         return None
 
+
 def format_date(date_str):
-  try:
-      dt = datetime.strptime(date_str, "%Y:%m:%d %H:%M:%S")
-      return dt.strftime("%B %Y")
-  except:
-      return ""
+    try:
+        dt = datetime.strptime(date_str, "%Y:%m:%d %H:%M:%S")
+        return dt.strftime("%B %Y")
+    except:
+        return ""
+
 
 def get_exif_data(image_path):
     try:
@@ -74,9 +113,9 @@ def get_exif_data(image_path):
 
         # Shutter
         if "ExposureTime" in data:
-          formatted = format_shutter(data["ExposureTime"])
-          if formatted:
-              out["shutter"] = formatted
+            formatted = format_shutter(data["ExposureTime"])
+            if formatted:
+                out["shutter"] = formatted
 
         # GPS
         if "GPSLatitude" in data and "GPSLongitude" in data:
@@ -86,8 +125,8 @@ def get_exif_data(image_path):
                 out["coords"] = f"{lat:.4f},{lon:.4f}"
             except:
                 pass
-            
-        #Date
+
+        # Date
         out["date"] = data.get("DateTimeOriginal") or data.get("CreateDate")
         out["date_formatted"] = format_date(out["date"])
 
@@ -119,6 +158,10 @@ def save(data):
 
 
 def main():
+    # Step 1: Optimize images from Originals → main folder
+    optimize_images()
+
+    # Step 2: Load existing JSON
     existing = load_existing()
     existing_map = {item["path"]: item for item in existing}
 
