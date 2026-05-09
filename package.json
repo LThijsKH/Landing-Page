@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LThijsKH/Landing-Page#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.4",
-    "tailwindcss": "^4.2.4"
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
   }
 }
