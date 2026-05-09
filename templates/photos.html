@@ -1,0 +1,106 @@
+{% extends "layout.html" %} {% block title %}Photos - {{ super() }}{% endblock
+%} {% block extra_head %}
+<script
+  defer
+  src="{{ url_for('static', filename='scripts/help.js') }}"
+></script>
+{% endblock %} {% set active_page = 'photos' %} {% block content %}
+<h1
+  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl first-letter:mr-1.5 md:first-letter:mr-2.5"
+>
+  Photography
+</h1>
+
+<!-- 3 col Library -->
+<div id="view-grid" class="grid grid-cols-1 md:grid-cols-3 p-1">
+  <div>
+    {% for i in range(col1|length) %}
+    <a href="{{ url_for('photo', filename=col1[i].path.split('/')[-1].split('.')[0]) }}">
+      <img
+        class="p-1"
+        src="{{ url_for('static', filename=col1[i].path) }}"
+        alt="{{ col1[i].alt }}"
+        loading="eager"
+      />
+    </a>
+    {% endfor %}
+  </div>
+  <div>
+    {% for i in range(col2|length) %}
+    <a href="{{ url_for('photo', filename=col2[i].path.split('/')[-1].split('.')[0]) }}">
+      <img
+        class="p-1"
+        src="{{ url_for('static', filename=col2[i].path) }}"
+        alt="{{ col2[i].alt }}"
+        loading="eager"
+      />
+    </a>
+    {% endfor %}
+  </div>
+  <div>
+    {% for i in range(col3|length) %}
+    <a href="{{ url_for('photo', filename=col3[i].path.split('/')[-1].split('.')[0]) }}">
+      <img
+        class="p-1"
+        src="{{ url_for('static', filename=col3[i].path) }}"
+        alt="{{ col3[i].alt }}"
+        loading="eager"
+      />
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="help-trigger"
+     class="hidden fixed bottom-6 right-6 z-[100]">
+  <button
+    onclick="openHelp()"
+    class="px-3 py-2 text-xs rounded-full bg-bg dark:bg-d-bg border border-line dark:border-d-line shadow hover:opacity-80 hover:cursor-pointer">
+    ?
+  </button>
+</div>
+<div id="help-popup" class="hidden fixed inset-0 z-[101] bg-black/50 backdrop-blur-sm flex items-center justify-center p-6">
+  <div class="bg-bg dark:bg-d-bg w-full max-w-md rounded-xl border border-line dark:border-d-line shadow-lg p-6">
+
+    <h3 class="text-lg font-medium mb-5">How to use</h3>
+
+    <ul class="space-y-4 text-sm text-muted">
+
+      <li>
+        Click a photo to see how it was taken
+      </li>
+
+      <li>
+        Click it again to view it without distractions
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        Navigate with
+        <span class="kbd">A</span>
+        <span class="kbd">D</span>
+        or
+        <span class="kbd">←</span>
+        <span class="kbd">→</span>
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        View more details:
+        <span class="kbd">F</span>
+      </li>
+
+      <li class="flex items-center gap-2 flex-wrap">
+        Go back:
+        <span class="kbd">Esc</span>
+      </li>
+
+    </ul>
+
+    <button
+      onclick="closeHelp()"
+      class="mt-6 text-sm underline opacity-70 hover:opacity-100 hover:cursor-pointer">
+      Got it!
+    </button>
+
+  </div>
+</div>
+{% endblock %}

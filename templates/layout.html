@@ -33,8 +33,8 @@
         class="hidden flex flex-col md:flex md:flex-row px-2"
       >
         <a
-          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photography' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
-          href="{{ url_for('photography') }}"
+          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photos' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
+          href="{{ url_for('photos') }}"
           >Photography</a
         >
         <a
@@ -96,7 +96,7 @@
             </a>
             <a
               onclick="openHelp()"
-              class="hover:text-text dark:hover:text-d-text {{ 'block' if active_page == 'photography' else 'hidden' }}"
+              class="hover:text-text dark:hover:text-d-text {{ 'block' if active_page == 'photos' else 'hidden' }}"
             >
               Help navigating this page
             </a>

@@ -1,15 +1,23 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from flask_frozen import Freezer
 import json
 from datetime import datetime
 
 app = Flask(__name__)
  
-def split_list(l, n=3):
-    cols = [[] for _ in range(n)]
-    for i, item in enumerate(l):
-        cols[i % n].append(item)
+def split_list(images, columns=3):
+    cols = [[] for _ in range(columns)]
+    heights = [0.0] * columns
+    for img in images:
+        orientation = img.get("orientation", "horizontal")
+        # 2:3 portrait images are visually taller
+        weight = 1 / img["aspect_ratio"]
+        shortest_col = heights.index(min(heights))
+        cols[shortest_col].append(img)
+        heights[shortest_col] += weight
     return cols
+
+images = []
 
 @app.route("/")
 def landing():
@@ -22,12 +30,49 @@ def landing():
         cv = json.load(f)
     return render_template("index.html", cv=cv, projects=featured_projects)
 
-@app.route("/photography/")
-def photography():
-    with open("static/data/photos.json") as f:
-        images = json.load(f)
+@app.route("/photos/")
+def photos():
+    global images
+    if images == []:
+        with open("static/data/photos.json") as f:
+            images = sorted(
+                json.load(f),
+                key=lambda img: datetime.strptime(
+                    img["date"],
+                    "%Y:%m:%d %H:%M:%S"
+                ),
+                reverse=True
+            )
+
     col1, col2, col3 = split_list(images)
-    return render_template("photography.html", images=images, col1=col1, col2=col2, col3=col3, total_i=len(images))
+    return render_template("photos.html", images=images, col1=col1, col2=col2, col3=col3, total_i=len(images))
+
+@app.route("/photo/<filename>")
+def photo(filename):
+    global images
+    if images == []:
+        with open("static/data/photos.json") as f:
+            images = sorted(
+                json.load(f),
+                key=lambda img: datetime.strptime(
+                    img["date"],
+                    "%Y:%m:%d %H:%M:%S"
+                ),
+                reverse=True
+            )
+
+    img_data = []
+    for img in images:
+        stripped_filename = img["path"].split('/')[-1].split('.')[0]
+        img_data.append({
+            "filename" : stripped_filename,
+            "route" : url_for("photo", filename=stripped_filename)
+            })
+    
+    for img in images:
+        if img["path"] == f"img/photos/{filename}.jpg":
+            return render_template("photo.html", img=img, img_data=img_data)
+    return not_found(404)
 
 @app.route('/projects/')
 def projects():
