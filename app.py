@@ -93,5 +93,7 @@ app.config['FREEZER_STATIC_IGNORE'] = [
 
 app.config['FREEZER_REMOVE_EXTRA_FILES'] = ['True']
 
+app.config["FREEZER_BASE_URL"] = "https://leotkh.com"
+
 if __name__ == '__main__':
     freezer.freeze()  # This will generate static files in a build/ directory
