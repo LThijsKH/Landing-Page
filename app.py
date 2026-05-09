@@ -47,7 +47,7 @@ def photos():
     col1, col2, col3 = split_list(images)
     return render_template("photos.html", images=images, col1=col1, col2=col2, col3=col3, total_i=len(images))
 
-@app.route("/photo/<filename>")
+@app.route("/photo/<filename>/")
 def photo(filename):
     global images
     if images == []:
