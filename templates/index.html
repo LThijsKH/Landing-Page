@@ -8,7 +8,7 @@ block extra_head %}
 </style>
 {% endblock %} {% set active_page = 'home' %} {% block
 content %}
-<div id="hero" class="flex-col p-0 lg:p-32 lg:pb-0 lg:min-h-[calc(100vh-65px)]">
+<div id="hero" class="flex-col p-0 lg:p-32 lg:pb-0 lg:max-h-[calc(100vh-65px)] contain-content">
   <div class="flex-col">
     <h1
       class="font-serif text-4xl max-lg:px-8 md:text-7xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-6xl not-print:md:first-letter:-mr-3 not-print:first-letter:-mr-1.5 "
@@ -27,7 +27,7 @@ content %}
       <h1 class="text-subheading">Projects</h3>
       <div class="mt-4 space-y-4 relative">
         {% for project in projects %}
-          <a class="group" href="{{ url_for('projects') }}#{{ project.slug }}">
+          <a class="group" href="{{ url_for('projects') }}#{{ project.id }}">
             <div>
               <h2 class="text-subheading">{{ project.title }}</h4>
               <p class="text-sm dark:text-d-muted text-muted group-hover:text-text dark:group-hover:text-d-text">{{ project.description }}</p>
@@ -40,8 +40,8 @@ content %}
       </a>
     </div>
   </div>
-  <div>
-    <h1 class="text-heading">Education</h3>
+  <div class="px-auto">
+    <h1 class="text-subheading mt-12">Education</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
