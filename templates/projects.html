@@ -15,17 +15,18 @@
       <p class="text-xs text-muted">[ {{project.id}} ]</p>
       <p class="font-serif text-2xl">{{ project.date }}</p>
     </div>
-    <div>
+    <div class="mt-6 max-w-7xl">
       <div>
         <h2 class="font-serif text-3xl md:text-5xl leading-tight">
           {{ project.title }}
         </h2>
       </div>
+      <div class="mt-6 max-w-5xl"></div>
       {% if project.image %} {% if "http" in project.image %}
-      <img class="w-full max-h-136 object-cover mt-4" alt="{{ project.alt }}" src="{{ project.image }}" />
+      <img class="class="w-full h-auto mt-6"" alt="{{ project.alt }}" src="{{ project.image }}" />
       {% else %}
       <img
-        class="w-full max-h-136 object-cover mt-4"
+        class="class="w-full h-auto mt-6""
         alt="{{ project.alt }}"
         src="{{url_for('static', filename=project.image)}}"
       />
@@ -67,7 +68,6 @@
           {% endif %}
 
         </div>
-
       </div>
     </div>
   </li>

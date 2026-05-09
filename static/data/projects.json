@@ -3,7 +3,7 @@
     "title": "Leotkh.com",
     "id": "WEB—0",
     "date": "04-2026",
-    "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/hero.png?raw=true",
+    "image": "https://github.com/LThijsKH/Landing-Page/blob/main/docs/Hero.png?raw=true",
     "alt": "Website Screenshot Collage",
     "tech": ["HTML", "Tailwind CSS", "Python", "Flask"],
     "description": "This website, a general portfolio for myself",
