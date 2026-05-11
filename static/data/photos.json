@@ -108,7 +108,7 @@
   },
   {
     "path": "img/photos/bushes-landscape.jpg",
-    "alt": "",
+    "alt": "Bushes on a mountain with a sunset in the distance",
     "location": "Volc\u00e1n Masaya, Nicaragua",
     "coords": "11.99764,-86.14990",
     "camera": "NIKON D5300",
@@ -215,7 +215,7 @@
   },
   {
     "path": "img/photos/distant-windturbines.jpg",
-    "alt": "",
+    "alt": "A slow shutter speed image of wint turbines in the distant with blurry trees in the foreground",
     "location": "Ometepe Island, Nicaragua",
     "coords": "11.43538,-85.54872",
     "camera": "NIKON D5300",
@@ -566,7 +566,7 @@
   },
   {
     "path": "img/photos/canoe.jpg",
-    "alt": "",
+    "alt": "Imag of a dark lake taken from a canoe",
     "location": "Charleston Lake, Canada",
     "coords": "44.524554,-76.014872",
     "camera": "NIKON D5300",
@@ -584,7 +584,7 @@
   },
   {
     "path": "img/photos/fire-embers.jpg",
-    "alt": "",
+    "alt": "CLose up image of embers in a camp fire",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
     "camera": "NIKON D5300",
@@ -602,7 +602,7 @@
   },
   {
     "path": "img/photos/bark.jpg",
-    "alt": "",
+    "alt": "A close up image of bark",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
     "camera": "NIKON D5300",
@@ -637,7 +637,7 @@
   },
   {
     "path": "img/photos/canoe-camping.jpg",
-    "alt": "",
+    "alt": "Old camera image of sunset reflecting off canoe",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
     "camera": "Canon PowerShot ELPH 115 IS",
@@ -868,7 +868,8 @@
   {
     "path": "img/photos/beach.jpg",
     "alt": "A empty beach with only seagulls",
-    "location": "Unknown location",
+    "location": "Cobourg Beach, Ontario",
+    "coords": "43.957494,-78.162548",
     "camera": "NIKON D5300",
     "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
     "iso": 200,
@@ -937,8 +938,8 @@
   },
   {
     "path": "img/photos/road-nl.jpg",
-    "alt": "",
-    "location": "",
+    "alt": "A long road right after the sunset",
+    "location": "De Hoge Veluwe National Park, Netherlands",
     "camera": "NIKON D5300",
     "lens": "AF-S DX VR Nikkor 18-55mm f/3.5-5.6G II",
     "iso": 800,
