@@ -8,16 +8,17 @@ block extra_head %}
 </style>
 {% endblock %} {% set active_page = 'home' %} {% block
 content %}
-<div id="hero" class="flex-col p-0 lg:p-32 lg:pb-0 lg:max-h-[calc(100vh-65px)] contain-content">
-  <div class="flex-col">
-    <h1
-      class="font-serif text-4xl max-lg:px-8 md:text-7xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-6xl not-print:md:first-letter:-mr-3 not-print:first-letter:-mr-1.5 "
-    >
-      Leo Keeren-Hall
-    </h1>
+<span id="hero-wrapper" class="block">
+  <h1 class="lg:sticky top:16 lg:top-0 font-serif text-4xl max-lg:px-8 md:text-7xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-6xl not-print:md:first-letter:-mr-3 not-print:first-letter:-mr-1.5 lg:px-32 lg:pt-32">
+    Leo Keeren-Hall
+  </h1>
+  <div class="lg:px-32">
+    <a href="{{ url_for('photo', filename='bushes-landscape') }}">
+      <img src="/static/img/photos/bushes-landscape.jpg" id="hero-image" class="print:hidden w-full h-120 object-cover md:-mt-10 pb-10"/>
+    </a>
   </div>
-  <a href="{{ url_for('photo', filename='bushes-landscape') }}"><img src="/static/img/photos/bushes-landscape.jpg" class="print:hidden mt-auto w-full h-120 object-cover relative bottom-0 md:-mt-10"/></a>
-</div>
+  <div class="lg:h-38"></div>
+</span>
 <div class="p-3 flex flex-col xl:flex-row justify-around">
   <div class="px-auto">
     <p class="max-w-xl text-base leading-relaxed">
