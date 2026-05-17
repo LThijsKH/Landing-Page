@@ -24,7 +24,7 @@
       class="min-w-full sticky top-0 z-50 flex md:flex-row flex-col justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg"
     >
       <div
-        class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'home' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
+        class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'home' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
       >
         <a href="{{ url_for('landing') }}">LTKH</a>
       </div>
@@ -33,29 +33,29 @@
         class="hidden flex flex-col md:flex md:flex-row px-2"
       >
         <a
-          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photos' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photos' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
           href="{{ url_for('photos') }}"
           >Photography</a
         >
         <a
-          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'projects' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }}  md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'projects' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }}  md:-mb-px"
           href="{{ url_for('projects') }}"
           >Projects</a
         >
         <a
-          class="px-5 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-5 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted md:-mb-px"
           href="#Contact"
           >Contact</a
         >
       </div>
       <div
-        class="absolute top-0 right-0 w-6 h-6 md:hidden mx-5 py-5 border-b-2 -mb-px border-transparent hover:border-muted hover:darkborder-d-muted"
+        class="absolute top-0 right-0 w-6 h-6 md:hidden mx-5 py-4 md:border-b-2 -mb-px border-transparent hover:border-muted hover:darkborder-d-muted"
         onclick="
           document.getElementById('nav-buttons').classList.toggle('hidden')
         "
       >
         <svg
-          class="text-text dark:text-d-text"
+          class="text-text dark:text-d-text hover:text-muted dark:hover:text-d-muted"
           stroke="currentColor"
           stroke-width="0.75"
           viewBox="0 0 24 24"
