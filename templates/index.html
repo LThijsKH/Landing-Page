@@ -9,7 +9,7 @@ block extra_head %}
 {% endblock %} {% set active_page = 'home' %} {% block
 content %}
 <span id="hero-wrapper" class="block">
-  <h1 class="lg:sticky top:16 lg:top-0 font-serif text-4xl max-lg:px-8 md:text-7xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-6xl not-print:md:first-letter:-mr-3 not-print:first-letter:-mr-1.5 lg:px-32 lg:pt-32">
+  <h1 class="lg:sticky top-16 lg:top-0 font-serif text-4xl max-lg:px-8 print:px-4 print:py-0 print:text-4xl md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl md:first-letter:-mr-3 first-letter:-mr-1.5 lg:px-32 lg:pt-32">
     Leo Keeren-Hall
   </h1>
   <div class="lg:px-32">
@@ -36,13 +36,13 @@ content %}
           </a>
         {% endfor %}
       </div>
-      <a href="{{ url_for('projects') }}" class="text-sm text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text print:hidden">
+      <a href="{{ url_for('projects') }}" class="text-sm text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text">
         View all projects →
       </a>
     </div>
   </div>
   <div class="px-auto">
-    <h1 class="text-subheading mt-12">Education</h3>
+    <h1 class="text-subheading">Education</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
