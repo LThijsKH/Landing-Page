@@ -111,11 +111,11 @@ document.addEventListener("keydown", (e) => {
   const key = e.key;
 
   if (key === "ArrowLeft" || key === "a") {
-    navigatePhoto(1);
+    navigatePhoto(-1);
   }
 
   if (key === "ArrowRight" || key === "d") {
-    navigatePhoto(-1);
+    navigatePhoto(1);
   }
 
   if (key === "Escape") {
@@ -199,10 +199,10 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* right swipe */ 
-            navigatePhoto(-1)
+            navigatePhoto(1)
         } else {
             /* left swipe */
-            navigatePhoto(1)
+            navigatePhoto(-1)
         }                       
     }
     /* reset values */
