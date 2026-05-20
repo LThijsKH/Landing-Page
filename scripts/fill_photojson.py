@@ -304,7 +304,7 @@ def main():
     existing = load_existing()
 
     existing_map = {
-        item["path"]: item
+        item.get("slug"): item
         for item in existing
     }
 
@@ -325,7 +325,7 @@ def main():
 
         name, _ = os.path.splitext(file)
 
-        public_path = f"img/photos/{name}.jpg"
+        public_path = f"img/photos/{name}"
 
         original_path = os.path.join(
             ORIGINALS_FOLDER,
@@ -334,9 +334,12 @@ def main():
 
         exif_data = get_exif_data(original_path)
 
-        if public_path in existing_map:
+        if name in existing_map:
+            entry = existing_map[name]
 
-            entry = existing_map[public_path]
+            entry["slug"] = name
+
+            entry["path"] = public_path
 
             entry["images"] = {
                 "thumb": f"img/photos/{name}-thumb.webp",
@@ -381,6 +384,7 @@ def main():
             print(f"NEW IMAGE: {public_path}")
 
             entry = {
+                "slug": name,
                 "path": public_path,
 
                 "images": {

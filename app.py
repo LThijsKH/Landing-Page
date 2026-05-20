@@ -47,8 +47,8 @@ def photos():
     col1, col2, col3 = split_list(images)
     return render_template("photos.html", images=images, col1=col1, col2=col2, col3=col3, total_i=len(images))
 
-@app.route("/photo/<filename>/")
-def photo(filename):
+@app.route("/photo/<slug>/")
+def photo(slug):
     global images
     if images == []:
         with open("static/data/photos.json") as f:
@@ -63,14 +63,16 @@ def photo(filename):
 
     img_data = []
     for img in images:
-        stripped_filename = img["path"].split('/')[-1].split('.')[0]
         img_data.append({
-            "filename" : stripped_filename,
-            "route" : url_for("photo", filename=stripped_filename)
-            })
+            "slug": img["slug"],
+            "route": url_for(
+                "photo",
+                slug=img["slug"]
+            )
+        })
     
     for img in images:
-        if img["path"] == f"img/photos/{filename}.jpg":
+        if img["slug"] == slug:
             return render_template("photo.html", img=img, img_data=img_data)
     return not_found(404)
 

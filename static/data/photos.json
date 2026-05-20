@@ -1,6 +1,6 @@
 [
   {
-    "path": "img/photos/patios.jpg",
+    "slug": "patios",
     "alt": "Glass patio fences light up",
     "location": "Montreal, Canada",
     "camera": "NIKON D5300",
@@ -19,10 +19,11 @@
       "thumb": "img/photos/patios-thumb.webp",
       "medium": "img/photos/patios-medium.webp",
       "full": "img/photos/patios-full.webp"
-    }
+    },
+    "path": "img/photos/patios-full.webp"
   },
   {
-    "path": "img/photos/church-bell.jpg",
+    "slug": "church-bell",
     "alt": "A bell suspended between two spires",
     "location": "Le\u00f3n, Nicaragua",
     "coords": "12.43500,-86.87878",
@@ -42,10 +43,11 @@
       "thumb": "img/photos/church-bell-thumb.webp",
       "medium": "img/photos/church-bell-medium.webp",
       "full": "img/photos/church-bell-full.webp"
-    }
+    },
+    "path": "img/photos/church-bell-full.webp"
   },
   {
-    "path": "img/photos/white-roof.jpg",
+    "slug": "white-roof",
     "alt": "A doorframe leading to a white ornate roof",
     "location": "Le\u00f3n, Nicaragua",
     "coords": "12.43514,-86.87801",
@@ -65,10 +67,11 @@
       "thumb": "img/photos/white-roof-thumb.webp",
       "medium": "img/photos/white-roof-medium.webp",
       "full": "img/photos/white-roof-full.webp"
-    }
+    },
+    "path": "img/photos/white-roof-full.webp"
   },
   {
-    "path": "img/photos/hazy-sunset.jpg",
+    "slug": "hazy-sunset",
     "alt": "A sunset landscape with fog",
     "location": "Le\u00f3n, Nicaragua",
     "coords": "12.43500,-86.87841",
@@ -88,10 +91,11 @@
       "thumb": "img/photos/hazy-sunset-thumb.webp",
       "medium": "img/photos/hazy-sunset-medium.webp",
       "full": "img/photos/hazy-sunset-full.webp"
-    }
+    },
+    "path": "img/photos/hazy-sunset-full.webp"
   },
   {
-    "path": "img/photos/street-vendor.jpg",
+    "slug": "street-vendor",
     "alt": "Street vendors with a knife over a grill covered in chicken",
     "location": "Le\u00f3n, Nicaragua",
     "coords": "12.43533,-86.87738",
@@ -111,10 +115,11 @@
       "thumb": "img/photos/street-vendor-thumb.webp",
       "medium": "img/photos/street-vendor-medium.webp",
       "full": "img/photos/street-vendor-full.webp"
-    }
+    },
+    "path": "img/photos/street-vendor-full.webp"
   },
   {
-    "path": "img/photos/courtyard.jpg",
+    "slug": "courtyard",
     "alt": "The inside of the Hotel El Convento couryard during golden hour",
     "location": "Le\u00f3n, Nicaragua",
     "coords": "12.43588\u00b0,-86.88160",
@@ -134,10 +139,11 @@
       "thumb": "img/photos/courtyard-thumb.webp",
       "medium": "img/photos/courtyard-medium.webp",
       "full": "img/photos/courtyard-full.webp"
-    }
+    },
+    "path": "img/photos/courtyard-full.webp"
   },
   {
-    "path": "img/photos/bushes-landscape.jpg",
+    "slug": "bushes-landscape",
     "alt": "Bushes on a mountain with a sunset in the distance",
     "location": "Volc\u00e1n Masaya, Nicaragua",
     "coords": "11.99764,-86.14990",
@@ -157,10 +163,11 @@
       "thumb": "img/photos/bushes-landscape-thumb.webp",
       "medium": "img/photos/bushes-landscape-medium.webp",
       "full": "img/photos/bushes-landscape-full.webp"
-    }
+    },
+    "path": "img/photos/bushes-landscape-full.webp"
   },
   {
-    "path": "img/photos/cathedral.jpg",
+    "slug": "cathedral",
     "alt": "An image of a cathedral in the distance through a wooden doorframe",
     "location": "Granada, Nicaragua",
     "coords": "11.93215,-85.95233",
@@ -180,10 +187,11 @@
       "thumb": "img/photos/cathedral-thumb.webp",
       "medium": "img/photos/cathedral-medium.webp",
       "full": "img/photos/cathedral-full.webp"
-    }
+    },
+    "path": "img/photos/cathedral-full.webp"
   },
   {
-    "path": "img/photos/museum.jpg",
+    "slug": "museum",
     "alt": "A few painting hanging on a wall with a slanted roof",
     "location": "Granada, Nicaragua",
     "coords": "11.93209,-85.95228",
@@ -203,10 +211,11 @@
       "thumb": "img/photos/museum-thumb.webp",
       "medium": "img/photos/museum-medium.webp",
       "full": "img/photos/museum-full.webp"
-    }
+    },
+    "path": "img/photos/museum-full.webp"
   },
   {
-    "path": "img/photos/pool.jpg",
+    "slug": "pool",
     "alt": "A pool inside of a colonial courtyard",
     "location": "Granada, Nicaragua",
     "coords": "11.93226,-85.95287",
@@ -226,10 +235,11 @@
       "thumb": "img/photos/pool-thumb.webp",
       "medium": "img/photos/pool-medium.webp",
       "full": "img/photos/pool-full.webp"
-    }
+    },
+    "path": "img/photos/pool-full.webp"
   },
   {
-    "path": "img/photos/cathedral2.jpg",
+    "slug": "cathedral2",
     "alt": "An image of the cathedral with a bird flying by",
     "location": "Granada, Nicaragua",
     "coords": "11.92983,-85.95423",
@@ -249,10 +259,11 @@
       "thumb": "img/photos/cathedral2-thumb.webp",
       "medium": "img/photos/cathedral2-medium.webp",
       "full": "img/photos/cathedral2-full.webp"
-    }
+    },
+    "path": "img/photos/cathedral2-full.webp"
   },
   {
-    "path": "img/photos/vase.jpg",
+    "slug": "vase",
     "alt": "A vase in the middle of two differently coloured buildings",
     "location": "Granada, Nicaragua",
     "camera": "NIKON D5300",
@@ -271,10 +282,11 @@
       "thumb": "img/photos/vase-thumb.webp",
       "medium": "img/photos/vase-medium.webp",
       "full": "img/photos/vase-full.webp"
-    }
+    },
+    "path": "img/photos/vase-full.webp"
   },
   {
-    "path": "img/photos/distant-windturbines.jpg",
+    "slug": "distant-windturbines",
     "alt": "A slow shutter speed image of wint turbines in the distant with blurry trees in the foreground",
     "location": "Ometepe Island, Nicaragua",
     "coords": "11.43538,-85.54872",
@@ -294,10 +306,11 @@
       "thumb": "img/photos/distant-windturbines-thumb.webp",
       "medium": "img/photos/distant-windturbines-medium.webp",
       "full": "img/photos/distant-windturbines-full.webp"
-    }
+    },
+    "path": "img/photos/distant-windturbines-full.webp"
   },
   {
-    "path": "img/photos/waterfall.jpg",
+    "slug": "waterfall",
     "alt": "A waterfall suddounded by greenery",
     "location": "Ometepe Island, Nicaragua",
     "coords": "11.43420,-85.51918",
@@ -317,10 +330,11 @@
       "thumb": "img/photos/waterfall-thumb.webp",
       "medium": "img/photos/waterfall-medium.webp",
       "full": "img/photos/waterfall-full.webp"
-    }
+    },
+    "path": "img/photos/waterfall-full.webp"
   },
   {
-    "path": "img/photos/volcano.jpg",
+    "slug": "volcano",
     "alt": "A volcanoe seen through trees",
     "location": "Ometepe Island, Nicaragua",
     "coords": "11.44685,-85.51511",
@@ -340,10 +354,11 @@
       "thumb": "img/photos/volcano-thumb.webp",
       "medium": "img/photos/volcano-medium.webp",
       "full": "img/photos/volcano-full.webp"
-    }
+    },
+    "path": "img/photos/volcano-full.webp"
   },
   {
-    "path": "img/photos/gas-pool.jpg",
+    "slug": "gas-pool",
     "alt": "Mud pools on the side of a volcanoe",
     "location": "Rinc\u00f3n de la Vieja, Costa-Rica",
     "coords": "10.779382,-85.347889",
@@ -363,10 +378,11 @@
       "thumb": "img/photos/gas-pool-thumb.webp",
       "medium": "img/photos/gas-pool-medium.webp",
       "full": "img/photos/gas-pool-full.webp"
-    }
+    },
+    "path": "img/photos/gas-pool-full.webp"
   },
   {
-    "path": "img/photos/hazy-trees.jpg",
+    "slug": "hazy-trees",
     "alt": "A image looking up at some hazy trees",
     "location": "Reserva Bosque Nuboso Monteverde, Costa-Rica",
     "camera": "NIKON D5300",
@@ -385,10 +401,11 @@
       "thumb": "img/photos/hazy-trees-thumb.webp",
       "medium": "img/photos/hazy-trees-medium.webp",
       "full": "img/photos/hazy-trees-full.webp"
-    }
+    },
+    "path": "img/photos/hazy-trees-full.webp"
   },
   {
-    "path": "img/photos/forest-path.jpg",
+    "slug": "forest-path",
     "alt": "A path going through a forest",
     "location": "Reserva Bosque Nuboso Monteverde, Costa-Rica",
     "camera": "NIKON D5300",
@@ -407,10 +424,11 @@
       "thumb": "img/photos/forest-path-thumb.webp",
       "medium": "img/photos/forest-path-medium.webp",
       "full": "img/photos/forest-path-full.webp"
-    }
+    },
+    "path": "img/photos/forest-path-full.webp"
   },
   {
-    "path": "img/photos/forest-stairs.jpg",
+    "slug": "forest-stairs",
     "alt": "A set of stairs, covered in moss, going through the forest",
     "location": "Reserva Bosque Nuboso Monteverde, Costa-Rica",
     "camera": "NIKON D5300",
@@ -429,10 +447,11 @@
       "thumb": "img/photos/forest-stairs-thumb.webp",
       "medium": "img/photos/forest-stairs-medium.webp",
       "full": "img/photos/forest-stairs-full.webp"
-    }
+    },
+    "path": "img/photos/forest-stairs-full.webp"
   },
   {
-    "path": "img/photos/sunset.jpg",
+    "slug": "sunset",
     "alt": "A sunet over many small mountains",
     "location": "Santa Elena, Costa-Rica",
     "coords": "10.31289,-84.85164",
@@ -452,10 +471,11 @@
       "thumb": "img/photos/sunset-thumb.webp",
       "medium": "img/photos/sunset-medium.webp",
       "full": "img/photos/sunset-full.webp"
-    }
+    },
+    "path": "img/photos/sunset-full.webp"
   },
   {
-    "path": "img/photos/windy-road-sunset.jpg",
+    "slug": "windy-road-sunset",
     "alt": "A windy road with a sunset in the background",
     "location": "Santa Elena, Costa-Rica",
     "coords": "10.30477,-84.85246",
@@ -475,10 +495,11 @@
       "thumb": "img/photos/windy-road-sunset-thumb.webp",
       "medium": "img/photos/windy-road-sunset-medium.webp",
       "full": "img/photos/windy-road-sunset-full.webp"
-    }
+    },
+    "path": "img/photos/windy-road-sunset-full.webp"
   },
   {
-    "path": "img/photos/windy-road-landscape.jpg",
+    "slug": "windy-road-landscape",
     "alt": "A windy road with a sunset in the background",
     "location": "Santa Elena, Costa-Rica",
     "coords": "10.30477,-84.85246",
@@ -498,10 +519,11 @@
       "thumb": "img/photos/windy-road-landscape-thumb.webp",
       "medium": "img/photos/windy-road-landscape-medium.webp",
       "full": "img/photos/windy-road-landscape-full.webp"
-    }
+    },
+    "path": "img/photos/windy-road-landscape-full.webp"
   },
   {
-    "path": "img/photos/dog-fence.jpg",
+    "slug": "dog-fence",
     "alt": "A dog behind a barbed wire fence",
     "coords": "10.32180,-84.84816",
     "location": "Santa Elena, Costa-Rica",
@@ -521,10 +543,11 @@
       "thumb": "img/photos/dog-fence-thumb.webp",
       "medium": "img/photos/dog-fence-medium.webp",
       "full": "img/photos/dog-fence-full.webp"
-    }
+    },
+    "path": "img/photos/dog-fence-full.webp"
   },
   {
-    "path": "img/photos/spider-web.jpg",
+    "slug": "spider-web",
     "alt": "A dewy spider web",
     "location": "Reserva Bosque Nuboso Santa Elena, Costa-Rica",
     "camera": "NIKON D5300",
@@ -544,10 +567,11 @@
       "thumb": "img/photos/spider-web-thumb.webp",
       "medium": "img/photos/spider-web-medium.webp",
       "full": "img/photos/spider-web-full.webp"
-    }
+    },
+    "path": "img/photos/spider-web-full.webp"
   },
   {
-    "path": "img/photos/forest.jpg",
+    "slug": "forest",
     "alt": "A few tress in the foreground and a whole forest of trees in the background",
     "location": "Reserva Bosque Nuboso Santa Elena, Costa-Rica",
     "camera": "NIKON D5300",
@@ -566,10 +590,11 @@
       "thumb": "img/photos/forest-thumb.webp",
       "medium": "img/photos/forest-medium.webp",
       "full": "img/photos/forest-full.webp"
-    }
+    },
+    "path": "img/photos/forest-full.webp"
   },
   {
-    "path": "img/photos/mountain-landscape.jpg",
+    "slug": "mountain-landscape",
     "alt": "A mountainous landscape",
     "location": "Arenal, Costa-Rica",
     "camera": "NIKON D5300",
@@ -588,10 +613,11 @@
       "thumb": "img/photos/mountain-landscape-thumb.webp",
       "medium": "img/photos/mountain-landscape-medium.webp",
       "full": "img/photos/mountain-landscape-full.webp"
-    }
+    },
+    "path": "img/photos/mountain-landscape-full.webp"
   },
   {
-    "path": "img/photos/dogs.jpg",
+    "slug": "dogs",
     "alt": "Two dogs running towards the camera down a driveway",
     "location": "Arenal, Costa-Rica",
     "camera": "NIKON D5300",
@@ -610,10 +636,11 @@
       "thumb": "img/photos/dogs-thumb.webp",
       "medium": "img/photos/dogs-medium.webp",
       "full": "img/photos/dogs-full.webp"
-    }
+    },
+    "path": "img/photos/dogs-full.webp"
   },
   {
-    "path": "img/photos/tree-island.jpg",
+    "slug": "tree-island",
     "alt": "A tree on a large manmade dock",
     "location": "Arenal Volcano National Park, Costa-Rica",
     "coords": "10.45390,-84.75897",
@@ -633,10 +660,11 @@
       "thumb": "img/photos/tree-island-thumb.webp",
       "medium": "img/photos/tree-island-medium.webp",
       "full": "img/photos/tree-island-full.webp"
-    }
+    },
+    "path": "img/photos/tree-island-full.webp"
   },
   {
-    "path": "img/photos/highway.jpg",
+    "slug": "highway",
     "alt": "The view from a highway looking out at mountains",
     "location": "Liberia, Costa-Rica",
     "camera": "NIKON D5300",
@@ -655,10 +683,11 @@
       "thumb": "img/photos/highway-thumb.webp",
       "medium": "img/photos/highway-medium.webp",
       "full": "img/photos/highway-full.webp"
-    }
+    },
+    "path": "img/photos/highway-full.webp"
   },
   {
-    "path": "img/photos/window.jpg",
+    "slug": "window",
     "alt": "Tress through a window",
     "location": "Liberia, Costa-Rica",
     "coords": "10.64192,85.48616",
@@ -678,10 +707,11 @@
       "thumb": "img/photos/window-thumb.webp",
       "medium": "img/photos/window-medium.webp",
       "full": "img/photos/window-full.webp"
-    }
+    },
+    "path": "img/photos/window-full.webp"
   },
   {
-    "path": "img/photos/red-leaf.jpg",
+    "slug": "red-leaf",
     "alt": "A red leaf sourounded by dark branches",
     "location": "Montreal, Canada",
     "camera": "NIKON D5300",
@@ -700,10 +730,11 @@
       "thumb": "img/photos/red-leaf-thumb.webp",
       "medium": "img/photos/red-leaf-medium.webp",
       "full": "img/photos/red-leaf-full.webp"
-    }
+    },
+    "path": "img/photos/red-leaf-full.webp"
   },
   {
-    "path": "img/photos/green-leaf.jpg",
+    "slug": "green-leaf",
     "alt": "A green leaf sourounded by dark branches",
     "location": "Montreal, Canada",
     "camera": "NIKON D5300",
@@ -722,10 +753,11 @@
       "thumb": "img/photos/green-leaf-thumb.webp",
       "medium": "img/photos/green-leaf-medium.webp",
       "full": "img/photos/green-leaf-full.webp"
-    }
+    },
+    "path": "img/photos/green-leaf-full.webp"
   },
   {
-    "path": "img/photos/canoe.jpg",
+    "slug": "canoe",
     "alt": "Imag of a dark lake taken from a canoe",
     "location": "Charleston Lake, Canada",
     "coords": "44.524554,-76.014872",
@@ -745,10 +777,11 @@
       "thumb": "img/photos/canoe-thumb.webp",
       "medium": "img/photos/canoe-medium.webp",
       "full": "img/photos/canoe-full.webp"
-    }
+    },
+    "path": "img/photos/canoe-full.webp"
   },
   {
-    "path": "img/photos/fire-embers.jpg",
+    "slug": "fire-embers",
     "alt": "CLose up image of embers in a camp fire",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
@@ -768,10 +801,11 @@
       "thumb": "img/photos/fire-embers-thumb.webp",
       "medium": "img/photos/fire-embers-medium.webp",
       "full": "img/photos/fire-embers-full.webp"
-    }
+    },
+    "path": "img/photos/fire-embers-full.webp"
   },
   {
-    "path": "img/photos/bark.jpg",
+    "slug": "bark",
     "alt": "A close up image of bark",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
@@ -791,10 +825,11 @@
       "thumb": "img/photos/bark-thumb.webp",
       "medium": "img/photos/bark-medium.webp",
       "full": "img/photos/bark-full.webp"
-    }
+    },
+    "path": "img/photos/bark-full.webp"
   },
   {
-    "path": "img/photos/apartment-patios.jpg",
+    "slug": "apartment-patios",
     "alt": "Apartment patios in the night with a few lights on",
     "location": "Montreal, Canada",
     "camera": "Canon PowerShot ELPH 115 IS",
@@ -813,10 +848,11 @@
       "thumb": "img/photos/apartment-patios-thumb.webp",
       "medium": "img/photos/apartment-patios-medium.webp",
       "full": "img/photos/apartment-patios-full.webp"
-    }
+    },
+    "path": "img/photos/apartment-patios-full.webp"
   },
   {
-    "path": "img/photos/canoe-camping.jpg",
+    "slug": "canoe-camping",
     "alt": "Old camera image of sunset reflecting off canoe",
     "location": "Charleston Lake, Canada",
     "coords": "44.52101,-76.01811",
@@ -836,10 +872,11 @@
       "thumb": "img/photos/canoe-camping-thumb.webp",
       "medium": "img/photos/canoe-camping-medium.webp",
       "full": "img/photos/canoe-camping-full.webp"
-    }
+    },
+    "path": "img/photos/canoe-camping-full.webp"
   },
   {
-    "path": "img/photos/goal.jpg",
+    "slug": "goal",
     "alt": "A soccer goal with no netting",
     "location": "Oakville, Canada",
     "coords": "43.40095,-79.70851",
@@ -859,10 +896,11 @@
       "thumb": "img/photos/goal-thumb.webp",
       "medium": "img/photos/goal-medium.webp",
       "full": "img/photos/goal-full.webp"
-    }
+    },
+    "path": "img/photos/goal-full.webp"
   },
   {
-    "path": "img/photos/path.jpg",
+    "slug": "path",
     "alt": "A park path",
     "location": "Oakville, Canada",
     "coords": "43.40191,-79.70882",
@@ -882,10 +920,11 @@
       "thumb": "img/photos/path-thumb.webp",
       "medium": "img/photos/path-medium.webp",
       "full": "img/photos/path-full.webp"
-    }
+    },
+    "path": "img/photos/path-full.webp"
   },
   {
-    "path": "img/photos/mountains-river.jpg",
+    "slug": "mountains-river",
     "alt": "A river going through mountains",
     "location": "Lac-Saint-Jean, Canada",
     "camera": "NIKON D5300",
@@ -904,10 +943,11 @@
       "thumb": "img/photos/mountains-river-thumb.webp",
       "medium": "img/photos/mountains-river-medium.webp",
       "full": "img/photos/mountains-river-full.webp"
-    }
+    },
+    "path": "img/photos/mountains-river-full.webp"
   },
   {
-    "path": "img/photos/gazebo.jpg",
+    "slug": "gazebo",
     "alt": "A gazebo with curtains flowing in the wind",
     "location": "Lac-Saint-Jean, Canada",
     "coords": "48.41697,-71.94998",
@@ -927,10 +967,11 @@
       "thumb": "img/photos/gazebo-thumb.webp",
       "medium": "img/photos/gazebo-medium.webp",
       "full": "img/photos/gazebo-full.webp"
-    }
+    },
+    "path": "img/photos/gazebo-full.webp"
   },
   {
-    "path": "img/photos/beach-lsg.jpg",
+    "slug": "beach-lsg",
     "alt": "A beach view",
     "location": "Lac-Saint-Jean, Canada",
     "coords": "48.74308,-71.86243",
@@ -950,10 +991,11 @@
       "thumb": "img/photos/beach-lsg-thumb.webp",
       "medium": "img/photos/beach-lsg-medium.webp",
       "full": "img/photos/beach-lsg-full.webp"
-    }
+    },
+    "path": "img/photos/beach-lsg-full.webp"
   },
   {
-    "path": "img/photos/road-sign.jpg",
+    "slug": "road-sign",
     "alt": "A yellow road sign beside a road",
     "location": "Lac-Saint-Jean, Canada",
     "camera": "NIKON D5300",
@@ -972,10 +1014,11 @@
       "thumb": "img/photos/road-sign-thumb.webp",
       "medium": "img/photos/road-sign-medium.webp",
       "full": "img/photos/road-sign-full.webp"
-    }
+    },
+    "path": "img/photos/road-sign-full.webp"
   },
   {
-    "path": "img/photos/light-streak.jpg",
+    "slug": "light-streak",
     "alt": "A slow shutter speed image of cars driving creating light trails",
     "location": "Montreal, Canada",
     "coords": "45.47094,-73.60121",
@@ -995,10 +1038,11 @@
       "thumb": "img/photos/light-streak-thumb.webp",
       "medium": "img/photos/light-streak-medium.webp",
       "full": "img/photos/light-streak-full.webp"
-    }
+    },
+    "path": "img/photos/light-streak-full.webp"
   },
   {
-    "path": "img/photos/sunset-lightouse.jpg",
+    "slug": "sunset-lightouse",
     "alt": "A lighthouse on a peer during the sunset",
     "coords": "43.39352,-79.70377",
     "location": "Oakville, Canada",
@@ -1018,10 +1062,11 @@
       "thumb": "img/photos/sunset-lightouse-thumb.webp",
       "medium": "img/photos/sunset-lightouse-medium.webp",
       "full": "img/photos/sunset-lightouse-full.webp"
-    }
+    },
+    "path": "img/photos/sunset-lightouse-full.webp"
   },
   {
-    "path": "img/photos/sunset-path.jpg",
+    "slug": "sunset-path",
     "alt": "A path with lights during sunset",
     "location": "Oakville, Canada",
     "coords": "43.39352,-79.70377",
@@ -1041,10 +1086,11 @@
       "thumb": "img/photos/sunset-path-thumb.webp",
       "medium": "img/photos/sunset-path-medium.webp",
       "full": "img/photos/sunset-path-full.webp"
-    }
+    },
+    "path": "img/photos/sunset-path-full.webp"
   },
   {
-    "path": "img/photos/rainy-sign.jpg",
+    "slug": "rainy-sign",
     "alt": "A road sign behind water on a window",
     "location": "United-States - Canada Border",
     "camera": "NIKON D5300",
@@ -1063,10 +1109,11 @@
       "thumb": "img/photos/rainy-sign-thumb.webp",
       "medium": "img/photos/rainy-sign-medium.webp",
       "full": "img/photos/rainy-sign-full.webp"
-    }
+    },
+    "path": "img/photos/rainy-sign-full.webp"
   },
   {
-    "path": "img/photos/bridges.jpg",
+    "slug": "bridges",
     "alt": "Two bridges",
     "location": "Montreal, Canada",
     "coords": "45.47021,-73.53521",
@@ -1086,10 +1133,11 @@
       "thumb": "img/photos/bridges-thumb.webp",
       "medium": "img/photos/bridges-medium.webp",
       "full": "img/photos/bridges-full.webp"
-    }
+    },
+    "path": "img/photos/bridges-full.webp"
   },
   {
-    "path": "img/photos/hazy-forest.jpg",
+    "slug": "hazy-forest",
     "alt": "Smog over a forest path",
     "location": "Unknown location",
     "camera": "NIKON D5300",
@@ -1108,10 +1156,11 @@
       "thumb": "img/photos/hazy-forest-thumb.webp",
       "medium": "img/photos/hazy-forest-medium.webp",
       "full": "img/photos/hazy-forest-full.webp"
-    }
+    },
+    "path": "img/photos/hazy-forest-full.webp"
   },
   {
-    "path": "img/photos/beach.jpg",
+    "slug": "beach",
     "alt": "A empty beach with only seagulls",
     "location": "Cobourg Beach, Ontario",
     "coords": "43.957494,-78.162548",
@@ -1131,10 +1180,11 @@
       "thumb": "img/photos/beach-thumb.webp",
       "medium": "img/photos/beach-medium.webp",
       "full": "img/photos/beach-full.webp"
-    }
+    },
+    "path": "img/photos/beach-full.webp"
   },
   {
-    "path": "img/photos/flower-bugs.jpg",
+    "slug": "flower-bugs",
     "alt": "A flower with bugs inside",
     "location": "Unknown location",
     "camera": "NIKON D5300",
@@ -1153,10 +1203,11 @@
       "thumb": "img/photos/flower-bugs-thumb.webp",
       "medium": "img/photos/flower-bugs-medium.webp",
       "full": "img/photos/flower-bugs-full.webp"
-    }
+    },
+    "path": "img/photos/flower-bugs-full.webp"
   },
   {
-    "path": "img/photos/blueberries.jpg",
+    "slug": "blueberries",
     "alt": "Blueberries on a brick wall",
     "location": "Guelph, Canada",
     "coords": "43.68450,-80.43189",
@@ -1176,10 +1227,11 @@
       "thumb": "img/photos/blueberries-thumb.webp",
       "medium": "img/photos/blueberries-medium.webp",
       "full": "img/photos/blueberries-full.webp"
-    }
+    },
+    "path": "img/photos/blueberries-full.webp"
   },
   {
-    "path": "img/photos/tree-above.jpg",
+    "slug": "tree-above",
     "alt": "A tree growing out of the side of a steep hill",
     "location": "Oakville, Canada",
     "camera": "NIKON D5300",
@@ -1199,10 +1251,11 @@
       "thumb": "img/photos/tree-above-thumb.webp",
       "medium": "img/photos/tree-above-medium.webp",
       "full": "img/photos/tree-above-full.webp"
-    }
+    },
+    "path": "img/photos/tree-above-full.webp"
   },
   {
-    "path": "img/photos/road-nl.jpg",
+    "slug": "road-nl",
     "alt": "A long road right after the sunset",
     "location": "De Hoge Veluwe National Park, Netherlands",
     "camera": "NIKON D5300",
@@ -1222,10 +1275,11 @@
       "thumb": "img/photos/road-nl-thumb.webp",
       "medium": "img/photos/road-nl-medium.webp",
       "full": "img/photos/road-nl-full.webp"
-    }
+    },
+    "path": "img/photos/road-nl-full.webp"
   },
   {
-    "path": "img/photos/upwards-nyc.jpg",
+    "slug": "upwards-nyc",
     "alt": "Looking up with skyscrapers surrounding your view",
     "location": "New York City, United-States",
     "camera": "NIKON D5300",
@@ -1244,6 +1298,7 @@
       "thumb": "img/photos/upwards-nyc-thumb.webp",
       "medium": "img/photos/upwards-nyc-medium.webp",
       "full": "img/photos/upwards-nyc-full.webp"
-    }
+    },
+    "path": "img/photos/upwards-nyc-full.webp"
   }
 ]

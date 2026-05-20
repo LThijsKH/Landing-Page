@@ -28,7 +28,7 @@
   property="og:image"
   content="{{ url_for(
     'static',
-    filename=img.path,
+    filename=img.images.full,
     _external=True
   ) }}"
 />
@@ -58,7 +58,7 @@
   name="twitter:image"
   content="{{ url_for(
     'static',
-    filename=img.path,
+    filename=img.images.full,
     _external=True
   ) }}"
 />

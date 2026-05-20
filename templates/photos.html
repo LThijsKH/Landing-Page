@@ -15,7 +15,7 @@
 <div id="view-grid" class="grid grid-cols-1 md:grid-cols-3 p-1">
   <div>
     {% for i in range(col1|length) %}
-    <a href="{{ url_for('photo', filename=col1[i].path.split('/')[-1].split('.')[0]) }}">
+    <a href="{{ url_for('photo', slug=col1[i].slug) }}">
       <img
         class="p-1 w-full"
         src="{{ url_for('static', filename=col1[i].images.thumb) }}"
@@ -32,7 +32,7 @@
   </div>
   <div>
     {% for i in range(col2|length) %}
-    <a href="{{ url_for('photo', filename=col2[i].path.split('/')[-1].split('.')[0]) }}">
+    <a href="{{ url_for('photo', slug=col2[i].slug) }}">
       <img
         class="p-1 w-full"
         src="{{ url_for('static', filename=col2[i].images.thumb) }}"
@@ -49,7 +49,7 @@
   </div>
   <div>
     {% for i in range(col3|length) %}
-    <a href="{{ url_for('photo', filename=col3[i].path.split('/')[-1].split('.')[0]) }}">
+    <a href="{{ url_for('photo', slug=col3[i].slug) }}">
       <img
         class="p-1 w-full"
         src="{{ url_for('static', filename=col3[i].images.thumb) }}"
