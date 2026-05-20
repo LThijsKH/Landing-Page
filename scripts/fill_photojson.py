@@ -13,37 +13,69 @@ MAX_SIZE = 25 * 1024 * 1024  # 25MB
 
 
 def optimize_images():
+
     print("Optimizing images...")
     print("--------------------")
 
+    sizes = {
+        "thumb": 600,
+        "medium": 1200,
+        "full": 2400,
+    }
+
     for file in os.listdir(ORIGINALS_FOLDER):
-        if not file.lower().endswith((".jpg", ".jpeg", ".png")):
+
+        if not file.lower().endswith(
+            (".jpg", ".jpeg", ".png")
+        ):
             continue
 
-        input_path = os.path.join(ORIGINALS_FOLDER, file)
+        input_path = os.path.join(
+            ORIGINALS_FOLDER,
+            file
+        )
+
         name, _ = os.path.splitext(file)
-        output_file = name + ".jpg"
-        output_path = os.path.join(IMAGE_FOLDER, output_file)
 
-        try:
-            subprocess.run([
-                "magick",
-                input_path,
-                "-resize", "4500x4500>",
-                "-strip",
-                "-quality", "92",
-                output_path
-            ], check=True)
+        for label, width in sizes.items():
 
-            size = os.path.getsize(output_path)
+            output_file = (
+                f"{name}-{label}.webp"
+            )
 
-            if size > MAX_SIZE:
-                print(f"⚠ {output_file} → {size // (1024*1024)} MB (too large)")
-            else:
-                print(f"✓ {output_file} → {size // (1024*1024)} MB")
+            output_path = os.path.join(
+                IMAGE_FOLDER,
+                output_file
+            )
 
-        except Exception as e:
-            print(f"Error processing {file}: {e}")
+            try:
+
+                subprocess.run([
+                    "magick",
+                    input_path,
+                    "-resize",
+                    f"{width}x{width}>",
+                    "-strip",
+                    "-quality",
+                    "82",
+                    output_path
+                ], check=True)
+
+                size = os.path.getsize(
+                    output_path
+                )
+
+                print(
+                    f"✓ {output_file} "
+                    f"→ {size // 1024} KB"
+                )
+
+            except Exception as e:
+
+                print(
+                    f"Error processing "
+                    f"{file}: {e}"
+                )
 
 
 def format_shutter(val):
@@ -306,6 +338,12 @@ def main():
 
             entry = existing_map[public_path]
 
+            entry["images"] = {
+                "thumb": f"img/photos/{name}-thumb.webp",
+                "medium": f"img/photos/{name}-medium.webp",
+                "full": f"img/photos/{name}-full.webp",
+            }
+
             for key, value in exif_data.items():
 
                 if value is None:
@@ -344,8 +382,16 @@ def main():
 
             entry = {
                 "path": public_path,
+
+                "images": {
+                    "thumb": f"img/photos/{name}-thumb.webp",
+                    "medium": f"img/photos/{name}-medium.webp",
+                    "full": f"img/photos/{name}-full.webp",
+                },
+
                 "alt": "",
                 "location": "",
+
                 **exif_data
             }
 

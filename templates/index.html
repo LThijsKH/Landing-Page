@@ -14,7 +14,16 @@ content %}
   </h1>
   <div class="lg:px-32">
     <a href="{{ url_for('photo', filename='bushes-landscape') }}">
-      <img src="/static/img/photos/bushes-landscape.jpg" id="hero-image" class="print:hidden w-full h-120 object-cover md:-mt-10 pb-10"/>
+      <img 
+        src="/static/img/photos/bushes-landscape-medium.webp"
+        sizes="100vw"
+        srcset="
+          /static/img/photos/bushes-landscape-medium.webp 1200w,
+          /static/img/photos/bushes-landscape-full.webp 2000w
+        "
+        id="hero-image" 
+        class="print:hidden w-full h-120 object-cover md:-mt-10 pb-10"
+      />
     </a>
   </div>
   <div class="lg:h-38"></div>

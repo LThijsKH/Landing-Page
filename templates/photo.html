@@ -110,7 +110,12 @@
     <div class="w-full md:w-2/3 my-auto">
       <div class="w-full flex items-center justify-center">
         <img
-          src="{{ url_for('static', filename=img.path) }}"
+          src="{{ url_for('static', filename=img.images.medium) }}"
+          sizes="100vw"
+          srcset="
+            {{ url_for('static', filename=img.images.medium) }} 1200w,
+            {{ url_for('static', filename=img.images.full) }} 2000w
+          "
           alt="{{ img.alt }}"
           class="max-h-[60vh] md:max-h-[80vh] max-w-[80vw] md:max-w-[60vw] w-full object-contain max-md:mt-14 hover:cursor-pointer"
           onclick="showView(1);"
@@ -141,7 +146,12 @@
   >
   <div class="slide w-full h-full flex items-center justify-center">
     <img
-      src="{{ url_for('static', filename=img.path) }}"
+      src="{{ url_for('static', filename=img.images.medium) }}"
+      sizes="100vw"
+      srcset="
+        {{ url_for('static', filename=img.images.medium) }} 1200w,
+        {{ url_for('static', filename=img.images.full) }} 2000w
+      "
       alt="{{ img.alt }}"
       class="max-w-full max-h-full object-contain"
       loading="lazy"

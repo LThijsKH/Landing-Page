@@ -17,10 +17,15 @@
     {% for i in range(col1|length) %}
     <a href="{{ url_for('photo', filename=col1[i].path.split('/')[-1].split('.')[0]) }}">
       <img
-        class="p-1"
-        src="{{ url_for('static', filename=col1[i].path) }}"
+        class="p-1 w-full"
+        src="{{ url_for('static', filename=col1[i].images.thumb) }}"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        srcset="
+          {{ url_for('static', filename=col1[i].images.thumb) }} 600w,
+          {{ url_for('static', filename=col1[i].images.medium) }} 1200w
+        "
         alt="{{ col1[i].alt }}"
-        loading="eager"
+        loading="lazy"
       />
     </a>
     {% endfor %}
@@ -29,10 +34,15 @@
     {% for i in range(col2|length) %}
     <a href="{{ url_for('photo', filename=col2[i].path.split('/')[-1].split('.')[0]) }}">
       <img
-        class="p-1"
-        src="{{ url_for('static', filename=col2[i].path) }}"
+        class="p-1 w-full"
+        src="{{ url_for('static', filename=col2[i].images.thumb) }}"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        srcset="
+          {{ url_for('static', filename=col2[i].images.thumb) }} 600w,
+          {{ url_for('static', filename=col2[i].images.medium) }} 1200w
+        "
         alt="{{ col2[i].alt }}"
-        loading="eager"
+        loading="lazy"
       />
     </a>
     {% endfor %}
@@ -41,10 +51,15 @@
     {% for i in range(col3|length) %}
     <a href="{{ url_for('photo', filename=col3[i].path.split('/')[-1].split('.')[0]) }}">
       <img
-        class="p-1"
-        src="{{ url_for('static', filename=col3[i].path) }}"
+        class="p-1 w-full"
+        src="{{ url_for('static', filename=col3[i].images.thumb) }}"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        srcset="
+          {{ url_for('static', filename=col3[i].images.thumb) }} 600w,
+          {{ url_for('static', filename=col3[i].images.medium) }} 1200w
+        "
         alt="{{ col3[i].alt }}"
-        loading="eager"
+        loading="lazy"
       />
     </a>
     {% endfor %}

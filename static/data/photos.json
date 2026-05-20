@@ -14,7 +14,12 @@
     "width": 3612,
     "height": 5418,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/patios-thumb.webp",
+      "medium": "img/photos/patios-medium.webp",
+      "full": "img/photos/patios-full.webp"
+    }
   },
   {
     "path": "img/photos/church-bell.jpg",
@@ -32,7 +37,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/church-bell-thumb.webp",
+      "medium": "img/photos/church-bell-medium.webp",
+      "full": "img/photos/church-bell-full.webp"
+    }
   },
   {
     "path": "img/photos/white-roof.jpg",
@@ -50,7 +60,12 @@
     "width": 2877,
     "height": 4316,
     "aspect_ratio": 0.6666,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/white-roof-thumb.webp",
+      "medium": "img/photos/white-roof-medium.webp",
+      "full": "img/photos/white-roof-full.webp"
+    }
   },
   {
     "path": "img/photos/hazy-sunset.jpg",
@@ -68,7 +83,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/hazy-sunset-thumb.webp",
+      "medium": "img/photos/hazy-sunset-medium.webp",
+      "full": "img/photos/hazy-sunset-full.webp"
+    }
   },
   {
     "path": "img/photos/street-vendor.jpg",
@@ -86,7 +106,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/street-vendor-thumb.webp",
+      "medium": "img/photos/street-vendor-medium.webp",
+      "full": "img/photos/street-vendor-full.webp"
+    }
   },
   {
     "path": "img/photos/courtyard.jpg",
@@ -104,7 +129,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/courtyard-thumb.webp",
+      "medium": "img/photos/courtyard-medium.webp",
+      "full": "img/photos/courtyard-full.webp"
+    }
   },
   {
     "path": "img/photos/bushes-landscape.jpg",
@@ -122,7 +152,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/bushes-landscape-thumb.webp",
+      "medium": "img/photos/bushes-landscape-medium.webp",
+      "full": "img/photos/bushes-landscape-full.webp"
+    }
   },
   {
     "path": "img/photos/cathedral.jpg",
@@ -140,7 +175,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/cathedral-thumb.webp",
+      "medium": "img/photos/cathedral-medium.webp",
+      "full": "img/photos/cathedral-full.webp"
+    }
   },
   {
     "path": "img/photos/museum.jpg",
@@ -158,7 +198,12 @@
     "width": 3319,
     "height": 4978,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/museum-thumb.webp",
+      "medium": "img/photos/museum-medium.webp",
+      "full": "img/photos/museum-full.webp"
+    }
   },
   {
     "path": "img/photos/pool.jpg",
@@ -176,7 +221,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/pool-thumb.webp",
+      "medium": "img/photos/pool-medium.webp",
+      "full": "img/photos/pool-full.webp"
+    }
   },
   {
     "path": "img/photos/cathedral2.jpg",
@@ -194,7 +244,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/cathedral2-thumb.webp",
+      "medium": "img/photos/cathedral2-medium.webp",
+      "full": "img/photos/cathedral2-full.webp"
+    }
   },
   {
     "path": "img/photos/vase.jpg",
@@ -211,7 +266,12 @@
     "width": 3757,
     "height": 5634,
     "aspect_ratio": 0.6668,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/vase-thumb.webp",
+      "medium": "img/photos/vase-medium.webp",
+      "full": "img/photos/vase-full.webp"
+    }
   },
   {
     "path": "img/photos/distant-windturbines.jpg",
@@ -229,7 +289,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/distant-windturbines-thumb.webp",
+      "medium": "img/photos/distant-windturbines-medium.webp",
+      "full": "img/photos/distant-windturbines-full.webp"
+    }
   },
   {
     "path": "img/photos/waterfall.jpg",
@@ -247,7 +312,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/waterfall-thumb.webp",
+      "medium": "img/photos/waterfall-medium.webp",
+      "full": "img/photos/waterfall-full.webp"
+    }
   },
   {
     "path": "img/photos/volcano.jpg",
@@ -265,7 +335,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/volcano-thumb.webp",
+      "medium": "img/photos/volcano-medium.webp",
+      "full": "img/photos/volcano-full.webp"
+    }
   },
   {
     "path": "img/photos/gas-pool.jpg",
@@ -283,7 +358,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/gas-pool-thumb.webp",
+      "medium": "img/photos/gas-pool-medium.webp",
+      "full": "img/photos/gas-pool-full.webp"
+    }
   },
   {
     "path": "img/photos/hazy-trees.jpg",
@@ -300,7 +380,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/hazy-trees-thumb.webp",
+      "medium": "img/photos/hazy-trees-medium.webp",
+      "full": "img/photos/hazy-trees-full.webp"
+    }
   },
   {
     "path": "img/photos/forest-path.jpg",
@@ -317,7 +402,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/forest-path-thumb.webp",
+      "medium": "img/photos/forest-path-medium.webp",
+      "full": "img/photos/forest-path-full.webp"
+    }
   },
   {
     "path": "img/photos/forest-stairs.jpg",
@@ -334,7 +424,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/forest-stairs-thumb.webp",
+      "medium": "img/photos/forest-stairs-medium.webp",
+      "full": "img/photos/forest-stairs-full.webp"
+    }
   },
   {
     "path": "img/photos/sunset.jpg",
@@ -352,7 +447,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/sunset-thumb.webp",
+      "medium": "img/photos/sunset-medium.webp",
+      "full": "img/photos/sunset-full.webp"
+    }
   },
   {
     "path": "img/photos/windy-road-sunset.jpg",
@@ -370,7 +470,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/windy-road-sunset-thumb.webp",
+      "medium": "img/photos/windy-road-sunset-medium.webp",
+      "full": "img/photos/windy-road-sunset-full.webp"
+    }
   },
   {
     "path": "img/photos/windy-road-landscape.jpg",
@@ -388,7 +493,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/windy-road-landscape-thumb.webp",
+      "medium": "img/photos/windy-road-landscape-medium.webp",
+      "full": "img/photos/windy-road-landscape-full.webp"
+    }
   },
   {
     "path": "img/photos/dog-fence.jpg",
@@ -406,7 +516,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/dog-fence-thumb.webp",
+      "medium": "img/photos/dog-fence-medium.webp",
+      "full": "img/photos/dog-fence-full.webp"
+    }
   },
   {
     "path": "img/photos/spider-web.jpg",
@@ -424,7 +539,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/spider-web-thumb.webp",
+      "medium": "img/photos/spider-web-medium.webp",
+      "full": "img/photos/spider-web-full.webp"
+    }
   },
   {
     "path": "img/photos/forest.jpg",
@@ -441,7 +561,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/forest-thumb.webp",
+      "medium": "img/photos/forest-medium.webp",
+      "full": "img/photos/forest-full.webp"
+    }
   },
   {
     "path": "img/photos/mountain-landscape.jpg",
@@ -458,7 +583,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/mountain-landscape-thumb.webp",
+      "medium": "img/photos/mountain-landscape-medium.webp",
+      "full": "img/photos/mountain-landscape-full.webp"
+    }
   },
   {
     "path": "img/photos/dogs.jpg",
@@ -475,7 +605,12 @@
     "width": 5702,
     "height": 3801,
     "aspect_ratio": 1.5001,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/dogs-thumb.webp",
+      "medium": "img/photos/dogs-medium.webp",
+      "full": "img/photos/dogs-full.webp"
+    }
   },
   {
     "path": "img/photos/tree-island.jpg",
@@ -493,7 +628,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/tree-island-thumb.webp",
+      "medium": "img/photos/tree-island-medium.webp",
+      "full": "img/photos/tree-island-full.webp"
+    }
   },
   {
     "path": "img/photos/highway.jpg",
@@ -510,7 +650,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/highway-thumb.webp",
+      "medium": "img/photos/highway-medium.webp",
+      "full": "img/photos/highway-full.webp"
+    }
   },
   {
     "path": "img/photos/window.jpg",
@@ -528,7 +673,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/window-thumb.webp",
+      "medium": "img/photos/window-medium.webp",
+      "full": "img/photos/window-full.webp"
+    }
   },
   {
     "path": "img/photos/red-leaf.jpg",
@@ -545,7 +695,12 @@
     "width": 5368,
     "height": 3579,
     "aspect_ratio": 1.4999,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/red-leaf-thumb.webp",
+      "medium": "img/photos/red-leaf-medium.webp",
+      "full": "img/photos/red-leaf-full.webp"
+    }
   },
   {
     "path": "img/photos/green-leaf.jpg",
@@ -562,7 +717,12 @@
     "width": 5350,
     "height": 3567,
     "aspect_ratio": 1.4999,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/green-leaf-thumb.webp",
+      "medium": "img/photos/green-leaf-medium.webp",
+      "full": "img/photos/green-leaf-full.webp"
+    }
   },
   {
     "path": "img/photos/canoe.jpg",
@@ -580,7 +740,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/canoe-thumb.webp",
+      "medium": "img/photos/canoe-medium.webp",
+      "full": "img/photos/canoe-full.webp"
+    }
   },
   {
     "path": "img/photos/fire-embers.jpg",
@@ -598,7 +763,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/fire-embers-thumb.webp",
+      "medium": "img/photos/fire-embers-medium.webp",
+      "full": "img/photos/fire-embers-full.webp"
+    }
   },
   {
     "path": "img/photos/bark.jpg",
@@ -616,7 +786,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/bark-thumb.webp",
+      "medium": "img/photos/bark-medium.webp",
+      "full": "img/photos/bark-full.webp"
+    }
   },
   {
     "path": "img/photos/apartment-patios.jpg",
@@ -633,7 +808,12 @@
     "width": 4608,
     "height": 2592,
     "aspect_ratio": 1.7778,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/apartment-patios-thumb.webp",
+      "medium": "img/photos/apartment-patios-medium.webp",
+      "full": "img/photos/apartment-patios-full.webp"
+    }
   },
   {
     "path": "img/photos/canoe-camping.jpg",
@@ -651,7 +831,12 @@
     "width": 4608,
     "height": 2592,
     "aspect_ratio": 1.7778,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/canoe-camping-thumb.webp",
+      "medium": "img/photos/canoe-camping-medium.webp",
+      "full": "img/photos/canoe-camping-full.webp"
+    }
   },
   {
     "path": "img/photos/goal.jpg",
@@ -669,7 +854,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/goal-thumb.webp",
+      "medium": "img/photos/goal-medium.webp",
+      "full": "img/photos/goal-full.webp"
+    }
   },
   {
     "path": "img/photos/path.jpg",
@@ -687,7 +877,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/path-thumb.webp",
+      "medium": "img/photos/path-medium.webp",
+      "full": "img/photos/path-full.webp"
+    }
   },
   {
     "path": "img/photos/mountains-river.jpg",
@@ -704,7 +899,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/mountains-river-thumb.webp",
+      "medium": "img/photos/mountains-river-medium.webp",
+      "full": "img/photos/mountains-river-full.webp"
+    }
   },
   {
     "path": "img/photos/gazebo.jpg",
@@ -722,7 +922,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/gazebo-thumb.webp",
+      "medium": "img/photos/gazebo-medium.webp",
+      "full": "img/photos/gazebo-full.webp"
+    }
   },
   {
     "path": "img/photos/beach-lsg.jpg",
@@ -740,7 +945,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/beach-lsg-thumb.webp",
+      "medium": "img/photos/beach-lsg-medium.webp",
+      "full": "img/photos/beach-lsg-full.webp"
+    }
   },
   {
     "path": "img/photos/road-sign.jpg",
@@ -757,7 +967,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/road-sign-thumb.webp",
+      "medium": "img/photos/road-sign-medium.webp",
+      "full": "img/photos/road-sign-full.webp"
+    }
   },
   {
     "path": "img/photos/light-streak.jpg",
@@ -775,7 +990,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/light-streak-thumb.webp",
+      "medium": "img/photos/light-streak-medium.webp",
+      "full": "img/photos/light-streak-full.webp"
+    }
   },
   {
     "path": "img/photos/sunset-lightouse.jpg",
@@ -793,7 +1013,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/sunset-lightouse-thumb.webp",
+      "medium": "img/photos/sunset-lightouse-medium.webp",
+      "full": "img/photos/sunset-lightouse-full.webp"
+    }
   },
   {
     "path": "img/photos/sunset-path.jpg",
@@ -811,7 +1036,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/sunset-path-thumb.webp",
+      "medium": "img/photos/sunset-path-medium.webp",
+      "full": "img/photos/sunset-path-full.webp"
+    }
   },
   {
     "path": "img/photos/rainy-sign.jpg",
@@ -828,7 +1058,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/rainy-sign-thumb.webp",
+      "medium": "img/photos/rainy-sign-medium.webp",
+      "full": "img/photos/rainy-sign-full.webp"
+    }
   },
   {
     "path": "img/photos/bridges.jpg",
@@ -846,7 +1081,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/bridges-thumb.webp",
+      "medium": "img/photos/bridges-medium.webp",
+      "full": "img/photos/bridges-full.webp"
+    }
   },
   {
     "path": "img/photos/hazy-forest.jpg",
@@ -863,7 +1103,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/hazy-forest-thumb.webp",
+      "medium": "img/photos/hazy-forest-medium.webp",
+      "full": "img/photos/hazy-forest-full.webp"
+    }
   },
   {
     "path": "img/photos/beach.jpg",
@@ -881,7 +1126,12 @@
     "width": 5952,
     "height": 3968,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/beach-thumb.webp",
+      "medium": "img/photos/beach-medium.webp",
+      "full": "img/photos/beach-full.webp"
+    }
   },
   {
     "path": "img/photos/flower-bugs.jpg",
@@ -898,7 +1148,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/flower-bugs-thumb.webp",
+      "medium": "img/photos/flower-bugs-medium.webp",
+      "full": "img/photos/flower-bugs-full.webp"
+    }
   },
   {
     "path": "img/photos/blueberries.jpg",
@@ -916,7 +1171,12 @@
     "width": 4000,
     "height": 6000,
     "aspect_ratio": 0.6667,
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "images": {
+      "thumb": "img/photos/blueberries-thumb.webp",
+      "medium": "img/photos/blueberries-medium.webp",
+      "full": "img/photos/blueberries-full.webp"
+    }
   },
   {
     "path": "img/photos/tree-above.jpg",
@@ -934,7 +1194,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/tree-above-thumb.webp",
+      "medium": "img/photos/tree-above-medium.webp",
+      "full": "img/photos/tree-above-full.webp"
+    }
   },
   {
     "path": "img/photos/road-nl.jpg",
@@ -952,7 +1217,12 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/road-nl-thumb.webp",
+      "medium": "img/photos/road-nl-medium.webp",
+      "full": "img/photos/road-nl-full.webp"
+    }
   },
   {
     "path": "img/photos/upwards-nyc.jpg",
@@ -969,6 +1239,11 @@
     "width": 6000,
     "height": 4000,
     "aspect_ratio": 1.5,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "images": {
+      "thumb": "img/photos/upwards-nyc-thumb.webp",
+      "medium": "img/photos/upwards-nyc-medium.webp",
+      "full": "img/photos/upwards-nyc-full.webp"
+    }
   }
 ]
