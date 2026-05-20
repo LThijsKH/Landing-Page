@@ -20,7 +20,7 @@
       "medium": "img/photos/patios-medium.webp",
       "full": "img/photos/patios-full.webp"
     },
-    "path": "img/photos/patios-full.webp"
+    "path": "img/photos/patios"
   },
   {
     "slug": "church-bell",
@@ -44,7 +44,7 @@
       "medium": "img/photos/church-bell-medium.webp",
       "full": "img/photos/church-bell-full.webp"
     },
-    "path": "img/photos/church-bell-full.webp"
+    "path": "img/photos/church-bell"
   },
   {
     "slug": "white-roof",
@@ -68,7 +68,7 @@
       "medium": "img/photos/white-roof-medium.webp",
       "full": "img/photos/white-roof-full.webp"
     },
-    "path": "img/photos/white-roof-full.webp"
+    "path": "img/photos/white-roof"
   },
   {
     "slug": "hazy-sunset",
@@ -92,7 +92,7 @@
       "medium": "img/photos/hazy-sunset-medium.webp",
       "full": "img/photos/hazy-sunset-full.webp"
     },
-    "path": "img/photos/hazy-sunset-full.webp"
+    "path": "img/photos/hazy-sunset"
   },
   {
     "slug": "street-vendor",
@@ -116,7 +116,7 @@
       "medium": "img/photos/street-vendor-medium.webp",
       "full": "img/photos/street-vendor-full.webp"
     },
-    "path": "img/photos/street-vendor-full.webp"
+    "path": "img/photos/street-vendor"
   },
   {
     "slug": "courtyard",
@@ -140,7 +140,7 @@
       "medium": "img/photos/courtyard-medium.webp",
       "full": "img/photos/courtyard-full.webp"
     },
-    "path": "img/photos/courtyard-full.webp"
+    "path": "img/photos/courtyard"
   },
   {
     "slug": "bushes-landscape",
@@ -164,7 +164,7 @@
       "medium": "img/photos/bushes-landscape-medium.webp",
       "full": "img/photos/bushes-landscape-full.webp"
     },
-    "path": "img/photos/bushes-landscape-full.webp"
+    "path": "img/photos/bushes-landscape"
   },
   {
     "slug": "cathedral",
@@ -188,7 +188,7 @@
       "medium": "img/photos/cathedral-medium.webp",
       "full": "img/photos/cathedral-full.webp"
     },
-    "path": "img/photos/cathedral-full.webp"
+    "path": "img/photos/cathedral"
   },
   {
     "slug": "museum",
@@ -212,7 +212,7 @@
       "medium": "img/photos/museum-medium.webp",
       "full": "img/photos/museum-full.webp"
     },
-    "path": "img/photos/museum-full.webp"
+    "path": "img/photos/museum"
   },
   {
     "slug": "pool",
@@ -236,7 +236,7 @@
       "medium": "img/photos/pool-medium.webp",
       "full": "img/photos/pool-full.webp"
     },
-    "path": "img/photos/pool-full.webp"
+    "path": "img/photos/pool"
   },
   {
     "slug": "cathedral2",
@@ -260,7 +260,7 @@
       "medium": "img/photos/cathedral2-medium.webp",
       "full": "img/photos/cathedral2-full.webp"
     },
-    "path": "img/photos/cathedral2-full.webp"
+    "path": "img/photos/cathedral2"
   },
   {
     "slug": "vase",
@@ -283,7 +283,7 @@
       "medium": "img/photos/vase-medium.webp",
       "full": "img/photos/vase-full.webp"
     },
-    "path": "img/photos/vase-full.webp"
+    "path": "img/photos/vase"
   },
   {
     "slug": "distant-windturbines",
@@ -307,7 +307,7 @@
       "medium": "img/photos/distant-windturbines-medium.webp",
       "full": "img/photos/distant-windturbines-full.webp"
     },
-    "path": "img/photos/distant-windturbines-full.webp"
+    "path": "img/photos/distant-windturbines"
   },
   {
     "slug": "waterfall",
@@ -331,7 +331,7 @@
       "medium": "img/photos/waterfall-medium.webp",
       "full": "img/photos/waterfall-full.webp"
     },
-    "path": "img/photos/waterfall-full.webp"
+    "path": "img/photos/waterfall"
   },
   {
     "slug": "volcano",
@@ -355,7 +355,7 @@
       "medium": "img/photos/volcano-medium.webp",
       "full": "img/photos/volcano-full.webp"
     },
-    "path": "img/photos/volcano-full.webp"
+    "path": "img/photos/volcano"
   },
   {
     "slug": "gas-pool",
@@ -379,7 +379,7 @@
       "medium": "img/photos/gas-pool-medium.webp",
       "full": "img/photos/gas-pool-full.webp"
     },
-    "path": "img/photos/gas-pool-full.webp"
+    "path": "img/photos/gas-pool"
   },
   {
     "slug": "hazy-trees",
@@ -402,7 +402,7 @@
       "medium": "img/photos/hazy-trees-medium.webp",
       "full": "img/photos/hazy-trees-full.webp"
     },
-    "path": "img/photos/hazy-trees-full.webp"
+    "path": "img/photos/hazy-trees"
   },
   {
     "slug": "forest-path",
@@ -425,7 +425,7 @@
       "medium": "img/photos/forest-path-medium.webp",
       "full": "img/photos/forest-path-full.webp"
     },
-    "path": "img/photos/forest-path-full.webp"
+    "path": "img/photos/forest-path"
   },
   {
     "slug": "forest-stairs",
@@ -448,7 +448,7 @@
       "medium": "img/photos/forest-stairs-medium.webp",
       "full": "img/photos/forest-stairs-full.webp"
     },
-    "path": "img/photos/forest-stairs-full.webp"
+    "path": "img/photos/forest-stairs"
   },
   {
     "slug": "sunset",
@@ -472,7 +472,7 @@
       "medium": "img/photos/sunset-medium.webp",
       "full": "img/photos/sunset-full.webp"
     },
-    "path": "img/photos/sunset-full.webp"
+    "path": "img/photos/sunset"
   },
   {
     "slug": "windy-road-sunset",
@@ -496,7 +496,7 @@
       "medium": "img/photos/windy-road-sunset-medium.webp",
       "full": "img/photos/windy-road-sunset-full.webp"
     },
-    "path": "img/photos/windy-road-sunset-full.webp"
+    "path": "img/photos/windy-road-sunset"
   },
   {
     "slug": "windy-road-landscape",
@@ -520,7 +520,7 @@
       "medium": "img/photos/windy-road-landscape-medium.webp",
       "full": "img/photos/windy-road-landscape-full.webp"
     },
-    "path": "img/photos/windy-road-landscape-full.webp"
+    "path": "img/photos/windy-road-landscape"
   },
   {
     "slug": "dog-fence",
@@ -544,7 +544,7 @@
       "medium": "img/photos/dog-fence-medium.webp",
       "full": "img/photos/dog-fence-full.webp"
     },
-    "path": "img/photos/dog-fence-full.webp"
+    "path": "img/photos/dog-fence"
   },
   {
     "slug": "spider-web",
@@ -568,7 +568,7 @@
       "medium": "img/photos/spider-web-medium.webp",
       "full": "img/photos/spider-web-full.webp"
     },
-    "path": "img/photos/spider-web-full.webp"
+    "path": "img/photos/spider-web"
   },
   {
     "slug": "forest",
@@ -591,7 +591,7 @@
       "medium": "img/photos/forest-medium.webp",
       "full": "img/photos/forest-full.webp"
     },
-    "path": "img/photos/forest-full.webp"
+    "path": "img/photos/forest"
   },
   {
     "slug": "mountain-landscape",
@@ -614,7 +614,7 @@
       "medium": "img/photos/mountain-landscape-medium.webp",
       "full": "img/photos/mountain-landscape-full.webp"
     },
-    "path": "img/photos/mountain-landscape-full.webp"
+    "path": "img/photos/mountain-landscape"
   },
   {
     "slug": "dogs",
@@ -637,7 +637,7 @@
       "medium": "img/photos/dogs-medium.webp",
       "full": "img/photos/dogs-full.webp"
     },
-    "path": "img/photos/dogs-full.webp"
+    "path": "img/photos/dogs"
   },
   {
     "slug": "tree-island",
@@ -661,7 +661,7 @@
       "medium": "img/photos/tree-island-medium.webp",
       "full": "img/photos/tree-island-full.webp"
     },
-    "path": "img/photos/tree-island-full.webp"
+    "path": "img/photos/tree-island"
   },
   {
     "slug": "highway",
@@ -684,7 +684,7 @@
       "medium": "img/photos/highway-medium.webp",
       "full": "img/photos/highway-full.webp"
     },
-    "path": "img/photos/highway-full.webp"
+    "path": "img/photos/highway"
   },
   {
     "slug": "window",
@@ -708,7 +708,7 @@
       "medium": "img/photos/window-medium.webp",
       "full": "img/photos/window-full.webp"
     },
-    "path": "img/photos/window-full.webp"
+    "path": "img/photos/window"
   },
   {
     "slug": "red-leaf",
@@ -731,7 +731,7 @@
       "medium": "img/photos/red-leaf-medium.webp",
       "full": "img/photos/red-leaf-full.webp"
     },
-    "path": "img/photos/red-leaf-full.webp"
+    "path": "img/photos/red-leaf"
   },
   {
     "slug": "green-leaf",
@@ -754,7 +754,7 @@
       "medium": "img/photos/green-leaf-medium.webp",
       "full": "img/photos/green-leaf-full.webp"
     },
-    "path": "img/photos/green-leaf-full.webp"
+    "path": "img/photos/green-leaf"
   },
   {
     "slug": "canoe",
@@ -778,7 +778,7 @@
       "medium": "img/photos/canoe-medium.webp",
       "full": "img/photos/canoe-full.webp"
     },
-    "path": "img/photos/canoe-full.webp"
+    "path": "img/photos/canoe"
   },
   {
     "slug": "fire-embers",
@@ -802,7 +802,7 @@
       "medium": "img/photos/fire-embers-medium.webp",
       "full": "img/photos/fire-embers-full.webp"
     },
-    "path": "img/photos/fire-embers-full.webp"
+    "path": "img/photos/fire-embers"
   },
   {
     "slug": "bark",
@@ -826,7 +826,7 @@
       "medium": "img/photos/bark-medium.webp",
       "full": "img/photos/bark-full.webp"
     },
-    "path": "img/photos/bark-full.webp"
+    "path": "img/photos/bark"
   },
   {
     "slug": "apartment-patios",
@@ -849,7 +849,7 @@
       "medium": "img/photos/apartment-patios-medium.webp",
       "full": "img/photos/apartment-patios-full.webp"
     },
-    "path": "img/photos/apartment-patios-full.webp"
+    "path": "img/photos/apartment-patios"
   },
   {
     "slug": "canoe-camping",
@@ -873,7 +873,7 @@
       "medium": "img/photos/canoe-camping-medium.webp",
       "full": "img/photos/canoe-camping-full.webp"
     },
-    "path": "img/photos/canoe-camping-full.webp"
+    "path": "img/photos/canoe-camping"
   },
   {
     "slug": "goal",
@@ -897,7 +897,7 @@
       "medium": "img/photos/goal-medium.webp",
       "full": "img/photos/goal-full.webp"
     },
-    "path": "img/photos/goal-full.webp"
+    "path": "img/photos/goal"
   },
   {
     "slug": "path",
@@ -921,7 +921,7 @@
       "medium": "img/photos/path-medium.webp",
       "full": "img/photos/path-full.webp"
     },
-    "path": "img/photos/path-full.webp"
+    "path": "img/photos/path"
   },
   {
     "slug": "mountains-river",
@@ -944,7 +944,7 @@
       "medium": "img/photos/mountains-river-medium.webp",
       "full": "img/photos/mountains-river-full.webp"
     },
-    "path": "img/photos/mountains-river-full.webp"
+    "path": "img/photos/mountains-river"
   },
   {
     "slug": "gazebo",
@@ -968,7 +968,7 @@
       "medium": "img/photos/gazebo-medium.webp",
       "full": "img/photos/gazebo-full.webp"
     },
-    "path": "img/photos/gazebo-full.webp"
+    "path": "img/photos/gazebo"
   },
   {
     "slug": "beach-lsg",
@@ -992,7 +992,7 @@
       "medium": "img/photos/beach-lsg-medium.webp",
       "full": "img/photos/beach-lsg-full.webp"
     },
-    "path": "img/photos/beach-lsg-full.webp"
+    "path": "img/photos/beach-lsg"
   },
   {
     "slug": "road-sign",
@@ -1015,7 +1015,7 @@
       "medium": "img/photos/road-sign-medium.webp",
       "full": "img/photos/road-sign-full.webp"
     },
-    "path": "img/photos/road-sign-full.webp"
+    "path": "img/photos/road-sign"
   },
   {
     "slug": "light-streak",
@@ -1039,7 +1039,7 @@
       "medium": "img/photos/light-streak-medium.webp",
       "full": "img/photos/light-streak-full.webp"
     },
-    "path": "img/photos/light-streak-full.webp"
+    "path": "img/photos/light-streak"
   },
   {
     "slug": "sunset-lightouse",
@@ -1063,7 +1063,7 @@
       "medium": "img/photos/sunset-lightouse-medium.webp",
       "full": "img/photos/sunset-lightouse-full.webp"
     },
-    "path": "img/photos/sunset-lightouse-full.webp"
+    "path": "img/photos/sunset-lightouse"
   },
   {
     "slug": "sunset-path",
@@ -1087,7 +1087,7 @@
       "medium": "img/photos/sunset-path-medium.webp",
       "full": "img/photos/sunset-path-full.webp"
     },
-    "path": "img/photos/sunset-path-full.webp"
+    "path": "img/photos/sunset-path"
   },
   {
     "slug": "rainy-sign",
@@ -1110,7 +1110,7 @@
       "medium": "img/photos/rainy-sign-medium.webp",
       "full": "img/photos/rainy-sign-full.webp"
     },
-    "path": "img/photos/rainy-sign-full.webp"
+    "path": "img/photos/rainy-sign"
   },
   {
     "slug": "bridges",
@@ -1134,7 +1134,7 @@
       "medium": "img/photos/bridges-medium.webp",
       "full": "img/photos/bridges-full.webp"
     },
-    "path": "img/photos/bridges-full.webp"
+    "path": "img/photos/bridges"
   },
   {
     "slug": "hazy-forest",
@@ -1157,7 +1157,7 @@
       "medium": "img/photos/hazy-forest-medium.webp",
       "full": "img/photos/hazy-forest-full.webp"
     },
-    "path": "img/photos/hazy-forest-full.webp"
+    "path": "img/photos/hazy-forest"
   },
   {
     "slug": "beach",
@@ -1181,7 +1181,7 @@
       "medium": "img/photos/beach-medium.webp",
       "full": "img/photos/beach-full.webp"
     },
-    "path": "img/photos/beach-full.webp"
+    "path": "img/photos/beach"
   },
   {
     "slug": "flower-bugs",
@@ -1204,7 +1204,7 @@
       "medium": "img/photos/flower-bugs-medium.webp",
       "full": "img/photos/flower-bugs-full.webp"
     },
-    "path": "img/photos/flower-bugs-full.webp"
+    "path": "img/photos/flower-bugs"
   },
   {
     "slug": "blueberries",
@@ -1228,7 +1228,7 @@
       "medium": "img/photos/blueberries-medium.webp",
       "full": "img/photos/blueberries-full.webp"
     },
-    "path": "img/photos/blueberries-full.webp"
+    "path": "img/photos/blueberries"
   },
   {
     "slug": "tree-above",
@@ -1252,7 +1252,7 @@
       "medium": "img/photos/tree-above-medium.webp",
       "full": "img/photos/tree-above-full.webp"
     },
-    "path": "img/photos/tree-above-full.webp"
+    "path": "img/photos/tree-above"
   },
   {
     "slug": "road-nl",
@@ -1276,7 +1276,7 @@
       "medium": "img/photos/road-nl-medium.webp",
       "full": "img/photos/road-nl-full.webp"
     },
-    "path": "img/photos/road-nl-full.webp"
+    "path": "img/photos/road-nl"
   },
   {
     "slug": "upwards-nyc",
@@ -1299,6 +1299,6 @@
       "medium": "img/photos/upwards-nyc-medium.webp",
       "full": "img/photos/upwards-nyc-full.webp"
     },
-    "path": "img/photos/upwards-nyc-full.webp"
+    "path": "img/photos/upwards-nyc"
   }
 ]

@@ -20,7 +20,13 @@ def optimize_images():
     sizes = {
         "thumb": 600,
         "medium": 1200,
-        "full": 2400,
+        "full": 3200,
+    }
+
+    qualities = {
+        "thumb": "78",
+        "medium": "82",
+        "full": "90",
     }
 
     for file in os.listdir(ORIGINALS_FOLDER):
@@ -53,11 +59,12 @@ def optimize_images():
                 subprocess.run([
                     "magick",
                     input_path,
+                    "-auto-orient",
                     "-resize",
                     f"{width}x{width}>",
                     "-strip",
                     "-quality",
-                    "82",
+                    qualities[label],
                     output_path
                 ], check=True)
 
