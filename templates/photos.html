@@ -6,7 +6,7 @@
 ></script>
 {% endblock %} {% set active_page = 'photos' %} {% block content %}
 <h1
-  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl first-letter:mr-1.5 md:first-letter:mr-2.5"
+  class="text-display first-letter:mr-1.75 md:first-letter:mr-2.5"
 >
   Photography
 </h1>
@@ -15,9 +15,9 @@
 <div id="view-grid" class="grid grid-cols-1 md:grid-cols-3 p-1">
   <div>
     {% for i in range(col1|length) %}
-    <a href="{{ url_for('photo', slug=col1[i].slug) }}">
+    <a href="{{ url_for('photo', slug=col1[i].slug) }}" class="group relative block">
       <img
-        class="p-1 w-full"
+        class="p-1 w-full transition duration-300 group-hover:brightness-75"
         src="{{ url_for('static', filename=col1[i].images.thumb) }}"
         sizes="(max-width: 768px) 100vw, 33vw"
         srcset="
@@ -27,14 +27,27 @@
         alt="{{ col1[i].alt }}"
         loading="lazy"
       />
+      <div
+        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+      >
+        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+          <div class="text-meta text-d-text text-sm">
+            {{ col1[i].location }}
+          </div>
+
+          <div class="text-meta opacity-80">
+            {{ col1[i].date_formatted }}
+          </div>
+        </div>
+      </div>
     </a>
     {% endfor %}
   </div>
   <div>
     {% for i in range(col2|length) %}
-    <a href="{{ url_for('photo', slug=col2[i].slug) }}">
+    <a href="{{ url_for('photo', slug=col2[i].slug) }}" class="group relative block">
       <img
-        class="p-1 w-full"
+        class="p-1 w-full transition duration-300 group-hover:brightness-75"
         src="{{ url_for('static', filename=col2[i].images.thumb) }}"
         sizes="(max-width: 768px) 100vw, 33vw"
         srcset="
@@ -44,14 +57,27 @@
         alt="{{ col2[i].alt }}"
         loading="lazy"
       />
+      <div
+        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+      >
+        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+          <div class="text-meta text-d-text text-sm">
+            {{ col2[i].location }}
+          </div>
+
+          <div class="text-meta opacity-80">
+            {{ col2[i].date_formatted }}
+          </div>
+        </div>
+      </div>
     </a>
     {% endfor %}
   </div>
   <div>
     {% for i in range(col3|length) %}
-    <a href="{{ url_for('photo', slug=col3[i].slug) }}">
+    <a href="{{ url_for('photo', slug=col3[i].slug) }}" class="group relative block">
       <img
-        class="p-1 w-full"
+        class="p-1 w-full transition duration-300 group-hover:brightness-75"
         src="{{ url_for('static', filename=col3[i].images.thumb) }}"
         sizes="(max-width: 768px) 100vw, 33vw"
         srcset="
@@ -61,6 +87,19 @@
         alt="{{ col3[i].alt }}"
         loading="lazy"
       />
+      <div
+        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+      >
+        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+          <div class="text-meta text-d-text text-sm">
+            {{ col3[i].location }}
+          </div>
+
+          <div class="text-meta opacity-80">
+            {{ col3[i].date_formatted }}
+          </div>
+        </div>
+      </div>
     </a>
     {% endfor %}
   </div>

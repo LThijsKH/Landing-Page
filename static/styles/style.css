@@ -12,7 +12,7 @@
     --color-d-muted: #a3a3a3;
     --color-d-line: #262626;
 
-    --color-accent: #3A855D;
+    --color-accent: #596B5D;
 
     /* fonts */
     --font-sans: "Atkinson Hyperlegible", "Inter", system-ui, sans-serif;
@@ -22,13 +22,41 @@
 }
 
 @layer components {
-    .text-heading {
-        @apply font-serif font-bold text-xl
+    /* Text */
+    .text-display {
+        @apply font-serif text-5xl lg:px-4 px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-8xl
+        /* Set for each first letter: md:first-letter:-mr-## first-letter:-mr-## */
     };
+    .text-title {
+        @apply font-serif text-4xl md:text-6xl leading-tight
+    }
+    .text-heading {
+        @apply font-serif text-2xl md:text-4xl font-medium leading-tight
+    }
     .text-subheading {
-        @apply font-bold text-lg;
+        @apply text-xl font-bold
+    };
+    .text-muted {
+        @apply text-muted font-extralight text-xs
+    }
+    .text-link {
+        @apply text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text transition-colors duration-300;
+    }
+    .text-meta {
+        @apply text-xs text-muted dark:text-d-muted;
+    }
+    .text-meta-heading {
+        @apply font-medium text-sm h-5
+    }
+    .text-index {
+        @apply font-mono text-xs text-muted dark:text-d-muted tracking-wider;
     }
     .kbd {
         @apply px-2 py-1 text-xs rounded-md border border-line dark:border-d-line bg-white/60 dark:bg-white/5 shadow-sm select-none
+    }
+
+    /* Layout */
+    .layout-page {
+        @apply p-3 px-8 xl:px-12;
     }
 }

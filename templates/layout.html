@@ -18,13 +18,13 @@
     {% block extra_head %}{% endblock %}
   </head>
   <body
-    class="font-sans bg-bg dark:bg-d-bg text-text dark:text-d-text selection:bg-accent"
+    class="font-sans bg-bg dark:bg-d-bg leading-relaxed text-text dark:text-d-text selection:bg-accent"
   >
     <nav
       class="min-w-full sticky top-0 z-50 flex md:flex-row flex-col justify-between border-b dark:border-d-line border-line print:hidden bg-bg dark:bg-d-bg"
     >
       <div
-        class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'home' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
+        class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'home' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px transition-colors duration-300"
       >
         <a href="{{ url_for('landing') }}">LTKH</a>
       </div>
@@ -33,17 +33,17 @@
         class="hidden flex flex-col md:flex md:flex-row px-2"
       >
         <a
-          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photos' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'photos' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }} md:-mb-px transition-colors duration-300"
           href="{{ url_for('photos') }}"
           >Photography</a
         >
         <a
-          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'projects' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }}  md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 {{ 'border-accent' if active_page == 'projects' else 'border-transparent hover:border-muted hover:darkborder-d-muted' }}  md:-mb-px transition-colors duration-300"
           href="{{ url_for('projects') }}"
           >Projects</a
         >
         <a
-          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted md:-mb-px"
+          class="px-4 my-5 border-l-2 md:border-l-0 md:mx-5 md:py-4 md:border-b-2 md:my-0 md:px-0 border-transparent hover:border-muted md:-mb-px transition-colors duration-300"
           href="#Contact"
           >Contact</a
         >
@@ -87,22 +87,22 @@
       <div class="p-4 flex flex-col justify-between self-start">
         <div class="min-w-full">
           <h3 id="Contact" class="font-bold">Contact</h3>
-          <div id="links" class="flex flex-col gap-1  hover:text-muted min-w-full">
+          <div id="links" class="flex flex-col gap-1 min-w-full">
             <a
               onclick="window.print()"
-              class="hover:text-text dark:hover:text-d-text {{ 'block' if active_page == 'home' else 'hidden' }}"
+              class="text-link cursor-pointer {{ 'block' if active_page == 'home' else 'hidden' }}"
             >
               Print my resume
             </a>
             <a
               onclick="openHelp()"
-              class="hover:text-text dark:hover:text-d-text {{ 'block' if active_page == 'photos' else 'hidden' }}"
+              class="text-link cursor-pointer {{ 'block' if active_page == 'photos' else 'hidden' }}"
             >
               Help navigating this page
             </a>
             <a
               href="https://www.linkedin.com/in/leotkh"
-              class="hover:text-text dark:hover:text-d-text"
+              class="text-link"
               target="_blank"
               rel="noopener"
             >
@@ -110,13 +110,13 @@
             </a>
             <a
               href="mailto:lkeerenhall@gmail.com"
-              class="hover:text-text dark:hover:text-d-text"
+              class="text-link"
             >
               Email
             </a>
             <a
               href="https://github.com/lthijskh"
-              class="hover:text-text dark:hover:text-d-text"
+              class="text-link"
               target="_blank"
               rel="noopener"
             >
@@ -124,7 +124,7 @@
             </a>
           </div>
         </div>
-        <p class="text-muted font-extralight text-xs mt-auto">
+        <p class="text-muted mt-auto">
           © 2026 Leo T. K-H
         </p>
       </div>

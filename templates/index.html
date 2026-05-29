@@ -9,10 +9,10 @@ block extra_head %}
 {% endblock %} {% set active_page = 'home' %} {% block
 content %}
 <span id="hero-wrapper" class="block">
-  <h1 class="lg:sticky top-16 lg:top-0 font-serif text-4xl max-lg:px-8 print:px-4 print:py-0 print:text-4xl md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl md:first-letter:-mr-3 first-letter:-mr-1.5 lg:px-32 lg:pt-32">
+  <h1 class="xl:sticky top-16 xl:top-0 w-full print:px-4 print:py-0 print:text-4xl text-display first-letter:-mr-3 xl:px-32 xl:pt-32">
     Leo Keeren-Hall
   </h1>
-  <div class="lg:px-32">
+  <div class="xl:px-32">
     <a href="{{ url_for('photo', slug='bushes-landscape') }}">
       <img 
         src="/static/img/photos/bushes-landscape-medium.webp"
@@ -22,54 +22,54 @@ content %}
           /static/img/photos/bushes-landscape-full.webp 2000w
         "
         id="hero-image" 
-        class="print:hidden w-full h-120 object-cover md:-mt-10 pb-10"
+        class="print:hidden w-full h-120 object-cover xl:-mt-10 pb-10"
       />
     </a>
   </div>
-  <div class="lg:h-38"></div>
+  <div class="xl:h-38"></div>
 </span>
-<div class="p-3 flex flex-col xl:flex-row justify-around">
+<div class="layout-page flex flex-col lg:flex-row justify-around">
   <div class="px-auto">
-    <p class="max-w-xl text-base leading-relaxed">
+    <p class="max-w-lg text-base leading-relaxed">
       I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects or technical problem solving. Outside of school, I am passionate about 
-      <a class="underline decoration-muted dark:decoration-d-muted hover:decoration-text dark:hover:decoration-d-text" href="{{ url_for('photos') }}">photography</a>, biking, and I'm always looking to learn by doing.</p>
+      <a class="text-link" href="{{ url_for('photos') }}">photography</a>, biking, and I'm always looking to learn by doing.</p>
     <div class="mt-12">
-      <h1 class="text-subheading">Projects</h3>
+      <h2 class="text-heading">Projects</h3>
       <div class="mt-4 space-y-4 relative">
         {% for project in projects %}
           <a class="group" href="{{ url_for('projects') }}#{{ project.id }}">
             <div>
-              <h2 class="text-subheading">{{ project.title }}</h4>
-              <p class="text-sm dark:text-d-muted text-muted group-hover:text-text dark:group-hover:text-d-text">{{ project.description }}</p>
+              <h3 class="text-subheading">{{ project.title }}</h4>
+              <p class="text-link text-sm transition">{{ project.description }}</p>
             </div>
           </a>
         {% endfor %}
       </div>
-      <a href="{{ url_for('projects') }}" class="text-sm text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text">
+      <a href="{{ url_for('projects') }}" class="text-link text-sm">
         View all projects →
       </a>
     </div>
   </div>
   <div class="px-auto">
-    <h1 class="text-subheading">Education</h3>
+    <h2 class="text-heading">Education</h3>
     <ul>
       <div class="mt-4">
         {% for item in cv.education %}
         <div class="flex gap-x-4">
           <div class="relative">
             <div class="relative z-10 size-6 flex justify-center items-center">
-              <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+              <div class="size-2 rounded-full bg-muted dark:bg-d-muted"></div>
             </div>
             {% if not loop.last %}
             <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
             {% endif %}
           </div>
-          <div class="pb-8">
-            <p class="font-light">
+          <div class="pb-8 mt-1.25">
+            <p class="text-meta">
               {{ item.date }}
-              <span class="text-muted italic"> {{ item.note }} </span>
+              <span class="text-muted dark:text-d-muted italic"> {{ item.note }} </span>
             </p>
-            <h2 class="text-subheading">{{ item.title }}</h3>
+            <h3 class="text-subheading">{{ item.title }}</h3>
             <p class="italic">{{ item.subtitle }}</p>
             {% if item.details %}
             <ul class="list-disc ml-4">
@@ -83,24 +83,24 @@ content %}
         {% endfor %}
       </div>
     </ul>
-    <h2 class="text-subheading mt-12">Work Experience</h3>
+    <h2 class="text-heading mt-12">Work Experience</h3>
     <div>
       {% for job in cv.work %}
       <div class="flex gap-x-4">
         <div class="relative">
           <div class="relative z-10 size-6 flex justify-center items-center">
-            <div class="size-2 rounded-full bg-text dark:bg-d-text"></div>
+            <div class="size-2 rounded-full bg-muted dark:bg-d-muted"></div>
           </div>
           {% if not loop.last %}
           <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
           {% endif %}
         </div>
-        <div class="pb-8">
-          <p class="font-light">
+        <div class="pb-8 mt-1.25">
+          <p class="text-meta">
             {{ job.date }}
-            <span class="text-muted italic"> {{ job.note }} </span>
+            <span class="text-muted dark:text-d-muted italic"> {{ job.note }} </span>
           </p>
-          <h2 class="text-subheading">{{ job.title }}</h1>
+          <h3 class="text-subheading">{{ job.title }}</h1>
           <p class="italic">{{ job.subtitle }}</p>
           {% if job.details %}
           <ul class="list-disc ml-4">

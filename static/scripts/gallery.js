@@ -4,6 +4,7 @@ const body = document.body;
 
 const singleView = document.getElementById("view-single");
 const lightbox = document.getElementById("lighthouse");
+const lightboxBg = document.getElementById("lighthouse-bg");
 
 const closeBtn = document.getElementById("close-modal");
 
@@ -150,10 +151,8 @@ closeBtn.addEventListener("click", () => {
   showView(0);
 });
 
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    showView(0);
-  }
+lightboxBg.addEventListener("click", () => {
+  showView(0);
 });
 
 window.addEventListener(

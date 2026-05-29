@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block title %}Projects - {{ super() }}{% endblock
 %} {% block extra_head %}{% endblock %} {% set active_page = 'projects' %} {%block content %}
 <h1
-  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl md:first-letter:-mr-1.5 first-letter:-mr-0.5"
+  class="text-display md:first-letter:-mr-1.5 first-letter:-mr-0.5"
 >
   Projects
 </h1>
@@ -12,14 +12,17 @@
     class="grid md:grid-cols-[90px_1fr] gap-8 py-20 not-last:border-b border-line dark:border-d-line"
   >    
     <div class="md:sticky top-24 h-fit">
-      <p class="text-xs text-muted">[ {{project.id}} ]</p>
-      <p class="font-serif text-2xl">{{ project.date }}</p>
+      <p class="text-meta">[ {{project.id}} ]</p>
+      <p class="text-heading">{{ project.date }}</p>
     </div>
     <div class="mt-6 max-w-7xl">
       <div>
-        <h2 class="font-serif text-3xl md:text-5xl leading-tight">
+        <h1 class="text-title">
           {{ project.title }}
-        </h2>
+        </h1>
+        <p class="mt-4 max-w-2xl leading-relaxed">
+        {{ project.description }}
+      </p>
       </div>
       <div class="mt-6 max-w-5xl"></div>
       {% if project.image %} {% if "http" in project.image %}
@@ -31,14 +34,11 @@
         src="{{url_for('static', filename=project.image)}}"
       />
       {% endif %} {% endif %}
-      <p class="mt-4 max-w-2xl leading-relaxed">
-        {{ project.description }}
-      </p>
 
       <div class="mt-6 pt-4 border-t border-line dark:border-d-line flex flex-wrap items-center justify-between gap-6 text-sm">
 
         {% if project.tech %}
-        <p class="text-muted dark:text-d-muted">
+        <p class="text-meta">
           {{ project.tech | join(" · ") }}
         </p>
         {% endif %}
@@ -47,7 +47,7 @@
 
           {% if project.link %}
           <a
-            class="text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text transition"
+            class="text-link"
             href="{{ project.link }}"
             target="_blank"
             rel="noopener"
@@ -58,7 +58,7 @@
 
           {% if project.repository %}
           <a
-            class="text-muted dark:text-d-muted hover:text-text dark:hover:text-d-text transition"
+            class="text-link"
             href="{{ project.repository }}"
             target="_blank"
             rel="noopener"

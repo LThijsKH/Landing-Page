@@ -64,7 +64,7 @@
 />
 {% endblock %} {% set active_page = 'photos' %} {% block content %}
 <h1
-  class="font-serif text-4xl max-lg:px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-6xl first-letter:mr-1.5 md:first-letter:mr-2.5"
+  class="text-display first-letter:mr-1.75 md:first-letter:mr-2.5"
 >
   Photography
 </h1>
@@ -81,22 +81,22 @@
       </button>
       <div class="max-w-md w-full transition-opacity duration-300 flex flex-col gap-3">
 
-        <div class="mt-1 text-sm text-muted dark:text-d-muted space-y-1 min-h-14">
-          <div class="text-text dark:text-d-text text-2xl font-medium leading-tight">
+        <div class="mt-1 space-y-1 min-h-14">
+          <div class="text-subheading">
             {{ img.location }}
           </div>
-          <a href="https://www.google.com/maps?q={{ img.coords}}" class="text-muted dark:text-d-muted max-w-fit text-xs h-4 block hover:text-text dark:hover:text-d-text" target="_blank" rel="noopener">{{ img.coords }}</a>
+          <a href="https://www.google.com/maps?q={{ img.coords}}" class="text-link max-w-fit text-xs h-4 block" target="_blank" rel="noopener">{{ img.coords }}</a>
         </div>
 
-        <div class="text-sm text-muted dark:text-d-muted">
+        <div class="text-meta text-sm">
           {{ img.date_formatted }}
         </div>
 
-        <div class="mt-6 text-sm text-muted dark:text-d-muted space-y-2 min-h-20">
-          <div class="font-medium text-text dark:text-d-text h-5">{{ img.camera }}</div>
-          <div class="text-xs h-4">{{ img.lens }}</div>
+        <div class="mt-6 space-y-2 min-h-20">
+          <div class="text-meta-heading">{{ img.camera }}</div>
+          <div class="text-meta h-4">{{ img.lens }}</div>
 
-          <div class="flex gap-6 text-xs mt-2 min-h-5">
+          <div class="flex gap-6 text-meta mt-2 min-h-5">
             <span>ISO {{ img.iso }}</span>
             <span>{{ img.focal }}</span>
             <span>{{ img.aperture }}</span>
@@ -144,7 +144,7 @@
     class="flex-1 flex items-center justify-center w-full max-w-[95vw] max-h-[95vh]"
     id="image-container"
   >
-  <div class="slide w-full h-full flex items-center justify-center">
+  <div id="lighthouse-bg"class="slide w-full h-full flex items-center justify-center">
     <img
       src="{{ url_for('static', filename=img.images.medium) }}"
       sizes="100vw"
