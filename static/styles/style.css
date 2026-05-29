@@ -26,7 +26,7 @@
     .text-display {
         @apply font-serif text-5xl lg:px-4 px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-8xl
         /* Set for each first letter: md:first-letter:-mr-## first-letter:-mr-## */
-    };
+    }
     .text-title {
         @apply font-serif text-4xl md:text-6xl leading-tight
     }
@@ -35,7 +35,7 @@
     }
     .text-subheading {
         @apply text-xl font-bold
-    };
+    }
     .text-muted {
         @apply text-muted font-extralight text-xs
     }
