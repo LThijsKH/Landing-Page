@@ -24,7 +24,7 @@
 @layer components {
     /* Text */
     .text-display {
-        @apply font-serif text-5xl lg:px-4 px-8 md:text-7xl first-letter:font-accent md:first-letter:text-9xl first-letter:text-8xl
+        @apply font-serif text-5xl lg:px-4 px-8 md:text-7xl print:text-5xl not-print:first-letter:font-accent not-print:md:first-letter:text-9xl not-print:first-letter:text-8xl
         /* Set for each first letter: md:first-letter:-mr-## first-letter:-mr-## */
     }
     .text-title {
@@ -57,6 +57,148 @@
 
     /* Layout */
     .layout-page {
-        @apply p-3 px-8 xl:px-12;
+        @apply p-3 px-8 xl:px-12 print:px-4;
+    }
+}
+
+/* GPT-5.5 improved printing */
+@media print {
+    html {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    body {
+        background: #ffffff;
+        color: #1f1f1f;
+        font-size: 9pt;
+        line-height: 1.35;
+    }
+
+    #hero-wrapper {
+        display: block;
+    }
+
+    #hero-wrapper h1 {
+        margin: 0 0 6mm;
+        padding: 0 !important;
+        color: #111111;
+        font-family: var(--font-serif);
+        font-size: 28pt !important;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    #hero-wrapper > div:last-child {
+        display: none;
+    }
+
+    .cv-print {
+        display: grid !important;
+        grid-template-columns: 0.9fr 1.35fr;
+        gap: 8mm;
+        align-items: start;
+        padding: 0 !important;
+    }
+
+    .cv-print > div {
+        padding: 0;
+    }
+
+    .cv-print p,
+    .cv-print li {
+        font-size: 8.7pt;
+        line-height: 1.35;
+    }
+
+    .cv-print a {
+        color: #333333;
+        text-decoration: none;
+    }
+
+    .cv-print .text-heading {
+        margin: 0 0 2.5mm;
+        color: #111111;
+        font-family: var(--font-sans);
+        font-size: 11pt !important;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .cv-print .text-subheading {
+        color: #171717;
+        font-size: 9.4pt !important;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .cv-print .text-meta {
+        color: #666666;
+        font-size: 7.6pt;
+        line-height: 1.2;
+    }
+
+    .cv-print .text-link,
+    .cv-print .text-muted {
+        color: #555555;
+        font-weight: 400;
+    }
+
+    .cv-print .mt-12 {
+        margin-top: 5mm !important;
+    }
+
+    .cv-print .mt-4 {
+        margin-top: 2.5mm !important;
+    }
+
+    .cv-print .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 2.5mm !important;
+    }
+
+    .cv-print .gap-x-4 {
+        column-gap: 2.5mm !important;
+        break-inside: avoid;
+    }
+
+    .cv-print .pb-8 {
+        padding-bottom: 3.8mm !important;
+    }
+
+    .cv-print ul {
+        margin-top: 1.5mm;
+    }
+
+    .cv-print .list-disc {
+        margin-left: 3.5mm !important;
+    }
+
+    .cv-print li {
+        margin-bottom: 0.8mm;
+    }
+
+    .cv-print .size-6 {
+        width: 4mm !important;
+        height: 4mm !important;
+    }
+
+    .cv-print .size-2 {
+        width: 1.4mm !important;
+        height: 1.4mm !important;
+        background: #777777 !important;
+    }
+
+    .cv-print .top-6 {
+        top: 4mm !important;
+    }
+
+    .cv-print .left-3 {
+        left: 2mm !important;
+    }
+
+    .cv-print .w-px {
+        background: #d0d0d0 !important;
     }
 }
