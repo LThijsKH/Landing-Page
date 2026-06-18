@@ -51,10 +51,11 @@ content %}
     </div>
   </div>
   <div class="px-auto">
-    <h2 class="text-heading">Education</h3>
+  {% for section_name, items in cv.timeline.items() %}
+    <h2 class="text-heading {% if not loop.first %}mt-12{% endif %}">{{ section_name }}</h3>
     <ul>
       <div class="mt-4">
-        {% for item in cv.education %}
+        {% for item in items %}
         <div class="flex gap-x-4">
           <div class="relative">
             <div class="relative z-10 size-6 flex justify-center items-center">
@@ -83,36 +84,7 @@ content %}
         {% endfor %}
       </div>
     </ul>
-    <h2 class="text-heading mt-12">Work Experience</h3>
-    <div>
-      {% for job in cv.work %}
-      <div class="flex gap-x-4">
-        <div class="relative">
-          <div class="relative z-10 size-6 flex justify-center items-center">
-            <div class="size-2 rounded-full bg-muted dark:bg-d-muted"></div>
-          </div>
-          {% if not loop.last %}
-          <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
-          {% endif %}
-        </div>
-        <div class="pb-8 mt-1.25">
-          <p class="text-meta">
-            {{ job.date }}
-            <span class="text-muted dark:text-d-muted italic"> {{ job.note }} </span>
-          </p>
-          <h3 class="text-subheading">{{ job.title }}</h1>
-          <p class="italic">{{ job.subtitle }}</p>
-          {% if job.details %}
-          <ul class="list-disc ml-4">
-            {% for d in job.details %}
-            <li>{{ d }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+  {% endfor %}
   </div>
 </div>
 {% endblock %}
