@@ -1,34 +1,10 @@
-<!doctype html>
-<html lang="en" class="h-full">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost?</title>
-
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/output.css') }}"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body class="h-screen bg-bg dark:bg-d-bg text-text dark:text-d-text font-sans">
-    <div class="max-w-5xl m-auto px-6 py-24 h-screen justify-center align-middle">
-      <p class="text-4xl">404</p>
-      <h1 class="text-subheading mt-4">Lost?</h1>
-      <p class="mt-6 text-muted dark:text-d-muted max-w-md">
-        The page you're looking for doesn't exist.
-      </p>
-      <p class="mt-2 text-sm dark:text-d-muted/25 text-muted/25">
-        Or maybe it hasn't been built yet...
-      </p>
-      <a href="/" class="text-link mt-8 inline-block"> ← Back to home </a>
-    </div>
-  </body>
-</html>
+{% extends "layout.html" %} {% block title %}Lost? - {{ super() }}{% endblock
+%}
+{% block content %}
+<p class="text-display">404</p>
+<h1 class="text-heading mt-4">Lost?</h1>
+<p class="mt-6">
+  The page you're looking for doesn't exist.
+</p>
+<a href="/" class="text-link mt-10"> ← Back to home </a>
+{% endblock %}
