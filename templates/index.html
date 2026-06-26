@@ -11,6 +11,11 @@ block extra_head %}
       margin: 0 !important;
       min-height: auto !important;
     }
+
+    .print-page-break {
+      page-break-before: always;
+      break-before: page;
+    }
   }
 </style>
 {% endblock %} {% set active_page = 'home' %} {% block
@@ -38,8 +43,7 @@ content %}
 <div class="cv-print layout-page flex flex-col not-print:lg:flex-row lg:flex-row justify-around">
   <div class="px-auto mb-12">
     <p class="max-w-lg text-base leading-relaxed">
-      I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects or technical problem solving. Outside of school, I am passionate about 
-      <a class="not-print:text-link" href="{{ url_for('photos') }}">photography</a>, biking, and I'm always looking to learn by doing.</p>
+      {{ cv.intro.pre }}<a class="not-print:text-link" href="{{ url_for('photos') }}">{{ cv.intro.link_text }}</a>{{ cv.intro.post }}</p>
     <div class="mt-12">
       <h2 class="text-heading">Projects</h2>
       <div class="mt-4 space-y-4 relative">
@@ -92,6 +96,86 @@ content %}
       </div>
     </ul>
   {% endfor %}
+  </div>
+</div>
+<div class="hidden print:block print-page-break">
+  <span id="hero-wrapper-fr" class="block">
+    <h1 class="not-print:xl:sticky not-print:top-16 not-print:xl:top-0 w-full print:px-4 print:py-0 text-display not-print:first-letter:-mr-3 xl:px-32 xl:pt-32">
+      Leo Keeren-Hall
+    </h1>
+    <div class="xl:px-32">
+      <a href="{{ url_for('photo', slug='bushes-landscape') }}">
+        <img 
+          src="/static/img/photos/bushes-landscape-medium.webp"
+          sizes="100vw"
+          srcset="
+            /static/img/photos/bushes-landscape-medium.webp 1200w,
+            /static/img/photos/bushes-landscape-full.webp 2000w
+          "
+          id="hero-image-fr" 
+          class="print:hidden w-full h-120 object-cover xl:-mt-10 pb-10"
+        />
+      </a>
+    </div>
+    <div class="xl:h-38"></div>
+  </span>
+  <div class="cv-print layout-page flex flex-col not-print:lg:flex-row lg:flex-row justify-around">
+    <div class="px-auto mb-12">
+      <p class="max-w-lg text-base leading-relaxed">
+        {{ cv_fr.intro.pre }}<a class="not-print:text-link" href="{{ url_for('photos') }}">{{ cv_fr.intro.link_text }}</a>{{ cv_fr.intro.post }}</p>
+      <div class="mt-12">
+        <h2 class="text-heading">Projets</h2>
+        <div class="mt-4 space-y-4 relative">
+          {% for project in projects %}
+            <a class="group" href="{{ url_for('projects') }}#{{ project.id }}">
+              <div>
+                <h3 class="text-subheading">{{ project.title }}</h3>
+                <p class="not-print:text-link print:italic transition">{{ project.description_fr | default(project.description) }}</p>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+        <a href="{{ url_for('projects') }}" class="text-link text-sm print:hidden">
+          Voir tous les projets →
+        </a>
+      </div>
+    </div>
+    <div class="px-auto">
+    {% for section_name, items in cv_fr.timeline.items() %}
+      <h2 class="text-heading {% if not loop.first %}mt-12{% endif %}">{{ section_name }}</h2>
+      <ul>
+        <div class="mt-4">
+          {% for item in items %}
+          <div class="flex gap-x-4">
+            <div class="relative">
+              <div class="relative z-10 size-6 flex justify-center items-center">
+                <div class="size-2 rounded-full bg-muted dark:bg-d-muted"></div>
+              </div>
+              {% if not loop.last %}
+              <div class="absolute top-6 bottom-0 left-3 w-px bg-line dark:bg-d-line"></div>
+              {% endif %}
+            </div>
+            <div class="pb-8 mt-1.25">
+              <p class="text-meta">
+                {{ item.date }}
+                <span class="text-muted dark:text-d-muted italic"> {{ item.note | default('') }} </span>
+              </p>
+              <h3 class="text-subheading">{{ item.title }}</h3>
+              <p class="italic">{{ item.subtitle }}</p>
+              {% if item.details %}
+              <ul class="list-disc ml-4">
+                {% for d in item.details %}
+                <li>{{ d }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </ul>
+    {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}

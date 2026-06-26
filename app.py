@@ -28,7 +28,9 @@ def landing():
     # TODO: Sort my date
     with open("static/data/cv.json") as f:
         cv = json.load(f)
-    return render_template("index.html", cv=cv, projects=featured_projects)
+    with open("static/data/cv_fr.json") as f:
+        cv_fr = json.load(f)
+    return render_template("index.html", cv=cv, cv_fr=cv_fr, projects=featured_projects)
 
 @app.route("/photos/")
 def photos():

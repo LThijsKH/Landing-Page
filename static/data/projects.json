@@ -8,6 +8,7 @@
     "alt": "Website Screenshot Collage",
     "tech": ["HTML", "Tailwind CSS", "Python", "Flask"],
     "description": "This website, a general portfolio for myself",
+    "description_fr": "Ce site Web, un portfolio personnel",
     "repository": "https://github.com/LThijsKH/Landing-Page",
     "link": "https://leotkh.com"
   }

@@ -1,4 +1,9 @@
 {
+  "intro": {
+    "pre": "I'm a CEGEP student in Computer Science accepted into Electrical Engineering at McGill University. I'm interested in building and understanding systems, whether that's through programming, hands-on projects or technical problem solving. Outside of school, I am passionate about ",
+    "link_text": "photography",
+    "post": ", biking, and I'm always looking to learn by doing."
+  },
   "timeline": {
     "Education": [
       {

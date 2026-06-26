@@ -1,0 +1,56 @@
+{
+  "intro": {
+    "pre": "Je suis étudiant au CÉGEP en informatique accepté en génie électrique à l'Université McGill. Je m'intéresse à la construction et à la compréhension des systèmes, que ce soit par la programmation, des projets pratiques ou la résolution de problèmes techniques. En dehors de l'école, je suis passionné par la ",
+    "link_text": "photographie",
+    "post": ", le vélo, et je cherche toujours à apprendre en pratiquant."
+  },
+  "timeline": {
+    "Éducation": [
+      {
+        "title": "Université McGill",
+        "subtitle": "Baccalauréat en génie électrique",
+        "date": "Automne 2026",
+        "note": "(Inscrit)",
+        "details": []
+      },
+      {
+        "title": "Cégep Dawson",
+        "subtitle": "DEC en informatique, sciences et mathématiques",
+        "date": "2024- 2026",
+        "note": "(Prévu)",
+        "details": ["Honor Roll (chaque semestre)"]
+      },
+      {
+        "title": "Villa Maria",
+        "subtitle": "Diplôme d'études secondaires en sciences (programme français)",
+        "date": "2019-2024"
+      }
+    ],
+    "Expérience professionnelle": [
+      {
+        "title": "Préposé au comptoir - Pasta Casareccia",
+        "subtitle": "Service au comptoir et service à la clientèle",
+        "date": "Juin 2026 - Présent",
+        "details": [
+          "Service à la clientèle bilingue en français et en anglais",
+          "Traitement des commandes clients et gestion des paiements en espèces et carte",
+          "Préparation et emballage des commandes pour repas sur place et à emporter",
+          "Maintien de la propreté et de l'organisation du comptoir",
+          "Travail efficace en équipe dans un environnement dynamique lors des périodes de pointe"
+        ]
+      },
+      {
+        "title": "Caissier - Super C",
+        "subtitle": "Département des fruits et légumes",
+        "date": "Juillet 2022 - Mai 2023",
+        "details": [
+          "Service à la clientèle bilingue (français et anglais)",
+          "Gestion autonome de mon département lors des quarts du soir",
+          "Gestion des livraisons et organisation des stocks provenant des palettes entrantes",
+          "Fermeture du département en fin de quart",
+          "Réapprovisionnement et entretien des présentoirs de produits"
+        ]
+      }
+    ]
+  }
+}
