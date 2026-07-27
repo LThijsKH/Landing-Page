@@ -1,14 +1,14 @@
 [
   {
-    "slug": "exp32",
-    "path": "img/photos/exp32",
+    "slug": "streetlight",
+    "path": "img/photos/streetlight",
     "images": {
-      "thumb": "img/photos/exp32-thumb.webp",
-      "medium": "img/photos/exp32-medium.webp",
-      "full": "img/photos/exp32-full.webp"
+      "thumb": "img/photos/streetlight-thumb.webp",
+      "medium": "img/photos/streetlight-medium.webp",
+      "full": "img/photos/streetlight-full.webp"
     },
-    "alt": "",
-    "location": "",
+    "alt": "A street lamp infront of a dark night sky",
+    "location": "Montreal, Canada",
     "camera": "Asahi Pentax H2",
     "lens": "Auto-Takumar 55mm f/2",
     "iso": 400,
@@ -27,15 +27,15 @@
     "orientation": "horizontal"
   },
   {
-    "slug": "exp31",
-    "path": "img/photos/exp31",
+    "slug": "scooter",
+    "path": "img/photos/scooter",
     "images": {
-      "thumb": "img/photos/exp31-thumb.webp",
-      "medium": "img/photos/exp31-medium.webp",
-      "full": "img/photos/exp31-full.webp"
+      "thumb": "img/photos/scooter-thumb.webp",
+      "medium": "img/photos/scooter-medium.webp",
+      "full": "img/photos/scooter-full.webp"
     },
-    "alt": "",
-    "location": "",
+    "alt": "A brightly coloured scooter covered in stickers",
+    "location": "Le Plateau Montreal, Canada",
     "camera": "Asahi Pentax H2",
     "lens": "Auto-Takumar 55mm f/2",
     "iso": 400,
@@ -54,15 +54,15 @@
     "orientation": "horizontal"
   },
   {
-    "slug": "exp22",
-    "path": "img/photos/exp22",
+    "slug": "montreal-skyline",
+    "path": "img/photos/montreal-skyline",
     "images": {
-      "thumb": "img/photos/exp22-thumb.webp",
-      "medium": "img/photos/exp22-medium.webp",
-      "full": "img/photos/exp22-full.webp"
+      "thumb": "img/photos/montreal-skyline-thumb.webp",
+      "medium": "img/photos/montreal-skyline-medium.webp",
+      "full": "img/photos/montreal-skyline-full.webp"
     },
     "alt": "",
-    "location": "",
+    "location": "Montreal, Canada",
     "camera": "Asahi Pentax H2",
     "lens": "Auto-Takumar 55mm f/2",
     "iso": 400,
@@ -82,15 +82,15 @@
     "orientation": "vertical"
   },
   {
-    "slug": "exp11",
-    "path": "img/photos/exp11",
+    "slug": "red-car",
+    "path": "img/photos/red-car",
     "images": {
-      "thumb": "img/photos/exp11-thumb.webp",
-      "medium": "img/photos/exp11-medium.webp",
-      "full": "img/photos/exp11-full.webp"
+      "thumb": "img/photos/red-car-thumb.webp",
+      "medium": "img/photos/red-car-medium.webp",
+      "full": "img/photos/red-car-full.webp"
     },
-    "alt": "",
-    "location": "",
+    "alt": "A bright red vintage Mercedes",
+    "location": "Montreal, Canada",
     "camera": "Asahi Pentax H2",
     "lens": "Auto-Takumar 55mm f/2",
     "iso": 400,
