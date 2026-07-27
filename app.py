@@ -4,12 +4,11 @@ import json
 from datetime import datetime
 
 app = Flask(__name__)
- 
+
 def split_list(images, columns=3):
     cols = [[] for _ in range(columns)]
     heights = [0.0] * columns
     for img in images:
-        orientation = img.get("orientation", "horizontal")
         # 2:3 portrait images are visually taller
         weight = 1 / img["aspect_ratio"]
         shortest_col = heights.index(min(heights))

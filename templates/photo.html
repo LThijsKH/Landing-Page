@@ -96,8 +96,14 @@
           <div class="text-meta-heading">{{ img.camera }}</div>
           <div class="text-meta h-4">{{ img.lens }}</div>
 
+          {% if img.film %}
+          <div class="text-meta h-4">
+            {{ img.film_stock }}{% if img.film_format %} · {{ img.film_format }}{% endif %}
+          </div>
+          {% endif %}
+
           <div class="flex gap-6 text-meta mt-2 min-h-5">
-            <span>ISO {{ img.iso }}</span>
+            <span>ISO {{ img.rated_iso or img.iso }}</span>
             <span>{{ img.focal }}</span>
             <span>{{ img.aperture }}</span>
             <span>{{ img.shutter }}</span>

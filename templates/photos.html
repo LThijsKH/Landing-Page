@@ -11,96 +11,57 @@
   Photography
 </h1>
 
-<!-- 3 col Library -->
-<div id="view-grid" class="grid grid-cols-1 md:grid-cols-3 p-1">
-  <div>
-    {% for i in range(col1|length) %}
-    <a href="{{ url_for('photo', slug=col1[i].slug) }}" class="group relative block">
-      <img
-        class="p-1 w-full transition duration-300 group-hover:brightness-75"
-        src="{{ url_for('static', filename=col1[i].images.thumb) }}"
-        sizes="(max-width: 768px) 100vw, 33vw"
-        srcset="
-          {{ url_for('static', filename=col1[i].images.thumb) }} 600w,
-          {{ url_for('static', filename=col1[i].images.medium) }} 1200w
-        "
-        alt="{{ col1[i].alt }}"
-        loading="lazy"
-      />
-      <div
-        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
-      >
-        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-          <div class="text-meta text-d-text text-sm">
-            {{ col1[i].location }}
-          </div>
-
-          <div class="text-meta opacity-80">
-            {{ col1[i].date_formatted }}
-          </div>
-        </div>
+{% macro photo_tile(img) %}
+<a href="{{ url_for('photo', slug=img.slug) }}" class="group relative block">
+  <img
+    class="p-1 w-full transition duration-300 group-hover:brightness-75"
+    src="{{ url_for('static', filename=img.images.thumb) }}"
+    sizes="(max-width: 768px) 100vw, 33vw"
+    srcset="
+      {{ url_for('static', filename=img.images.thumb) }} 600w,
+      {{ url_for('static', filename=img.images.medium) }} 1200w
+    "
+    alt="{{ img.alt }}"
+    loading="lazy"
+  />
+  <div
+    class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+  >
+    <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
+      <div class="text-meta text-d-text text-sm">
+        {{ img.location }}
       </div>
-    </a>
+
+      <div class="text-meta opacity-80">
+        {{ img.date_formatted }}
+      </div>
+    </div>
+  </div>
+</a>
+{% endmacro %}
+
+<!-- Mobile: single chronological column -->
+<div id="view-grid-mobile" class="md:hidden p-1">
+  {% for img in images %}
+  {{ photo_tile(img) }}
+  {% endfor %}
+</div>
+
+<!-- Desktop: 3 height-balanced columns -->
+<div id="view-grid-desktop" class="hidden md:grid md:grid-cols-3 p-1">
+  <div>
+    {% for img in col1 %}
+    {{ photo_tile(img) }}
     {% endfor %}
   </div>
   <div>
-    {% for i in range(col2|length) %}
-    <a href="{{ url_for('photo', slug=col2[i].slug) }}" class="group relative block">
-      <img
-        class="p-1 w-full transition duration-300 group-hover:brightness-75"
-        src="{{ url_for('static', filename=col2[i].images.thumb) }}"
-        sizes="(max-width: 768px) 100vw, 33vw"
-        srcset="
-          {{ url_for('static', filename=col2[i].images.thumb) }} 600w,
-          {{ url_for('static', filename=col2[i].images.medium) }} 1200w
-        "
-        alt="{{ col2[i].alt }}"
-        loading="lazy"
-      />
-      <div
-        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
-      >
-        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-          <div class="text-meta text-d-text text-sm">
-            {{ col2[i].location }}
-          </div>
-
-          <div class="text-meta opacity-80">
-            {{ col2[i].date_formatted }}
-          </div>
-        </div>
-      </div>
-    </a>
+    {% for img in col2 %}
+    {{ photo_tile(img) }}
     {% endfor %}
   </div>
   <div>
-    {% for i in range(col3|length) %}
-    <a href="{{ url_for('photo', slug=col3[i].slug) }}" class="group relative block">
-      <img
-        class="p-1 w-full transition duration-300 group-hover:brightness-75"
-        src="{{ url_for('static', filename=col3[i].images.thumb) }}"
-        sizes="(max-width: 768px) 100vw, 33vw"
-        srcset="
-          {{ url_for('static', filename=col3[i].images.thumb) }} 600w,
-          {{ url_for('static', filename=col3[i].images.medium) }} 1200w
-        "
-        alt="{{ col3[i].alt }}"
-        loading="lazy"
-      />
-      <div
-        class="absolute inset-1 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
-      >
-        <div class="absolute bottom-4 left-4 text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-          <div class="text-meta text-d-text text-sm">
-            {{ col3[i].location }}
-          </div>
-
-          <div class="text-meta opacity-80">
-            {{ col3[i].date_formatted }}
-          </div>
-        </div>
-      </div>
-    </a>
+    {% for img in col3 %}
+    {{ photo_tile(img) }}
     {% endfor %}
   </div>
 </div>
